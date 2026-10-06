@@ -1,6 +1,5 @@
 """Swiss buying quotes. CHF is never passed to the French EUR models."""
 
-import json
 import re
 from datetime import datetime, timedelta, date
 from decimal import Decimal, ROUND_HALF_UP
@@ -62,6 +61,7 @@ def parse(source, html, payload=None):
     ident = source["buyer_id"]
     doc = soup(html)
     text = clean_text(html)
+    conditions = extract_conditions(html)
     rates = []
     updated = None
     eligibility = {"status": "unknown", "statement": None, "source_url": source["url"]}
@@ -132,7 +132,7 @@ def parse(source, html, payload=None):
         statement = next(
             (
                 c
-                for c in extract_conditions(html)
+                for c in conditions
                 if re.search(
                     r"limiter ses achats aux personnes domiciliées en Suisse", c
                 )
@@ -155,11 +155,7 @@ def parse(source, html, payload=None):
             raise SourceChanged("missing API provenance")
         minimum = re.search(r"Minimum (\d+) grammes", text)
         statement = next(
-            (
-                c
-                for c in extract_conditions(html)
-                if "Non-résidents CH" in c and "douane" in c
-            ),
+            (c for c in conditions if "Non-résidents CH" in c and "douane" in c),
             None,
         )
         if not minimum or not statement:
@@ -210,12 +206,22 @@ def parse(source, html, payload=None):
             ),
             "",
         )
-        if (
-            not re.search(r"price \* \(parseFloat\(content", script)
-            or "/1000" not in script
+        gold = re.search(
+            r'if\s*\(\s*response\[0\]\s*===\s*"2230003"\s*\)(.*?)(?=if\s*\(\s*response\[3\]|$)',
+            script,
+            re.S,
+        )
+        expected = "(price * (parseFloat(content.replace(/[^0-9,\\s]/g, '').replace(/,/, '.'))/1000))"
+        expression = (
+            re.search(r"let\s+dividedPrice\s*=\s*(.*?)\.toLocaleString", gold[1], re.S)
+            if gold
+            else None
+        )
+        if not expression or re.sub(r"\s+", "", expression[1]) != re.sub(
+            r"\s+", "", expected
         ):
             raise SourceChanged("buyer calculator formula changed")
-        block = re.search(r"\[([^\]]+)\]\.forEach", script)
+        block = re.search(r"\[([^\]]+)\]\.forEach", gold[1])
         labels = re.findall(r"'([^']+)'", block[1]) if block else []
         raw = payload.splitlines() if isinstance(payload, str) else []
         if len(raw) < 2 or raw[0] != "2230003":
@@ -240,9 +246,7 @@ def parse(source, html, payload=None):
                     },
                 )
             )
-        statement = next(
-            (c for c in extract_conditions(html) if "Einfuhrzollnachweises" in c), None
-        )
+        statement = next((c for c in conditions if "Einfuhrzollnachweises" in c), None)
         if not statement:
             raise SourceChanged("foreign import conditions missing")
         eligibility.update(status="conditional", statement=statement)
@@ -270,7 +274,7 @@ def parse(source, html, payload=None):
         "rates": rates,
         "source_updated_at": updated,
         "eligibility": eligibility,
-        "conditions": extract_conditions(html),
+        "conditions": conditions,
         "condition_summary": note,
         "warnings": warnings,
     }
@@ -300,6 +304,11 @@ def parse_fx(xml, at):
     }
 
 
+def trusted_rates(previous):
+    rates = previous.get("accepted_rates")
+    return rates if rates is not None else previous.get("rates", [])
+
+
 def quote_status(observation, at, previous=None):
     updated = observation.get("source_updated_at")
     if updated:
@@ -311,7 +320,7 @@ def quote_status(observation, at, previous=None):
     if previous:
         old = {
             r["purity_carats"]: decimal(r["price_chf_per_gram"])
-            for r in previous.get("accepted_rates", previous.get("rates", []))
+            for r in trusted_rates(previous)
         }
         if any(
             r["purity_carats"] in old

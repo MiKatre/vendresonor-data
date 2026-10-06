@@ -143,6 +143,9 @@ def test_failed_collection_retains_original_time_but_excludes_coverage():
                 **captured("bijouxor"),
                 "status": "ok",
                 "observed_at": "2026-10-05T10:00:00+00:00",
+                "documents": [
+                    {"url": SOURCES["bijouxor"]["url"], "sha256": "original"}
+                ],
             }
         ]
     }
@@ -151,6 +154,7 @@ def test_failed_collection_retains_original_time_but_excludes_coverage():
         documents = []
 
         def get(self, url):
+            self.documents.append({"url": url, "status_code": 503})
             raise RuntimeError("network down")
 
     snapshot = collect_snapshot([SOURCES["bijouxor"]], Broken(), previous, at=AT)
@@ -158,6 +162,10 @@ def test_failed_collection_retains_original_time_but_excludes_coverage():
     assert buyer["rates"] == previous["buyers"][0]["rates"]
     assert buyer["observed_at"] == "2026-10-05T10:00:00+00:00"
     assert buyer["status"] == "failed" and coverage(snapshot) == 0
+    assert buyer["documents"] == previous["buyers"][0]["documents"]
+    assert buyer["attempt_documents"] == [
+        {"url": SOURCES["bijouxor"]["url"], "status_code": 503}
+    ]
     assert snapshot["fx"]["status"] == "failed"
 
 
@@ -173,3 +181,41 @@ def test_quarantine_does_not_accept_the_same_bad_jump_next_run():
     )
     with pytest.raises(SourceChanged, match="fineness disagree"):
         captured("swissgoldexchange", html)
+
+
+@pytest.mark.parametrize("change", ["divisor", "discount"])
+def test_changed_gold_formula_cannot_be_validated_by_unchanged_silver(change):
+    html = (FIXTURES / "geiger.html").read_text()
+    if change == "divisor":
+        html = html.replace("/1000", "/10000", 1)
+    else:
+        html = html.replace("(price *", "(price * .9 *", 1)
+    with pytest.raises(SourceChanged, match="formula changed"):
+        captured("geiger", html)
+
+
+def test_repeated_failed_buyer_recovers_and_legacy_null_baseline_is_repaired():
+    class Fetcher:
+        documents = []
+        last_observed_at = AT
+        broken = True
+
+        def get(self, url):
+            if self.broken:
+                raise RuntimeError("network down")
+            if url.endswith("eurofxref-daily.xml"):
+                return '<root><Cube time="2026-10-05"><Cube currency="CHF" rate="0.9311"/></Cube></root>'
+            return (FIXTURES / "bijouxor.html").read_text()
+
+    fetcher = Fetcher()
+    snapshot = None
+    for _ in range(2):
+        snapshot = collect_snapshot([SOURCES["bijouxor"]], fetcher, snapshot, at=AT)
+        assert snapshot["buyers"][0]["accepted_rates"] == []
+    # Older snapshots emitted null after repeated network failures.
+    snapshot["buyers"][0]["accepted_rates"] = None
+    fetcher.broken = False
+    for _ in range(2):
+        snapshot = collect_snapshot([SOURCES["bijouxor"]], fetcher, snapshot, at=AT)
+        buyer = snapshot["buyers"][0]
+        assert buyer["status"] == "ok" and len(buyer["accepted_rates"]) == 3

@@ -12,7 +12,7 @@ import httpx
 
 from .collect import ROOT, USER_AGENT, Fetcher, atomic_write, now
 from .adapters import discover_icon, soup
-from .swiss import FX_URL, parse, parse_fx, quote_status
+from .swiss import FX_URL, parse, parse_fx, quote_status, trusted_rates
 
 
 def collect_snapshot(sources, fetcher, previous=None, *, at=None):
@@ -28,6 +28,8 @@ def collect_snapshot(sources, fetcher, previous=None, *, at=None):
             "status": "failed",
             "observed_at": None,
             "rates": [],
+            "accepted_rates": [],
+            "documents": [],
             "icon_url": None,
             "conditions": [],
             "eligibility": {
@@ -76,13 +78,12 @@ def collect_snapshot(sources, fetcher, previous=None, *, at=None):
             buyer["accepted_rates"] = (
                 observation["rates"]
                 if status == "ok"
-                else old.get(ident, {}).get(
-                    "accepted_rates", old.get(ident, {}).get("rates", [])
-                )
+                else trusted_rates(old.get(ident, {}))
             )
             buyer["icon_url"] = discover_icon(source["url"], html, fetcher)
             buyer["error"] = None
         except Exception as exc:
+            buyer["status"] = "failed"
             if ident in old:
                 # Keep provenance and original collection time; never call retained data fresh.
                 for key in [
@@ -94,12 +95,16 @@ def collect_snapshot(sources, fetcher, previous=None, *, at=None):
                     "eligibility",
                     "icon_url",
                     "warnings",
-                    "accepted_rates",
+                    "documents",
                 ]:
                     buyer[key] = old[ident].get(key, buyer.get(key))
+                buyer["accepted_rates"] = trusted_rates(old[ident])
             buyer["error"] = {"type": type(exc).__name__, "message": str(exc)[:600]}
         buyer["attempted_at"] = at.isoformat()
-        buyer["documents"] = fetcher.documents.copy()
+        if buyer["status"] == "failed":
+            buyer["attempt_documents"] = fetcher.documents.copy()
+        else:
+            buyer["documents"] = fetcher.documents.copy()
         buyers.append(buyer)
         print(
             f"Swiss {ident}: {buyer['status']}"
