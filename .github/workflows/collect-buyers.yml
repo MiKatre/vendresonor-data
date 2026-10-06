@@ -55,7 +55,7 @@ jobs:
           git pull --rebase origin "$GITHUB_REF_NAME"
           git push origin "HEAD:$GITHUB_REF_NAME"
       - name: Rebuild the website with this data commit
-        if: steps.collect.outcome == 'success' && steps.swiss.outcome == 'success' && github.ref == 'refs/heads/master'
+        if: steps.collect.outcome == 'success' && github.ref == 'refs/heads/master'
         env:
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: python scripts/trigger_build.py

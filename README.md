@@ -47,5 +47,5 @@ Exit codes: 0 = accepted numeric rates from at least one attempted buyer; 1 = no
 - Golden Cash: live buyer API only; static fallback and spot ticker excluded. Geiger: public export and the buyer's own alloy formula. No theoretical spot fallback.
 - ECB daily XML: CHF per EUR, dated; euro equivalent = CHF / rate. Reference conversion excludes banking fees. FX failure disables conversion; CHF observations remain available.
 - Buyer failures retain original observation dates and prices with `failed` status. Changes above 30% and future source dates quarantined. Valorum's stale source is retained separately.
-- Same six-hour workflow collects both markets. Rebuild requires both collectors to succeed; website uses the same immutable data commit for France and Switzerland.
+- Same six-hour workflow collects both markets. French collection success triggers the rebuild; Swiss coverage failures are reported without blocking French updates. Website uses the same immutable data commit for both markets.
 - Exit 0: coverage gate and ECB succeeded; exit 1: insufficient coverage or FX failure. Raw observations archived even on partial failure.
