@@ -1,0 +1,186 @@
+{
+  "goldson": {
+    "source_url": "https://www.goldson.fr/rachat-or-18-carats.php",
+    "resolved_url": "https://www.goldson.fr/rachat-or-18-carats.php",
+    "http_status": 200,
+    "observed_at": "2026-10-05T21:33:25.774998+00:00",
+    "sha256": "9cb9192e74eacd79803969689aa4d526b884892e23cd461dbb0f45ddb98aaa15",
+    "content_type": "text/html; charset=UTF-8",
+    "robots": {
+      "url": "https://www.goldson.fr/robots.txt",
+      "http_status": 200,
+      "allows_audit_user_agent": true
+    }
+  },
+  "change_vivienne": {
+    "source_url": "https://changevivienne.com/rachat-bijoux",
+    "resolved_url": "https://changevivienne.com/rachat-bijoux",
+    "http_status": 200,
+    "observed_at": "2026-10-05T21:33:26.238571+00:00",
+    "sha256": "4cfb58973fd531dd88ab0a9f75d8fccb3b0610d2276db859d3aa531abe9c7401",
+    "content_type": "text/html; charset=utf-8",
+    "robots": {
+      "url": "https://changevivienne.com/robots.txt",
+      "http_status": 200,
+      "allows_audit_user_agent": true
+    }
+  },
+  "godot": {
+    "source_url": "https://www.achat-or-et-argent.fr/rachat-de-bijoux/commander-son-kit",
+    "resolved_url": "https://www.achat-or-et-argent.fr/rachat-de-bijoux/commander-son-kit",
+    "http_status": 200,
+    "observed_at": "2026-10-05T21:34:52.869880+00:00",
+    "sha256": "49b78070cfa1b4369a823e8ad85530ac6051cf9d6462f1d998a366827539ed9d",
+    "content_type": "text/html; charset=UTF-8",
+    "robots": {
+      "url": "https://www.achat-or-et-argent.fr/robots.txt",
+      "http_status": 200,
+      "allows_audit_user_agent": true
+    }
+  },
+  "epo": {
+    "source_url": "https://epo-gold.fr/rachat-or-paris-2-bourse-vivienne/",
+    "resolved_url": "https://epo-gold.fr/rachat-or-paris-2-bourse-vivienne/",
+    "http_status": 200,
+    "observed_at": "2026-10-05T21:33:28.801226+00:00",
+    "sha256": "d7a37059f207d81745282f66465fd36a02e136e4a80256a0879b2a23abff71bd",
+    "content_type": "text/html; charset=UTF-8",
+    "robots": {
+      "url": "https://epo-gold.fr/robots.txt",
+      "http_status": 200,
+      "allows_audit_user_agent": true
+    }
+  },
+  "or_heritage": {
+    "source_url": "https://www.or-heritage.com/rachat.html",
+    "resolved_url": "https://www.or-heritage.com/rachat.html",
+    "http_status": 200,
+    "observed_at": "2026-10-05T21:33:30.320104+00:00",
+    "sha256": "e713d024e57e4f67e679c546922d03fab8b3fd1586e86255cbdce453e8b63be6",
+    "content_type": "text/html; charset=UTF-8",
+    "robots": {
+      "url": "https://www.or-heritage.com/robots.txt",
+      "http_status": 200,
+      "allows_audit_user_agent": true
+    }
+  },
+  "antheor": {
+    "source_url": "https://www.antheor-paris.fr/rachat-or-paris/",
+    "resolved_url": "https://www.antheor-paris.fr/rachat-or-paris/",
+    "http_status": 200,
+    "observed_at": "2026-10-05T21:34:28.470377+00:00",
+    "sha256": "c9e2ca4e113616d7a05249be8fb8056906dff1fd86f80f4a3fcc55169ece02e8",
+    "content_type": "text/html; charset=UTF-8",
+    "robots": {
+      "url": "https://www.antheor-paris.fr/robots.txt",
+      "http_status": 200,
+      "allows_audit_user_agent": true
+    }
+  },
+  "abacor": {
+    "source_url": "https://www.abacor.fr/or/achat-or/",
+    "resolved_url": "https://www.abacor.fr/or/achat-or/",
+    "http_status": 200,
+    "observed_at": "2026-10-05T21:33:26.549118+00:00",
+    "sha256": "4c1c0f99df508f110c1fbf15bf1b7cd8c08b79be413856a763738271d951644f",
+    "content_type": "text/html; charset=UTF-8",
+    "robots": {
+      "url": "https://www.abacor.fr/robots.txt",
+      "http_status": 200,
+      "allows_audit_user_agent": true
+    }
+  },
+  "gold_fr": {
+    "source_url": "https://gold.fr/gold-kit/",
+    "resolved_url": "https://gold.fr/gold-kit/",
+    "http_status": 200,
+    "observed_at": "2026-10-05T21:33:27.713071+00:00",
+    "sha256": "80e5b2c099a99bb21dba4dfc8d43e64890da78174c1d53e0c05eb04e0589155d",
+    "content_type": "text/html; charset=utf-8",
+    "robots": {
+      "url": "https://gold.fr/robots.txt",
+      "http_status": 200,
+      "allows_audit_user_agent": true
+    }
+  },
+  "orencash": {
+    "source_url": "https://www.orencash.fr/nos-services/vendre-son-or-sur-internet/",
+    "resolved_url": "https://www.orencash.fr/nos-services/vendre-son-or-sur-internet/",
+    "http_status": 200,
+    "observed_at": "2026-10-05T21:33:27.199981+00:00",
+    "sha256": "671fe1946c54bf12ab6b57a6377efa58a45fd3aa534d344b8ff93e02665cb115",
+    "content_type": "text/html; charset=UTF-8",
+    "robots": {
+      "url": "https://www.orencash.fr/robots.txt",
+      "http_status": 200,
+      "allows_audit_user_agent": true
+    }
+  },
+  "cuo": {
+    "source_url": "https://www.cours-de-l-or-prix-or-net.net/",
+    "resolved_url": "https://www.cours-de-l-or-prix-or-net.net/",
+    "http_status": 200,
+    "observed_at": "2026-10-05T21:34:29.176774+00:00",
+    "sha256": "8caafe9b8a3eb585fe5441c421795e7e033fee15ff7275587d971f30094961aa",
+    "content_type": "text/html;charset=UTF-8",
+    "robots": {
+      "url": "https://www.cours-de-l-or-prix-or-net.net/robots.txt",
+      "http_status": 200,
+      "allows_audit_user_agent": true
+    }
+  },
+  "comptoircentral": {
+    "source_url": "https://comptoircentraldelor.com/rachat-or-et-dargent/",
+    "captured_documents": [
+      {
+        "url": "https://comptoircentraldelor.com/robots.txt",
+        "method": "GET",
+        "http_status": 200,
+        "observed_at": "2026-10-05T21:56:34.135590+00:00",
+        "sha256": "62f2334e60178972d017a166ef4542f2338ba19176008732197b926ee81ab50d"
+      },
+      {
+        "url": "https://comptoircentraldelor.com/rachat-or-et-dargent/",
+        "method": "GET",
+        "http_status": 200,
+        "observed_at": "2026-10-05T21:56:34.583265+00:00",
+        "sha256": "edf2ff29073d231c5f8454b2a1828291b59dfd307f771bff24ef950bab19882c"
+      }
+    ],
+    "fixture_scope": "Minimal excerpts of captured HTML/JavaScript used by the parser."
+  },
+  "lesmonnaiesdelyon": {
+    "source_url": "https://www.lesmonnaiesdelyon.com/achat-or-paris",
+    "captured_documents": [
+      {
+        "url": "https://www.lesmonnaiesdelyon.com/robots.txt",
+        "method": "GET",
+        "http_status": 200,
+        "observed_at": "2026-10-05T21:56:36.106037+00:00",
+        "sha256": "1f61191d833198c8e3fd1e5fce3d0c09f277c3024094a20ee1a6d82e045433d7"
+      },
+      {
+        "url": "https://www.lesmonnaiesdelyon.com/achat-or-paris",
+        "method": "GET",
+        "http_status": 200,
+        "observed_at": "2026-10-05T21:56:36.503496+00:00",
+        "sha256": "3f95a7fcfa044ca0d36ae3561efb737b3124b40247d2348b2bc017b53f0ade4d"
+      },
+      {
+        "url": "https://www.lesmonnaiesdelyon.com/assets/index-BQTQWX11.js",
+        "method": "GET",
+        "http_status": 200,
+        "observed_at": "2026-10-05T21:56:36.901198+00:00",
+        "sha256": "70560f731b1739228c4d95ba988bf5ef620c7f1a07ba8f43c934445874c22622"
+      },
+      {
+        "url": "https://www.lesmonnaiesdelyon.com/assets/GoldSection-CXa2WalY.js",
+        "method": "GET",
+        "http_status": 200,
+        "observed_at": "2026-10-05T21:56:37.290630+00:00",
+        "sha256": "eb326acd4199b7b033a495ee4f97315a688d5d6e8e4e601875e05b604706c1b7"
+      }
+    ],
+    "fixture_scope": "Minimal excerpts of captured HTML/JavaScript used by the parser."
+  }
+}

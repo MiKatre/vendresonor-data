@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "buyers": [
+    {
+      "buyer_id": "goldson",
+      "name": "Goldson",
+      "url": "https://www.goldson.fr/rachat-or-18-carats.php",
+      "transaction_channel": "postal_online_only",
+      "conditions_reviewed_at": "2026-10-05",
+      "reviewed_conditions": [
+        "Only online postal jewellery rates extracted; bullion and dental/object tables have different prices.",
+        "Seller must reside in France; offer determined at physical evaluation, not at initial website consultation.",
+        "Shipping page: EUR 14 covers EUR 600; EUR 0.50 per additional EUR 100 insured, maximum EUR 5000; reimbursement if accepted transaction exceeds EUR 500.",
+        "Unused kit after three months: EUR 15; withdrawal after payment: potential EUR 30 return charge; refusal return paid by buyer.",
+        "Only metal weight counts; stones and ornaments excluded."
+      ],
+      "review_notes": [
+        "Page describes tax-deducted prices; terms describe threshold-dependent deductions separately. Reconcile before calculating a gross/net ranking.",
+        "No price publication timestamp found."
+      ]
+    },
+    {
+      "buyer_id": "change_vivienne",
+      "name": "Change Vivienne",
+      "url": "https://changevivienne.com/rachat-bijoux",
+      "transaction_channel": "postal",
+      "conditions_reviewed_at": "2026-10-05",
+      "reviewed_conditions": [
+        "Calculator multiplies displayed gram rate by submitted weight; total labelled H.T.",
+        "Final offer follows receipt and expertise; source does not bind the displayed estimate."
+      ],
+      "review_notes": [
+        "Shipping, insurance, return charges, product eligibility and exact tax basis unresolved from reviewed page.",
+        "No price publication timestamp found; unrounded HTML attributes differ slightly from displayed rates."
+      ]
+    },
+    {
+      "buyer_id": "godot",
+      "name": "Godot & Fils",
+      "url": "https://www.achat-or-et-argent.fr/rachat-de-bijoux/commander-son-kit",
+      "transaction_channel": "postal",
+      "conditions_reviewed_at": "2026-10-05",
+      "reviewed_conditions": [
+        "Website JavaScript calls POST /workerApi with methode=getRachatBijoux; no account or personal details supplied for rate retrieval.",
+        "Calculator labels total H.T.; source states estimated amounts, with final offer after evaluation.",
+        "Kit may be refused if estimated amount below EUR 100.",
+        "Outbound shipping reimbursement may be granted when purchase amount is at least EUR 500.",
+        "Commission fields accompany rates; do not subtract again without confirming displayed-rate semantics."
+      ],
+      "review_notes": [
+        "API applies identical 11.50 tax and 5000 threshold fields across different products. Retain as buyer fields, not a validated tax rule.",
+        "9K comment identifies dental gold; 22K mounted coins; 24K generally bullion. Verify eligibility for scrap jewellery.",
+        "No price publication timestamp; shipping reimbursement discretionary; return/insurance costs need terms review."
+      ]
+    },
+    {
+      "buyer_id": "epo",
+      "name": "EPO Gold",
+      "url": "https://epo-gold.fr/rachat-or-paris-2-bourse-vivienne/",
+      "transaction_channel": "in_person_paris",
+      "conditions_reviewed_at": "2026-10-05",
+      "reviewed_conditions": [
+        "Prices apply to gold tested and verified at the counter.",
+        "Signed jewellery receives separate jewellery premium; exclude from melting comparison.",
+        "Expertise described as free and without commitment."
+      ],
+      "review_notes": [
+        "Gross/net basis and other deductions not established.",
+        "No price publication timestamp found; page dateModified is not a rate timestamp."
+      ]
+    },
+    {
+      "buyer_id": "or_heritage",
+      "name": "Or et Héritage",
+      "url": "https://www.or-heritage.com/rachat.html",
+      "transaction_channel": "in_person_paris",
+      "conditions_reviewed_at": "2026-10-05",
+      "reviewed_conditions": [
+        "Prices explicitly indicative; final amount after certified weighing, metal test and tax assessment.",
+        "Source states no fees or commission for expertise.",
+        "JavaScript replaces HTML values using its public PAXG feed and buyer-defined factors; HTML is not necessarily the final browser display."
+      ],
+      "review_notes": [
+        "Collector reproduces the current public calculator using its PAXG endpoint and buyer factors; no substitution of this project's reference feed.",
+        "No trustworthy price publication timestamp on initial HTML."
+      ]
+    },
+    {
+      "buyer_id": "antheor",
+      "name": "Anthéor Paris",
+      "url": "https://www.antheor-paris.fr/rachat-or-paris/",
+      "transaction_channel": "in_person_paris",
+      "conditions_reviewed_at": "2026-10-05",
+      "reviewed_conditions": [
+        "Minimum 10 grams.",
+        "Indicative table; not a firm offer.",
+        "18K example around 10g: approximately EUR 73/g; around 100g or more: up to EUR 78/g, subject to inspection and quote. Do not assign hard tier boundaries from approximate examples.",
+        "24K table concerns bullion and coins, unlike 9K–22K melting estimates.",
+        "Final amount depends on net weight, product type, condition, supporting documents and tax regime."
+      ],
+      "review_notes": [
+        "General 18K table rate is not the applicable small-lot example.",
+        "Precise fees and tax inclusion unresolved; signed-jewellery EUR 200/g claim excluded."
+      ]
+    },
+    {
+      "buyer_id": "abacor",
+      "name": "Abacor",
+      "url": "https://www.abacor.fr/or/achat-or/",
+      "transaction_channel": "in_person_paris_neuilly",
+      "conditions_reviewed_at": "2026-10-05",
+      "reviewed_conditions": [
+        "Advertised upper limits depend on quantity; physical inspection required for a firm offer.",
+        "Separate 9K–24K table explicitly represents interbank market prices before purchase and melting fees; excluded from buyer rates.",
+        "Second-hand/signed jewellery price from EUR 200/g excluded from scrap-gold comparison."
+      ],
+      "review_notes": [
+        "No exact quantity brackets or deductions attached to upper limits.",
+        "Date on theoretical-price table is not a timestamp for the advertised buyer upper limits."
+      ]
+    },
+    {
+      "buyer_id": "gold_fr",
+      "name": "Comptoir National de l’Or / Gold Trade",
+      "url": "https://gold.fr/gold-kit/",
+      "transaction_channel": "postal_gold_kit",
+      "conditions_reviewed_at": "2026-10-05",
+      "reviewed_conditions": [
+        "Minimum formula uses second London fixing and gold fineness; not this project reference feed.",
+        "18K minimum: 55% of fineness-adjusted reference, with exclusions for hollow gold/nonprecious components; French 18K hallmark condition.",
+        "14K minimum: 50% of fineness-adjusted reference.",
+        "9K minimum: 45% of fineness-adjusted reference; source incorrectly associates 9K with 333 per mille.",
+        "Shipping and insurance remain seller costs; taxes may be withheld separately; bullion commission table not applied to scrap."
+      ],
+      "review_notes": [
+        "No directly quoted EUR/g buyer rates extracted.",
+        "9K/333 purity inconsistency requires resolution; do not silently correct.",
+        "Exact costs and applicable source reference time required before deriving any minimum amount."
+      ]
+    },
+    {
+      "buyer_id": "orencash",
+      "name": "Or en Cash",
+      "url": "https://www.orencash.fr/nos-services/vendre-son-or-sur-internet/",
+      "transaction_channel": "postal_or_agency",
+      "conditions_reviewed_at": "2026-10-05",
+      "reviewed_conditions": [
+        "Expertise free and without commitment; final postal offer sent by email.",
+        "Source states return paid by buyer if offer refused.",
+        "Tax may be deducted at conclusion."
+      ],
+      "review_notes": [
+        "Collector reproduces the public wizard's own reference, purity factors and deductions; final tax basis still unresolved.",
+        "Do not substitute spot reference or purity ratios for a missing buyer quote."
+      ]
+    },
+    {
+      "buyer_id": "cuo",
+      "name": "Comptoir Universel de l’Or",
+      "url": "https://www.cours-de-l-or-prix-or-net.net/",
+      "transaction_channel": "postal_for_this_rate",
+      "conditions_reviewed_at": "2026-10-05",
+      "reviewed_conditions": [
+        "Online 18K net rate distinct from agency range EUR 76–80/g depending on weight.",
+        "Bullion net claim assumes 22-year holding, certificate and invoice; excluded from scrap-gold rates."
+      ],
+      "review_notes": [
+        "Source rate date October 6 is later than October 5 retrieval in Europe/Paris. Quarantine until clarified.",
+        "Weight brackets for agency range and net deduction semantics unresolved."
+      ]
+    },
+    {
+      "buyer_id": "comptoircentral",
+      "name": "Comptoir Central de l’Or",
+      "url": "https://comptoircentraldelor.com/rachat-or-et-dargent/",
+      "transaction_channel": "in_person_marseille",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null
+    },
+    {
+      "buyer_id": "monnaiesdor",
+      "name": "Monnaies d’Or",
+      "url": "https://www.monnaiesdor.com/",
+      "transaction_channel": "in_person_paris",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null,
+      "adapter": "discovery_only"
+    },
+    {
+      "buyer_id": "lesmonnaiesdelyon",
+      "name": "Les Monnaies de Lyon",
+      "url": "https://www.lesmonnaiesdelyon.com/achat-or-paris",
+      "transaction_channel": "in_person_paris",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null
+    },
+    {
+      "buyer_id": "goldmarket",
+      "name": "GOLDMARKET",
+      "url": "https://www.goldmarket.fr/rachat-or/",
+      "transaction_channel": "in_person",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null,
+      "adapter": "discovery_only"
+    },
+    {
+      "buyer_id": "bdor",
+      "name": "BDOR",
+      "url": "https://www.bdor.fr/vente-or-argent/rachat-bijoux-strasbourg-colmar",
+      "transaction_channel": "in_person",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null,
+      "adapter": "discovery_only"
+    }
+  ]
+}

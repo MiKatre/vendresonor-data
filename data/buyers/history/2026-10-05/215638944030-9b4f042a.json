@@ -1,0 +1,1888 @@
+{
+  "schema_version": 1,
+  "collected_at": "2026-10-05T21:56:38.944030+00:00",
+  "attempts": [
+    {
+      "buyer_id": "goldson",
+      "status": "ok",
+      "attempted_at": "2026-10-05T21:56:20.666752+00:00",
+      "observation": {
+        "buyer_id": "goldson",
+        "observed_at": "2026-10-05T21:56:21.450538Z",
+        "rates": [
+          {
+            "rate_id": "goldson:jewellery_for_melting:22:indicative:",
+            "purity_carats": "22",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "79.70",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "jewellery_for_melting",
+            "price_basis": "source_claims_tax_deducted",
+            "transaction_channel": "postal_online_only",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.goldson.fr/rachat-or-18-carats.php",
+            "observed_at": "2026-10-05T21:56:21.450538Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {},
+            "conditions": [],
+            "warnings": [
+              "Tax inclusion differs between price page and terms; net estimate unvalidated."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "goldson:jewellery_for_melting:21:indicative:",
+            "purity_carats": "21",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "74.60",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "jewellery_for_melting",
+            "price_basis": "source_claims_tax_deducted",
+            "transaction_channel": "postal_online_only",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.goldson.fr/rachat-or-18-carats.php",
+            "observed_at": "2026-10-05T21:56:21.450538Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {},
+            "conditions": [],
+            "warnings": [
+              "Tax inclusion differs between price page and terms; net estimate unvalidated."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "goldson:jewellery_for_melting:18:indicative:",
+            "purity_carats": "18",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "65.44",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "jewellery_for_melting",
+            "price_basis": "source_claims_tax_deducted",
+            "transaction_channel": "postal_online_only",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.goldson.fr/rachat-or-18-carats.php",
+            "observed_at": "2026-10-05T21:56:21.450538Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {},
+            "conditions": [],
+            "warnings": [
+              "Tax inclusion differs between price page and terms; net estimate unvalidated."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "goldson:jewellery_for_melting:14:indicative:",
+            "purity_carats": "14",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "49.10",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "jewellery_for_melting",
+            "price_basis": "source_claims_tax_deducted",
+            "transaction_channel": "postal_online_only",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.goldson.fr/rachat-or-18-carats.php",
+            "observed_at": "2026-10-05T21:56:21.450538Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {},
+            "conditions": [],
+            "warnings": [
+              "Tax inclusion differs between price page and terms; net estimate unvalidated."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "goldson:jewellery_for_melting:9:indicative:",
+            "purity_carats": "9",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "28.70",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "jewellery_for_melting",
+            "price_basis": "source_claims_tax_deducted",
+            "transaction_channel": "postal_online_only",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.goldson.fr/rachat-or-18-carats.php",
+            "observed_at": "2026-10-05T21:56:21.450538Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {},
+            "conditions": [],
+            "warnings": [
+              "Tax inclusion differs between price page and terms; net estimate unvalidated."
+            ],
+            "comparison_eligible": false
+          }
+        ],
+        "conditions": [
+          "Pour identifier vos\n                bijoux en or 18 carats, le poinçon représentant une tête d'aigle est apposé : s'il n'a pas été effacé\n                par l'usure, vous pourrez par exemple le trouver sur la face intérieure d'un anneau ou d'une bague. Si\n                vous souhaitez en savoir davantage sur notre manière d'évaluer l'or, vous trouverez toutes les\n                informations sur la page dédiée à l'estimation de l'or . Ce poinçon est parmi\n                ceux que l'on trouve le plus fréquemment : il y a de grandes chances qu'il apparaisse sur votre bijou !",
+          "NB: Les tarifs ci dessous sont applicables uniquement pour le rachat d’or en ligne.",
+          "Celui-ci dépend directement du cours journalier, tel qu'il est fixé par les marchés officiels. Sur notre\n                site, dès que vous utiliserez notre calculette, vous trouverez affiché le prix du gramme net, une fois\n                toutes les taxes déduites ; nous affichons même très exactement le montant prélevé par l'État, ce qui\n                est un gage d'honnêteté et de transparence (d'autres sites n'affichent que le prix brut). Toutes les\n                informations sur les taxes prélevées lorsque vous vendez votre or sur cette page . Vous y trouverez également de\n                plus amples informations sur la vente des métaux précieux."
+        ],
+        "warnings": [],
+        "documents": [
+          {
+            "url": "https://www.goldson.fr/robots.txt",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:21.017573+00:00",
+            "sha256": "f18488534e570a95510131305c8f28fbe413d64b35f3528e7206093362678993"
+          },
+          {
+            "url": "https://www.goldson.fr/rachat-or-18-carats.php",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:21.450538+00:00",
+            "sha256": "38fbd84b4a7c4fa36e7a33af02f44227f8db88a96d8fcc643ab173ca8fa85120"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "buyer_id": "change_vivienne",
+      "status": "ok",
+      "attempted_at": "2026-10-05T21:56:21.499980+00:00",
+      "observation": {
+        "buyer_id": "change_vivienne",
+        "observed_at": "2026-10-05T21:56:22.365505Z",
+        "rates": [
+          {
+            "rate_id": "change_vivienne:gold_items_unspecified:9:indicative:",
+            "purity_carats": "9",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "36.77",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "source_labels_total_ht",
+            "transaction_channel": "postal",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://changevivienne.com/rachat-bijoux",
+            "observed_at": "2026-10-05T21:56:22.365505Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {
+              "unrounded_eur_per_gram": "36.770234825149"
+            },
+            "conditions": [],
+            "warnings": [],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "change_vivienne:gold_items_unspecified:14:indicative:",
+            "purity_carats": "14",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "58.12",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "source_labels_total_ht",
+            "transaction_channel": "postal",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://changevivienne.com/rachat-bijoux",
+            "observed_at": "2026-10-05T21:56:22.365505Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {
+              "unrounded_eur_per_gram": "58.12069375588"
+            },
+            "conditions": [],
+            "warnings": [],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "change_vivienne:gold_items_unspecified:18:indicative:",
+            "purity_carats": "18",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "81.84",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "source_labels_total_ht",
+            "transaction_channel": "postal",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://changevivienne.com/rachat-bijoux",
+            "observed_at": "2026-10-05T21:56:22.365505Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {
+              "unrounded_eur_per_gram": "81.843425901138"
+            },
+            "conditions": [],
+            "warnings": [],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "change_vivienne:gold_items_unspecified:22:indicative:",
+            "purity_carats": "22",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "99.64",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "source_labels_total_ht",
+            "transaction_channel": "postal",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://changevivienne.com/rachat-bijoux",
+            "observed_at": "2026-10-05T21:56:22.365505Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {
+              "unrounded_eur_per_gram": "99.635475010081"
+            },
+            "conditions": [],
+            "warnings": [],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "change_vivienne:gold_items_unspecified:24:indicative:",
+            "purity_carats": "24",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "112.68",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "source_labels_total_ht",
+            "transaction_channel": "postal",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://changevivienne.com/rachat-bijoux",
+            "observed_at": "2026-10-05T21:56:22.365505Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {
+              "unrounded_eur_per_gram": "112.68297768997"
+            },
+            "conditions": [],
+            "warnings": [],
+            "comparison_eligible": false
+          }
+        ],
+        "conditions": [
+          "Situé à Paris , Change Vivienne propose une gamme complète de services de change de devises : conversion de devises étrangères, vente de diamants et bijoux, et achat/vente de métaux précieux. Avec des taux compétitifs, un service rapide et personnalisé, Change Vivienne vous garantit des transactions sécurisées et sans frais cachés."
+        ],
+        "warnings": [],
+        "documents": [
+          {
+            "url": "https://changevivienne.com/robots.txt",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:21.867305+00:00",
+            "sha256": "ea8fcfdf28d94d8342dec0b7a167a111d04e461c618b974fd1907b494953a26f"
+          },
+          {
+            "url": "https://changevivienne.com/rachat-bijoux",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:22.365505+00:00",
+            "sha256": "f91e9aa3dc81bcdabe2b9476ae02442b34dc0ee3fc38dda53cb19edc3a5f698f"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "buyer_id": "godot",
+      "status": "ok",
+      "attempted_at": "2026-10-05T21:56:22.418311+00:00",
+      "observation": {
+        "buyer_id": "godot",
+        "observed_at": "2026-10-05T21:56:24.039655Z",
+        "rates": [
+          {
+            "rate_id": "godot:gold_items_unspecified:24:indicative:",
+            "purity_carats": "24",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "112.68",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "source_labels_total_ht",
+            "transaction_channel": "postal",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.achat-or-et-argent.fr/rachat-de-bijoux/commander-son-kit",
+            "observed_at": "2026-10-05T21:56:24.039655Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {
+              "commission": 5,
+              "tax": "11.50",
+              "limitTaxe": "5000.000",
+              "comment": "généralement les lingots",
+              "commission_inclusion": "do_not_deduct_again_without_review"
+            },
+            "conditions": [],
+            "warnings": [],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "godot:gold_items_unspecified:22:indicative:",
+            "purity_carats": "22",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "98.94",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "source_labels_total_ht",
+            "transaction_channel": "postal",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.achat-or-et-argent.fr/rachat-de-bijoux/commander-son-kit",
+            "observed_at": "2026-10-05T21:56:24.039655Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {
+              "commission": 9,
+              "tax": "11.50",
+              "limitTaxe": "5000.000",
+              "comment": "généralement les pièces montées",
+              "commission_inclusion": "do_not_deduct_again_without_review"
+            },
+            "conditions": [],
+            "warnings": [],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "godot:gold_items_unspecified:18:indicative:",
+            "purity_carats": "18",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "78.73",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "source_labels_total_ht",
+            "transaction_channel": "postal",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.achat-or-et-argent.fr/rachat-de-bijoux/commander-son-kit",
+            "observed_at": "2026-10-05T21:56:24.039655Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {
+              "commission": 11.5,
+              "tax": "11.50",
+              "limitTaxe": "5000.000",
+              "comment": "90% des bijoux",
+              "commission_inclusion": "do_not_deduct_again_without_review"
+            },
+            "conditions": [],
+            "warnings": [],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "godot:gold_items_unspecified:14:indicative:",
+            "purity_carats": "14",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "57.43",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "source_labels_total_ht",
+            "transaction_channel": "postal",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.achat-or-et-argent.fr/rachat-de-bijoux/commander-son-kit",
+            "observed_at": "2026-10-05T21:56:24.039655Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {
+              "commission": 17,
+              "tax": "11.50",
+              "limitTaxe": "5000.000",
+              "comment": "",
+              "commission_inclusion": "do_not_deduct_again_without_review"
+            },
+            "conditions": [],
+            "warnings": [],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "godot:gold_items_unspecified:9:indicative:",
+            "purity_carats": "9",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "36.47",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "source_labels_total_ht",
+            "transaction_channel": "postal",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.achat-or-et-argent.fr/rachat-de-bijoux/commander-son-kit",
+            "observed_at": "2026-10-05T21:56:24.039655Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {
+              "commission": 18,
+              "tax": "11.50",
+              "limitTaxe": "5000.000",
+              "comment": "généralement or dentaire",
+              "commission_inclusion": "do_not_deduct_again_without_review"
+            },
+            "conditions": [],
+            "warnings": [],
+            "comparison_eligible": false
+          }
+        ],
+        "conditions": [
+          "ATTENTION ! Achat or et Argent se réserve le droit de ne pas envoyer de kits dont la valeur d'estimation de rachat est inférieure à 100€.",
+          "REMARQUE : Le remboursement des frais d’expéditions des kits pourra être réalisé si le montant du rachat est égal ou supérieur à 500 €.",
+          "Si vous rencontrez la moindre difficulté lorsque vous préparez votre Kit, n'hésitez pas à nous contacter au 0800 119 119 (appels gratuits) pour tous renseignements ou par mail à l'adresse rachat@achat-or-et-argent.fr .",
+          "Le montant de revente qui vous a été indiqué est une estimation."
+        ],
+        "warnings": [],
+        "documents": [
+          {
+            "url": "https://www.achat-or-et-argent.fr/robots.txt",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:22.772638+00:00",
+            "sha256": "7b58e14a685d333868d8a609f3e31704fc06af82b57469d6ecbd11a7eb76babb"
+          },
+          {
+            "url": "https://www.achat-or-et-argent.fr/rachat-de-bijoux/commander-son-kit",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:23.567584+00:00",
+            "sha256": "665e4a9e25f2af624e2783b4bc0806b7e81567506c4c8df889c34ae0f55ffafe"
+          },
+          {
+            "url": "https://www.achat-or-et-argent.fr/workerApi",
+            "method": "POST",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:24.039655+00:00",
+            "sha256": "3a75ba937afabd0771844c125333ff22b90f38ecd9bc977663cb13a2e5545a27"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "buyer_id": "epo",
+      "status": "ok",
+      "attempted_at": "2026-10-05T21:56:24.080838+00:00",
+      "observation": {
+        "buyer_id": "epo",
+        "observed_at": "2026-10-05T21:56:25.153479Z",
+        "rates": [
+          {
+            "rate_id": "epo:gold_items_unspecified:18:published:",
+            "purity_carats": "18",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "79.52",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "published",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "unknown",
+            "transaction_channel": "in_person_paris",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://epo-gold.fr/rachat-or-paris-2-bourse-vivienne/",
+            "observed_at": "2026-10-05T21:56:25.153479Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {},
+            "conditions": [],
+            "warnings": [],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "epo:gold_items_unspecified:24:published:",
+            "purity_carats": "24",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "115.12",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "published",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "unknown",
+            "transaction_channel": "in_person_paris",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://epo-gold.fr/rachat-or-paris-2-bourse-vivienne/",
+            "observed_at": "2026-10-05T21:56:25.153479Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {},
+            "conditions": [],
+            "warnings": [],
+            "comparison_eligible": false
+          }
+        ],
+        "conditions": [
+          "Notre équipe de gemmologues certifiés HRD Antwerp vous reçoit sans rendez-vous, du lundi au vendredi de 9h30 à 19h00, pour une estimation gratuite et immédiate. Chaque pièce est examinée avec rigueur, dans un cadre confidentiel et professionnel.",
+          "Demander une estimation gratuite"
+        ],
+        "warnings": [],
+        "documents": [
+          {
+            "url": "https://epo-gold.fr/robots.txt",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:24.742549+00:00",
+            "sha256": "3cbaaa54ddc64709a071e3ee44b99cbc0143adc1819bdc299b19a8c6fdb6f216"
+          },
+          {
+            "url": "https://epo-gold.fr/rachat-or-paris-2-bourse-vivienne/",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:25.153479+00:00",
+            "sha256": "d7a37059f207d81745282f66465fd36a02e136e4a80256a0879b2a23abff71bd"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "buyer_id": "or_heritage",
+      "status": "ok",
+      "attempted_at": "2026-10-05T21:56:25.204400+00:00",
+      "observation": {
+        "buyer_id": "or_heritage",
+        "observed_at": "2026-10-05T21:56:27.889441Z",
+        "rates": [
+          {
+            "rate_id": "or_heritage:gold_items_unspecified:24:indicative:",
+            "purity_carats": "24",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "111.89",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "before_final_tax_assessment",
+            "transaction_channel": "in_person_paris",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.or-heritage.com/rachat.html",
+            "observed_at": "2026-10-05T21:56:27.889441Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "buyer_calculator",
+            "source_fields": {
+              "buyer_factor": "0.9415635145223173",
+              "reference": "buyer_PAXG_endpoint",
+              "paxg_eur_per_ounce": "3696.31",
+              "reference_updated_at": "2026-10-05T23:55:10+02:00"
+            },
+            "conditions": [],
+            "warnings": [
+              "Reference timestamp is not buyer price publication time."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "or_heritage:gold_items_unspecified:22:indicative:",
+            "purity_carats": "22",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "100.00",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "before_final_tax_assessment",
+            "transaction_channel": "in_person_paris",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.or-heritage.com/rachat.html",
+            "observed_at": "2026-10-05T21:56:27.889441Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "buyer_calculator",
+            "source_fields": {
+              "buyer_factor": "0.8414784465547474",
+              "reference": "buyer_PAXG_endpoint",
+              "paxg_eur_per_ounce": "3696.31",
+              "reference_updated_at": "2026-10-05T23:55:10+02:00"
+            },
+            "conditions": [],
+            "warnings": [
+              "Reference timestamp is not buyer price publication time."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "or_heritage:gold_items_unspecified:18:indicative:",
+            "purity_carats": "18",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "78.03",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "before_final_tax_assessment",
+            "transaction_channel": "in_person_paris",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.or-heritage.com/rachat.html",
+            "observed_at": "2026-10-05T21:56:27.889441Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "buyer_calculator",
+            "source_fields": {
+              "buyer_factor": "0.6565858231627923",
+              "reference": "buyer_PAXG_endpoint",
+              "paxg_eur_per_ounce": "3696.31",
+              "reference_updated_at": "2026-10-05T23:55:10+02:00"
+            },
+            "conditions": [],
+            "warnings": [
+              "Reference timestamp is not buyer price publication time."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "or_heritage:gold_items_unspecified:14:indicative:",
+            "purity_carats": "14",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "56.62",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "before_final_tax_assessment",
+            "transaction_channel": "in_person_paris",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.or-heritage.com/rachat.html",
+            "observed_at": "2026-10-05T21:56:27.889441Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "buyer_calculator",
+            "source_fields": {
+              "buyer_factor": "0.47646742244058266",
+              "reference": "buyer_PAXG_endpoint",
+              "paxg_eur_per_ounce": "3696.31",
+              "reference_updated_at": "2026-10-05T23:55:10+02:00"
+            },
+            "conditions": [],
+            "warnings": [
+              "Reference timestamp is not buyer price publication time."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "or_heritage:gold_items_unspecified:9:indicative:",
+            "purity_carats": "9",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "36.42",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "before_final_tax_assessment",
+            "transaction_channel": "in_person_paris",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.or-heritage.com/rachat.html",
+            "observed_at": "2026-10-05T21:56:27.889441Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "buyer_calculator",
+            "source_fields": {
+              "buyer_factor": "0.30650509539764936",
+              "reference": "buyer_PAXG_endpoint",
+              "paxg_eur_per_ounce": "3696.31",
+              "reference_updated_at": "2026-10-05T23:55:10+02:00"
+            },
+            "conditions": [],
+            "warnings": [
+              "Reference timestamp is not buyer price publication time."
+            ],
+            "comparison_eligible": false
+          }
+        ],
+        "conditions": [
+          "Estimation gratuite",
+          "* Prix au gramme indicatifs, basés sur le cours du jour. Le montant définitif est confirmé en rendez-vous après pesée certifiée, test du métal et prise en compte de la fiscalité applicable.",
+          "* Montants bruts indicatifs avant fiscalité. La vente est obligatoirement soumise à la TMP (Taxe sur les Métaux Précieux — 11,5 %) par défaut, ou à la TPV (Taxe sur la Plus-Value) sur présentation d'une facture nominative ou d'un acte de succession.",
+          "Certaines pièces, lingots ou produits en métaux précieux peuvent faire l’objet d’une estimation personnalisée, même s’ils ne figurent pas dans les tableaux ci-dessus.",
+          "Les poinçons présents sur les bijoux donnent une première indication du titrage du métal. L’estimation définitive est confirmée lors du rendez-vous, après contrôle, pesée et vérification.",
+          "Pesée certifiée, contrôle du métal et estimation selon le cours du jour. Aucun frais ni commission.",
+          "Non. L'estimation est gratuite et sans engagement .",
+          "Pour les bijoux, broutilles, débris et bijoux cassés en or destinés à la fonte , nous procédons au rachat à partir d'un poids minimum de 20 grammes .",
+          "Oui, pour les estimations importantes (succession, gros volume, mobilité réduite), nous nous déplaçons à Paris et région parisienne.",
+          "Réservez votre rendez-vous d'estimation gratuite — ou contactez-nous directement."
+        ],
+        "warnings": [],
+        "documents": [
+          {
+            "url": "https://www.or-heritage.com/robots.txt",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:25.859401+00:00",
+            "sha256": "43d37b946ff7e3f07466b07f3537e5316632726dc6890e90af4a8bd35433d7dd"
+          },
+          {
+            "url": "https://www.or-heritage.com/rachat.html",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:26.885573+00:00",
+            "sha256": "cda87a074fc642a2c2873181131c07d6cfb1fef752cd4a56b5888aede6483ce6"
+          },
+          {
+            "url": "https://www.or-heritage.com/script.js?v=193",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:27.280853+00:00",
+            "sha256": "463340cdc7fdea0d60b2915d0af1d033a9c9c3867142c98a1fe6cfcc66976a54"
+          },
+          {
+            "url": "https://www.or-heritage.com/.netlify/functions/coingecko-paxg",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:27.889441+00:00",
+            "sha256": "90a2df6057141f916b5dc19d243e5876c95356912c32e082cb3688684e350ce7"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "buyer_id": "antheor",
+      "status": "ok",
+      "attempted_at": "2026-10-05T21:56:27.985833+00:00",
+      "observation": {
+        "buyer_id": "antheor",
+        "observed_at": "2026-10-05T21:56:28.766730Z",
+        "rates": [
+          {
+            "rate_id": "antheor:jewellery_for_melting:9:indicative:",
+            "purity_carats": "9",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "29",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "jewellery_for_melting",
+            "price_basis": "unknown",
+            "transaction_channel": "in_person_paris",
+            "min_weight_g": "10",
+            "max_weight_g": null,
+            "source_url": "https://www.antheor-paris.fr/rachat-or-paris/",
+            "observed_at": "2026-10-05T21:56:28.766730Z",
+            "source_updated_at": "2026-10-05T23:37:00+02:00",
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {},
+            "conditions": [],
+            "warnings": [
+              "General table; weight-dependent examples are not firm tiers."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "antheor:jewellery_for_melting:14:indicative:",
+            "purity_carats": "14",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "54",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "jewellery_for_melting",
+            "price_basis": "unknown",
+            "transaction_channel": "in_person_paris",
+            "min_weight_g": "10",
+            "max_weight_g": null,
+            "source_url": "https://www.antheor-paris.fr/rachat-or-paris/",
+            "observed_at": "2026-10-05T21:56:28.766730Z",
+            "source_updated_at": "2026-10-05T23:37:00+02:00",
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {},
+            "conditions": [],
+            "warnings": [
+              "General table; weight-dependent examples are not firm tiers."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "antheor:jewellery_for_melting:18:indicative:",
+            "purity_carats": "18",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "76",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "jewellery_for_melting",
+            "price_basis": "unknown",
+            "transaction_channel": "in_person_paris",
+            "min_weight_g": "10",
+            "max_weight_g": null,
+            "source_url": "https://www.antheor-paris.fr/rachat-or-paris/",
+            "observed_at": "2026-10-05T21:56:28.766730Z",
+            "source_updated_at": "2026-10-05T23:37:00+02:00",
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {},
+            "conditions": [],
+            "warnings": [
+              "General table; weight-dependent examples are not firm tiers."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "antheor:jewellery_for_melting:21:indicative:",
+            "purity_carats": "21",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "90",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "jewellery_for_melting",
+            "price_basis": "unknown",
+            "transaction_channel": "in_person_paris",
+            "min_weight_g": "10",
+            "max_weight_g": null,
+            "source_url": "https://www.antheor-paris.fr/rachat-or-paris/",
+            "observed_at": "2026-10-05T21:56:28.766730Z",
+            "source_updated_at": "2026-10-05T23:37:00+02:00",
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {},
+            "conditions": [],
+            "warnings": [
+              "General table; weight-dependent examples are not firm tiers."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "antheor:jewellery_for_melting:22:indicative:",
+            "purity_carats": "22",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "96",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "jewellery_for_melting",
+            "price_basis": "unknown",
+            "transaction_channel": "in_person_paris",
+            "min_weight_g": "10",
+            "max_weight_g": null,
+            "source_url": "https://www.antheor-paris.fr/rachat-or-paris/",
+            "observed_at": "2026-10-05T21:56:28.766730Z",
+            "source_updated_at": "2026-10-05T23:37:00+02:00",
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {},
+            "conditions": [],
+            "warnings": [
+              "General table; weight-dependent examples are not firm tiers."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "antheor:investment_gold:24:indicative:",
+            "purity_carats": "24",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "118",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "investment_gold",
+            "price_basis": "unknown",
+            "transaction_channel": "in_person_paris",
+            "min_weight_g": "10",
+            "max_weight_g": null,
+            "source_url": "https://www.antheor-paris.fr/rachat-or-paris/",
+            "observed_at": "2026-10-05T21:56:28.766730Z",
+            "source_updated_at": "2026-10-05T23:37:00+02:00",
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {},
+            "conditions": [],
+            "warnings": [
+              "General table; weight-dependent examples are not firm tiers."
+            ],
+            "comparison_eligible": false
+          }
+        ],
+        "conditions": [
+          "Votre estimation est réalisée gratuitement, devant vous et sans engagement. La proposition tient compte du cours au moment du devis , du titre, du poids net et de la nature de l'objet. Un bijou signé ou serti peut être valorisé au-delà de son seul poids d'or. Contactez-nous pour connaître le prix du jour .",
+          "Estimation gratuite",
+          "Débris d'or - Or cassé - Bracelets Colliers... une proposition fondée sur le titre, le poids net, le cours au moment du devis et l'expertise Quantité minimum pour la reprise :10 grammes",
+          "Mise à jour : 05/10/2026 à 23:37 (heure de Paris). Cours indicatif de l'or fin : 118,84 €/g.",
+          "*Repère 24 carats : le tarif indicatif des lingots, lingotins et pièces en or fin suit le cours de l’or en temps réel. Le montant net exact dépend de la nature du bien, de son état, des justificatifs disponibles et du régime fiscal applicable.",
+          "Les tarifs 9K à 22K sont des estimations pour de l'or destiné à la fonte, actualisées selon le cours international de l’or et le taux de change euro-dollar. Le repère 24K concerne les lingots et pièces en or fin selon la règle précisée ci-dessus. Ces valeurs ne constituent pas une offre ferme. La proposition dépend du contrôle du titre, du poids net, de la quantité, de la nature de l'objet et du régime fiscal applicable. Elle vous est expliquée avant la vente et reste valable au moment du devis.",
+          "Un bijou intact ou signé peut être valorisé au-delà de son seul poids d'or. Pour préparer votre estimation, consultez aussi le rachat d'or à Paris , les lingots d'or et les pièces d'or .",
+          "Anthéor Paris vous accueille au 8 rue Corvetto, 75008 Paris, pour une estimation gratuite de vos bijoux en or, pièces, lingots, débris d'or et or cassé. La proposition dépend du cours de l'or, du titre et du poids contrôlé.",
+          "Le meilleur prix dépend d'une expertise réelle : titre de l'or, poids, état, pierres, signature et cours du jour. La boutique Anthéor Paris, 8 rue Corvetto, réalise cette estimation gratuitement avant toute proposition.",
+          "Le virement instantané dépend des plafonds et contrôles bancaires. À titre indicatif, un plafond journalier d'environ 40 000 € peut s'appliquer. Au-delà ou en cas de blocage bancaire, Anthéor propose un virement différé ou un chèque de société.",
+          "Lorsqu'un délai légal de rétractation s'applique, le bien est conservé dans son état d'origine pendant 48 heures. Après ce délai, l'or destiné à la fonte peut être regroupé puis transmis au fondeur.",
+          "La proposition suit le cours et le marché observés au moment de l'expertise. Les tarifs indicatifs du site sont recalculés plusieurs fois par jour et un prix communiqué un autre jour ne peut pas être garanti.",
+          "Anthéor explique avant la signature les prélèvements légaux applicables et les distingue des éventuels frais commerciaux.",
+          "Estimation de l’or"
+        ],
+        "warnings": [],
+        "documents": [
+          {
+            "url": "https://www.antheor-paris.fr/robots.txt",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:28.347506+00:00",
+            "sha256": "fa760766cc671c6c4b818abd16b21a6b2db8ebe00a3112d27e789a98984b7021"
+          },
+          {
+            "url": "https://www.antheor-paris.fr/rachat-or-paris/",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:28.766730+00:00",
+            "sha256": "98385f292921284f15ed447e4e4403d5050f9b575e37907c92a93965f8c690fb"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "buyer_id": "abacor",
+      "status": "ok",
+      "attempted_at": "2026-10-05T21:56:28.839497+00:00",
+      "observation": {
+        "buyer_id": "abacor",
+        "observed_at": "2026-10-05T21:56:30.170499Z",
+        "rates": [
+          {
+            "rate_id": "abacor:gold_items_unspecified:24:up_to:",
+            "purity_carats": "24",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "123",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "up_to",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "unknown",
+            "transaction_channel": "in_person_paris_neuilly",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.abacor.fr/or/achat-or/",
+            "observed_at": "2026-10-05T21:56:30.170499Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {},
+            "conditions": [
+              "En outre, pour calculer le prix d’un objet en or il faut comprendre qu’en fonction de la qualité de l’alliage il est composé de plus au moins d’or, c’est ce qu’on appelle le carat. Un lingot d’or pur est composé de 99,9% d’or soit 24 carats, alors qu’une pièce d’or ancienne est en général composée de 91,7% d’or soit 22 carats et des bijoux en or de qualité sont composés de 75% d’or soit 18 carats. Ainsi, en fonction de la quantité et de la qualité de l’or que vous souhaitez vendre, Abacor peut racheter celui-ci jusqu’à 123 euros le gramme pour de l’or 24 carats et 89 euros le gramme d’or 18 carats ."
+            ],
+            "warnings": [
+              "Quantity-dependent upper limit; exact tiers unknown."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "abacor:gold_items_unspecified:18:up_to:",
+            "purity_carats": "18",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "89",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "up_to",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "unknown",
+            "transaction_channel": "in_person_paris_neuilly",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.abacor.fr/or/achat-or/",
+            "observed_at": "2026-10-05T21:56:30.170499Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {},
+            "conditions": [
+              "En outre, pour calculer le prix d’un objet en or il faut comprendre qu’en fonction de la qualité de l’alliage il est composé de plus au moins d’or, c’est ce qu’on appelle le carat. Un lingot d’or pur est composé de 99,9% d’or soit 24 carats, alors qu’une pièce d’or ancienne est en général composée de 91,7% d’or soit 22 carats et des bijoux en or de qualité sont composés de 75% d’or soit 18 carats. Ainsi, en fonction de la quantité et de la qualité de l’or que vous souhaitez vendre, Abacor peut racheter celui-ci jusqu’à 123 euros le gramme pour de l’or 24 carats et 89 euros le gramme d’or 18 carats ."
+            ],
+            "warnings": [
+              "Quantity-dependent upper limit; exact tiers unknown."
+            ],
+            "comparison_eligible": false
+          }
+        ],
+        "conditions": [
+          "Vous vous demandez où vendre vos bijoux en or au meilleur prix ? Quel est le tarif d’un gramme d’or 18 ou 24 carats ? Comment vendre votre lingot d’or sans frais de courtage ? Quel est le prix de rachat d’or aujourd’hui ? Où acheter de l’or à Paris ? Où trouver un comptoir d’achat or ouvert actuellement ? Vous êtes au bon endroit, car Abacor vous accompagne et vous explique en toute transparence ce que vous devez savoir sur le précieux métal jaune afin que votre achat ou votre vente d’or se déroule dans les meilleures conditions.",
+          "Depuis 1996, Abacor vous propose ses services d’estimation, d’achat et de vente d’or à Paris. Nous vous accueillons dans nos agences pour l’expertise et le rachat de vos biens en or ou la vente de pièces et de lingots en or. Nous offrons un meilleur tarif d’achat et de vente d’or que la concurrence pour satisfaire et fidéliser nos clients. Nos professionnels du négoce d’or déterminent précisément la valeur de votre or selon sa qualité, son poids et le cours de l’or du jour et procèdent à l’évaluation la plus précise possible à l’aide de balances contrôlées et de méthodes de test certifiées.",
+          "Estimation gratuite",
+          "Nos experts en estimation et reprise d’or estiment vos bijoux, vos pièces ou vos lingots gratuitement et sans engagement. Une fois que la pureté de l’or a été estimée et que le poids a été mesuré, le prix est calculé selon le cours de l’or en temps réel. Abacor est reconnu pour ses tarifs compétitifs et ses paiements rapides.",
+          "En effet, nous proposons les meilleurs prix pour le rachat d’or 18 carats, allant jusqu’à 89€/g pour l’or destiné à la fonte et à partir de 200€/g pour les bijoux d’occasion . Pour l’or riche en 24 carats, nous rachetons même jusqu’à 123€/g en fonction de la quantité que vous souhaitez revendre. Ces tarifs sont indiqués à titre indicatif et susceptibles d’évolution rapide à la hausse comme à la baisse en fonction du cours de l’or. Pour obtenir une estimation précise valant offre ferme de rachat, un examen physique de vos objets en or sera nécessaire, contactez-nous pour obtenir un rendez-vous .",
+          "Nous sommes également en mesure d’effectuer des estimations dans le cadre d’une succession, afin de faciliter un partage éventuel. Pour toute question concernant une estimation du prix de vos bijoux ou objets en or, contactez nous par téléphone au 01 48 04 76 06 ou via notre formulaire de contact . Grâce à l’expertise de nos spécialistes en métaux précieux, vous pourrez connaître gratuitement le prix de votre or en nous rendant visite au comptoir de rachat d’or du 13 Rue de Rivoli, 75004 Paris ; au 59 Rue Saint-Antoine, 75004 Paris ou au 109 Avenue Charles de Gaulle, 92200 Neuilly-sur-Seine . Pour les grandes quantités d’or, un expert peut se déplacer pour effectuer une offre de rachat d’or à domicile si vous êtes dans l’incapacité de venir.",
+          "Abacor rachète vos lingots, pièces, bijoux, montres et bagues en or. Nous évaluons et rachetons les lingots d’or, ainsi que les lingotins et les pièces d’or, sur la base de leur cotation. Ainsi, pendant l’expertise de vos pièces, nos experts en numismatique les examinent attentivement en se référant à leur registre numismatique, ceci leur permet d’en réaliser une estimation précise et de vous en proposer le meilleur prix de rachat.",
+          "Chez Abacor, nous offrons le meilleur prix pour le rachat de l’or depuis bientôt 30 ans. Nous sommes en mesure d’offrir les meilleur prix de rachat d’or, car nous travaillons sans intermédiaire. Nous maintenons par ailleurs des frais généraux minimes, tout en traitant de très gros volumes grâce à notre réputation.",
+          "Chez Abacor, chaque transaction est réalisée dans un cadre sûr, afin de vous garantir une vente d’or en toute sérénité. Ainsi, l’estimation de vos objets en or sera réalisée dans un sas sécurisé et les paiements se font uniquement par virement bancaire instantané. Si vous souhaitez vendre une grande quantité d’or, il est même possible de passer par notre service de rachat d’or à domicile . Pour toute opération de rachat d’or, la présentation d’une pièce d’identité en cours de validité est obligatoire afin que la vente soit conforme à la réglementation en vigueur. Seul une carte nationale d’identité, un passeport ou permis de conduire français émis après le 16 septembre 2013 sont acceptés. Enfin, nos prix de rachat sont indexés en temps réel sur le cours officiel de l’or et peuvent être revalorisés en fonction des quantités apportées. Les tarifs affichés au comptoir sont toujours basés sur le cours du jour et vous assurent une transaction au juste prix du marché.",
+          "Voici les prix du gramme d’or aujourd’hui, selon les différents titres calculés sur la base d’un cours de l’or du jour au kilo. Ces tarifs sont ceux des échanges interbancaires, pour connaitre les prix de rachat pratiqués à nos comptoir de Paris et Neuilly-sur-Seine, il faut y retrancher les frais de rachat et de fonte.",
+          "Estimation Or & Argent"
+        ],
+        "warnings": [],
+        "documents": [
+          {
+            "url": "https://www.abacor.fr/robots.txt",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:29.754838+00:00",
+            "sha256": "3671cb26a88267dbdefd826dda5a9c55806212cb5f5347d305b64c02a1960c33"
+          },
+          {
+            "url": "https://www.abacor.fr/or/achat-or/",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:30.170499+00:00",
+            "sha256": "4c1c0f99df508f110c1fbf15bf1b7cd8c08b79be413856a763738271d951644f"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "buyer_id": "gold_fr",
+      "status": "formula_only",
+      "attempted_at": "2026-10-05T21:56:30.261513+00:00",
+      "observation": {
+        "buyer_id": "gold_fr",
+        "observed_at": "2026-10-05T21:56:30.996598Z",
+        "rates": [
+          {
+            "rate_id": "gold_fr:gold_items_unspecified:18:minimum_formula:",
+            "purity_carats": "18",
+            "fineness_per_mille": "750",
+            "price_eur_per_gram": null,
+            "max_price_eur_per_gram": null,
+            "quote_kind": "minimum_formula",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "unknown",
+            "transaction_channel": "postal_gold_kit",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://gold.fr/gold-kit/",
+            "observed_at": "2026-10-05T21:56:30.996598Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "formula",
+            "source_fields": {
+              "minimum_factor": "0.55",
+              "reference": "London_second_fixing_adjusted_by_fineness"
+            },
+            "conditions": [
+              "Prix Garanti Minimum : 55% du cours au g titré / gramme de 18k (750/1000°) *"
+            ],
+            "warnings": [],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "gold_fr:gold_items_unspecified:14:minimum_formula:",
+            "purity_carats": "14",
+            "fineness_per_mille": "585",
+            "price_eur_per_gram": null,
+            "max_price_eur_per_gram": null,
+            "quote_kind": "minimum_formula",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "unknown",
+            "transaction_channel": "postal_gold_kit",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://gold.fr/gold-kit/",
+            "observed_at": "2026-10-05T21:56:30.996598Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "formula",
+            "source_fields": {
+              "minimum_factor": "0.5",
+              "reference": "London_second_fixing_adjusted_by_fineness"
+            },
+            "conditions": [
+              "Prix Garanti Minimum : 50% du cours au g titré / gramme de 14k (585/1000°)"
+            ],
+            "warnings": [],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "gold_fr:gold_items_unspecified:9:minimum_formula:",
+            "purity_carats": "9",
+            "fineness_per_mille": "333",
+            "price_eur_per_gram": null,
+            "max_price_eur_per_gram": null,
+            "quote_kind": "minimum_formula",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "unknown",
+            "transaction_channel": "postal_gold_kit",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://gold.fr/gold-kit/",
+            "observed_at": "2026-10-05T21:56:30.996598Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "formula",
+            "source_fields": {
+              "minimum_factor": "0.45",
+              "reference": "London_second_fixing_adjusted_by_fineness"
+            },
+            "conditions": [
+              "Prix Garanti Minimum : 45% du cours au g titré / gramme de 9k (333/1000°)"
+            ],
+            "warnings": [
+              "Source carats/fineness mismatch; formula quarantined."
+            ],
+            "comparison_eligible": false
+          }
+        ],
+        "conditions": [
+          "Doit on intégrer la vente de son Or à sa déclaration sur le revenu (IR) ? La vente de son Or (pièces, lingots) est elle soumise à l'impôt sur le revenu (IR) ?   Non ! Mais... Concernant l’impôt sur le revenu, une fois acquittée la taxe sur les métaux précieux (TMP) ou l’impôt au titre de la plus-value mobilière (TPV) ...",
+          "Existe-t-il une taxe sur la vente d’Or ? La vente d’Or est encadrée par un dispositif fiscal particulier, en vigueur depuis 2006. En effet, tout particulier souhaitant vendre son Or se doit d’opter pour l’un des deux régimes de taxation suivants : Taxe forfaitaire de 11,5% appliquée au montant brut de la vente; ...",
+          "Y a-t-il un délai de rétractation ? Il n’y a pas de délai de rétractation possible pour les transactions portant sur l’or Investissement car cela inciterait massivement les particuliers à se retirer en cas de baisse des cours de l'or suite à l'achat d'Or  En revanche, toutes les autres opérations sont soumises ...",
+          "Les présentes conditions d’utilisation (ci-après les « Conditions ») régissent toute utilisation des services accessibles depuis le Site Internet www.gold.fr , effectuée par une personne physique non commerçante (ci-après, « Vous » ou le « Client »), qui souhaite nous confier l'achat ou la vente d'or ou de métaux précieux. Gold Trade agit en qualité de commissionnaire.",
+          "Les opérations d’achat et de vente sur or sont soumises à une fiscalité particulière. A titre indicatif, les principales dispositions fiscales applicables à ces opérations sont consultables sur notre guide fiscal. Ces informations sont cependant mises à disposition à titre purement indicatif et sont susceptibles de ne pas refléter les dernières évolutions législatives ou réglementaires. En aucun cas, elles sauraient être interprétées comme des recommandations ou comme une consultation fiscale.",
+          "Le Client est informé qu’il ne peut expédier ses produits à Gold Trade qu’en utilisant le Gold Kit. Les frais d’expédition et d’assurance du Gold Kit restent à sa charge. Au-delà de 500 € de rachat (hors Produits Boursables), les frais de retour sont pris en charge par Gold Trade.",
+          "Lorsque le Produit vendu par le Client est un Produit Boursable, le tarif de référence de la transaction est fondé sur le cours CPoR de 13h du jour de réception du Gold kit, moins la commission et les frais prélevés par Gold Trade, tels que mentionnés à l’article 7 des présentes.",
+          "Les Produits Non Boursables sont évalués sur la base de leur poids, leur titrage et leur qualité au moment où l’estimation est effectuée par Gold Trade.",
+          "Concernant l’évaluation de la valeur des Produits d’Or Non Boursables, Gold Trade garantit des prix minimum de rachat, preuve de notre sérieux et notre engagement à pratiquer des prix compétitifs.",
+          "Ces prix minimum peuvent varier à la hausse, en fonction des critères d’expertise tels que la qualité et la quantité des Produits vendus ainsi qu’en fonction de l’évolution des cours.",
+          "Ces prix minimums sont les suivants :",
+          "Prix Garanti Minimum : 55% du cours au g titré / gramme de 18k (750/1000°) *",
+          "Prix Garanti Minimum : 50% du cours au g titré / gramme de 14k (585/1000°)",
+          "Prix Garanti Minimum : 45% du cours au g titré / gramme de 9k (333/1000°)",
+          "Les frais de retour et d’assurance sont à la charge de Gold Trade, sauf abus manifeste de la part du Client.",
+          "5.4.4. Droit de rétractation applicable à la vente par le Client de Vieil Or",
+          "Lorsque le Produit vendu n’est pas de l’Or Investissement, le Client dispose d'un délai de 48 heures à compter de son acceptation de l'Offre pour exercer le droit de rétractation mentionné au présent article 5.4.4.",
+          "Le Client n’a pas à justifier de motifs ni à payer de pénalités pour exercer son droit de rétractation.",
+          "Le Client souhaitant exercer son droit de rétractation, utilise le formulaire de rétractation détachable joint en annexe du contrat de vente ou accessible depuis le lien suivant : https://www.gold.fr/informations-sur-l-or/tout-savoir/coupon-detachable-formulaire-retractation",
+          "Pour exercer son droit de rétractation, le Client adresse à Gold Trade le formulaire détachable, par un moyen permettant d'attester de la date et de l'heure de l'envoi, au plus tard 48 heures à compter du jour et de l'heure de l’acceptation de l'Offre.",
+          "En cas d’exercice du droit de rétractation, le Client doit rembourser à Gold Trade le prix perçu, le cas échéant, et en contrepartie, Gold Trade lui restituera les Produits.",
+          "A défaut d’exercice du droit de rétractation dans le délai imparti, le contrat de vente est conclu définitivement.",
+          "Le Client est informé qu’il ne bénéficie pas de délai de rétractation lors de la vente d’Or Investissement, en application de l’article L.224-99 du Code de la consommation.",
+          "Lors du paiement des Produits d’Or Boursable, un décompte mentionnant la nature des Produits achetées par de Gold Trade, ainsi que le cours retenu en application des dispositions de l’article 5.4.1 et le détail des frais et commission mentionnés à l’article 7 est adressé au Client.",
+          "Dans tous les cas, le prix de la vente avant prélèvement de la taxe sur les Métaux précieux et de la CRDS, le montant de la taxe sur les Métaux précieux et de la CRDS, et le montant du prix réglé au Client, après prélèvement de la taxe sur les Métaux précieux et de la CRDS sont indiqués au Client.",
+          "Le coût approximatif d’achat est fonction du cours des Produits Boursables, accessible depuis le lien suivant https://www.gold.fr/cours-or-prix-de-l-or/ , à la date correspondant à la nature de l’ordre donné par le Client, « au mieux », « limité »), ainsi que de notre commission et des frais visés aux articles 7.",
+          "Lorsque le montant viré par le Client est supérieur au coût de l’ordre passé, du fait des fluctuations du cours de l’or, Gold Trade rembourse le solde en joignant un chèque de remboursement à la commande.",
+          "6.4. Absence de droit de rétractation",
+          "Au titre de l’article L. 221-28 du Code de la consommation, « le droit de rétractation ne peut être exercé pour les contrats de fourniture de biens ou de services dont le prix dépend de fluctuations sur le marché financier échappant au contrôle du professionnel et susceptibles de se produire pendant le délai de rétractation ».",
+          "Le cours de l'or étant soumis aux fluctuations des taux du marché financier, le Client ne peut exercer de droit de rétractation une fois les ordres passés pour son compte.",
+          "Les frais de livraison sont à la charge du Client et lui sont facturés sur le bordereau de vente.",
+          "En cas de retard de livraison de plus de trois jours ouvrés par rapport au délai indicatif de livraison mentionné dans le courriel de confirmation de la livraison, le Client doit vérifier auprès de son bureau de poste distributeur habituel s’il n’a pas de colis en instance.",
+          "7.1. Frais appliqués aux principales transactions",
+          "Les opérations effectuées en ligne par les Clients sont soumises au paiement de frais, tels que précisés ci-après :",
+          "7.1.1. Taxe sur les métaux précieux - FISCALITE"
+        ],
+        "warnings": [],
+        "documents": [
+          {
+            "url": "https://gold.fr/robots.txt",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:30.561664+00:00",
+            "sha256": "7bee4d9bcbd0bfb9b474e5fb74a68ce918239464a707232e25d86cf3e962070f"
+          },
+          {
+            "url": "https://gold.fr/gold-kit/",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:30.996598+00:00",
+            "sha256": "ac8f71e6f968f479e01cfbbd426c1040d3ba94c60f85cb1787e307a4e2e5dbfc"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "buyer_id": "orencash",
+      "status": "ok",
+      "attempted_at": "2026-10-05T21:56:31.051661+00:00",
+      "observation": {
+        "buyer_id": "orencash",
+        "observed_at": "2026-10-05T21:56:32.614457Z",
+        "rates": [
+          {
+            "rate_id": "orencash:or_bijoux:9:indicative:or_bijoux",
+            "purity_carats": "9",
+            "fineness_per_mille": "375.000",
+            "price_eur_per_gram": "33.806354926250",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "or_bijoux",
+            "price_basis": "unknown",
+            "transaction_channel": "postal_or_agency",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.orencash.fr/nos-services/vendre-son-or-sur-internet/",
+            "observed_at": "2026-10-05T21:56:32.614457Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "buyer_calculator",
+            "source_fields": {
+              "source_label": "9 carats",
+              "buyer_reference_eur_per_gram": "118.614",
+              "purity_factor": "0.375",
+              "scale": "0.993",
+              "low_purity_cutoff": "0.9",
+              "low_purity_factor": "0.985",
+              "deduction_eur_per_gram": "9.7"
+            },
+            "conditions": [],
+            "warnings": [
+              "Source calculator estimate; deductions already applied. Final tax basis unvalidated."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "orencash:or_bijoux:14:indicative:or_bijoux",
+            "purity_carats": "14",
+            "fineness_per_mille": "585.000",
+            "price_eur_per_gram": "54.369913684950",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "or_bijoux",
+            "price_basis": "unknown",
+            "transaction_channel": "postal_or_agency",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.orencash.fr/nos-services/vendre-son-or-sur-internet/",
+            "observed_at": "2026-10-05T21:56:32.614457Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "buyer_calculator",
+            "source_fields": {
+              "source_label": "14 carats",
+              "buyer_reference_eur_per_gram": "118.614",
+              "purity_factor": "0.585",
+              "scale": "0.993",
+              "low_purity_cutoff": "0.9",
+              "low_purity_factor": "0.985",
+              "deduction_eur_per_gram": "13.5"
+            },
+            "conditions": [],
+            "warnings": [
+              "Source calculator estimate; deductions already applied. Final tax basis unvalidated."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "orencash:or_bijoux:18:indicative:or_bijoux",
+            "purity_carats": "18",
+            "fineness_per_mille": "750.000",
+            "price_eur_per_gram": "73.512709852500",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "or_bijoux",
+            "price_basis": "unknown",
+            "transaction_channel": "postal_or_agency",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.orencash.fr/nos-services/vendre-son-or-sur-internet/",
+            "observed_at": "2026-10-05T21:56:32.614457Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "buyer_calculator",
+            "source_fields": {
+              "source_label": "18 carats",
+              "buyer_reference_eur_per_gram": "118.614",
+              "purity_factor": "0.750",
+              "scale": "0.993",
+              "low_purity_cutoff": "0.9",
+              "low_purity_factor": "0.985",
+              "deduction_eur_per_gram": "13.5"
+            },
+            "conditions": [],
+            "warnings": [
+              "Source calculator estimate; deductions already applied. Final tax basis unvalidated."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "orencash:or_bijoux:24:indicative:or_bijoux",
+            "purity_carats": "24",
+            "fineness_per_mille": "1000.000",
+            "price_eur_per_gram": "104.283702000",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "or_bijoux",
+            "price_basis": "unknown",
+            "transaction_channel": "postal_or_agency",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.orencash.fr/nos-services/vendre-son-or-sur-internet/",
+            "observed_at": "2026-10-05T21:56:32.614457Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "buyer_calculator",
+            "source_fields": {
+              "source_label": "24 carats",
+              "buyer_reference_eur_per_gram": "118.614",
+              "purity_factor": "1.000",
+              "scale": "0.993",
+              "low_purity_cutoff": "0.9",
+              "low_purity_factor": "0.985",
+              "deduction_eur_per_gram": "13.5"
+            },
+            "conditions": [],
+            "warnings": [
+              "Source calculator estimate; deductions already applied. Final tax basis unvalidated."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "orencash:or_lingot:24:indicative:or_lingot",
+            "purity_carats": "24",
+            "fineness_per_mille": "1000.000",
+            "price_eur_per_gram": "104.283702000",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "or_lingot",
+            "price_basis": "unknown",
+            "transaction_channel": "postal_or_agency",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.orencash.fr/nos-services/vendre-son-or-sur-internet/",
+            "observed_at": "2026-10-05T21:56:32.614457Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "buyer_calculator",
+            "source_fields": {
+              "source_label": "24 carats",
+              "buyer_reference_eur_per_gram": "118.614",
+              "purity_factor": "1.000",
+              "scale": "0.993",
+              "low_purity_cutoff": "0.9",
+              "low_purity_factor": "0.985",
+              "deduction_eur_per_gram": "13.5"
+            },
+            "conditions": [],
+            "warnings": [
+              "Source calculator estimate; deductions already applied. Final tax basis unvalidated."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "orencash:or_dentaire:None:indicative:or_dentaire",
+            "purity_carats": null,
+            "fineness_per_mille": "650.000",
+            "price_eur_per_gram": "61.911015205500",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "or_dentaire",
+            "price_basis": "unknown",
+            "transaction_channel": "postal_or_agency",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.orencash.fr/nos-services/vendre-son-or-sur-internet/",
+            "observed_at": "2026-10-05T21:56:32.614457Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "buyer_calculator",
+            "source_fields": {
+              "source_label": "650 ‰ (650 millièmes)*",
+              "buyer_reference_eur_per_gram": "118.614",
+              "purity_factor": "0.650",
+              "scale": "0.993",
+              "low_purity_cutoff": "0.9",
+              "low_purity_factor": "0.985",
+              "deduction_eur_per_gram": "13.5"
+            },
+            "conditions": [],
+            "warnings": [
+              "Source calculator estimate; deductions already applied. Final tax basis unvalidated."
+            ],
+            "comparison_eligible": false
+          }
+        ],
+        "conditions": [
+          "5 Pré-estimation",
+          "À titre indicatif, vous pouvez utiliser une balance de cuisine. Pour avoir un poids précis, nous vous invitons à vous rendre dans une agence Or en Cash.",
+          "Le prix présenté est établi en fonction des critères renseignés et est basé sur le cours de l'or actuel. Pour avoir une estimation plus précise, nous vous invitons à prendre rendez-vous dans l'une de nos agences.",
+          "Certaines ventes peuvent être soumises à la taxe forfaitaire sur les métaux précieux : - Pour les cessions de bijoux (TFMP 6% + CRDS 0.5% taxe due uniquement lorsque la cession excède 5 000€). La taxe est déduite du prix de rachat lors de la conclusion de la vente, voir conditions en agence d'application ci-après.",
+          "Certaines ventes peuvent être soumises à la taxe forfaitaire sur les métaux précieux : - Pour les cessions de métaux précieux (TFMP 11% + CRDS 0.5%). Dans tous les cas, option possible pour le régime de droit commun (taxe sur les plus-values réelles : TPV 19% + prélèvement sociaux 18.6%). La taxe est déduite du prix de rachat lors de la conclusion de la vente, voir conditions en agence d'application ci-après.",
+          "Certaines ventes peuvent être soumises à la taxe forfaitaire sur les métaux précieux : - Pour les cessions de métaux précieux (TFMP 11% + CRDS 0.5%). La taxe est déduite du prix de rachat lors de la conclusion de la vente, voir conditions en agence d'application ci-après.",
+          "Pour vous proposer une estimation fiable et transparente, nos experts réalisent cette analyse directement en agence.",
+          "L'estimation est gratuite et sans engagement.",
+          "Le platine est un métal rare et précieux dont chaque pièce est unique. Sa valeur dépend de critères fins comme la composition, l'alliage et l'état, que seule une analyse en main permet d'évaluer justement. C'est pourquoi nos experts vous reçoivent en agence pour une estimation gratuite, précise et sans engagement.",
+          "*Le montant affiché est brut. L'achat de pièces et lingots est, au même titre que tout investissement, soumis à un régime fiscal. Une taxe sera déduite du prix brut en cas de revente. En savoir plus sur la fiscalité liée à l'argent d'investissement",
+          "L'estimation des bijoux et l'offre de rachat sont envoyées par mail. En cas d'accord du client, le règlement par virement bancaire est immédiat. L'envoi est remboursé dès 600€ de transaction conclue",
+          "Le prix de rachat ne convient pas ? Nous restituons le lot et prenons en charge les frais de retour. Notre expertise est gratuite et sans engagement !",
+          "Nous garantissons une discrétion totale pour toutes vos estimations et transactions.",
+          "L'estimation est réalisée sous vos yeux, en toute transparence et selon le cours du jour.",
+          "Estimation en ligne"
+        ],
+        "warnings": [],
+        "documents": [
+          {
+            "url": "https://www.orencash.fr/robots.txt",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:31.393085+00:00",
+            "sha256": "5d02b1ae642b1662b18f2f838df067c9315607641936c2e71de37d233f369cc5"
+          },
+          {
+            "url": "https://www.orencash.fr/nos-services/vendre-son-or-sur-internet/",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:32.157659+00:00",
+            "sha256": "671fe1946c54bf12ab6b57a6377efa58a45fd3aa534d344b8ff93e02665cb115"
+          },
+          {
+            "url": "https://www.orencash.fr/build/app/shop/app-shop-entry.5969b557.js",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:32.614457+00:00",
+            "sha256": "e2dc93374ffa8906baac5c60d76cf324c59c90ac5ee00b69b273ecb7d63a6a31"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "buyer_id": "cuo",
+      "status": "quarantined",
+      "attempted_at": "2026-10-05T21:56:32.693053+00:00",
+      "observation": {
+        "buyer_id": "cuo",
+        "observed_at": "2026-10-05T21:56:33.722739Z",
+        "rates": [
+          {
+            "rate_id": "cuo:jewellery_for_melting:18:indicative:",
+            "purity_carats": "18",
+            "fineness_per_mille": null,
+            "price_eur_per_gram": "81.61",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "jewellery_for_melting",
+            "price_basis": "source_labels_net",
+            "transaction_channel": "postal_for_this_rate",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.cours-de-l-or-prix-or-net.net/",
+            "observed_at": "2026-10-05T21:56:33.722739Z",
+            "source_updated_at": null,
+            "source_date": "2026-10-06",
+            "origin": "displayed",
+            "source_fields": {},
+            "conditions": [],
+            "warnings": [
+              "Future source date; quarantined."
+            ],
+            "comparison_eligible": false
+          }
+        ],
+        "conditions": [
+          "Prix de rachat net d'un lingot d'or *  --------- 116 140€ * détention 22 ans, 999 millèmes - commission 1.5%",
+          "* commission CUO 1.50%",
+          "*minimum de 30 grammes d'or : envoi de l'or remboursé sous kit sécurisé",
+          "Très belle expérience dans cette boutique de rachat d’or. Je suis venu avec mon fils de 13 ans pour faire estimer quelques pièces en argent et quelques bijoux. La personne qui nous a reçus a été vraiment très accueillante, honnête et professionnelle.\r\nCe que j’ai particulièrement apprécié, c’est qu’il a pris le temps de tout regarder tranquillement et surtout d’expliquer les choses à mon fils qui s’intéresse beaucoup aux pièces et aux métaux précieux. Il lui a expliqué comment reconnaître certains métaux, comment se fait l’estimation, et a répondu à ses questions avec beaucoup de gentillesse et de pédagogie.\r\nC’est assez rare aujourd’hui de rencontrer des commerçants qui prennent autant de temps pour leurs clients, surtout pour transmettre leur passion à un jeune.\r\nJe recommande cette boutique sans hésiter pour leur sérieux, leur transparence et leur accueil très chaleureux. Merci encore pour ce moment très sympathique !",
+          "Je recommande vraiment cette agence ! Accueil très agréable, un dame très professionnelle, sérieuse et surtout très transparente. Tout m’a été expliqué clairement concernant le rachat de mon or, sans aucune mauvaise surprise. L’estimation a été faite rapidement et le paiement a été effectué très rapidement également.\r\n\r\nMerci pour votre sérieux, votre gentillesse et votre professionnalisme. Une très bonne expérience, je reviendrai sans hésiter et je recommande vivement cette adresse ! 😊",
+          "Après 4 semaines de pics intenses, sa plus longue série de hausses depuis la crise du Covid, le cours de l'or avait chuté à 107 500€ au matin du 28 octobre, restant toutefois en hausse de 35% en 1 an. Les raisons de cette chute brutale du cours de l'or :Les ventes d'or, depuis le 20 octobre, s'essoufflent, les investisseurs ayant pris leurs bénéfices sur les stocks d'or de plus de 22 ans, sans taxe à régler: une plus value de plus de 1100% ( le cours de l'or en 2002 atteignaient 10 000€ et s'est vendu à son plus haut à 120 000€)",
+          "Le cours de l'or repart à la hausse de plus de 2000€ ce jeudi 13 mars 2025. Serait ce l'effet d'annonce de taxer les vins et champagne français de 200% par D. Trump qui donne la gueule de bois aux marchés américains buvant le calice de Trump et cie jusqu'à la lie? L'économie américaine commence à chuter , les consommateurs doutent, les marchés de wall street s'affolent.... et le cours de l'or augmente.",
+          "Pour la Saint Valentin, vendredi 14, nous espérions un petit cadeau du cours de l'or à 91 000€ pour profiter du moment présent et vendre son lingot au meilleur prix mais nous ne verrons pas le prix de l'or réaccélérer avant longtemps... Notre commission est réduite au maximum",
+          "Le lingot d'or est racheté au prix de 64 270€ ce 29 mars 2024 ( lingot d'or détenu 22 ans avec certificat et facture) au Comptoir Universel de l'Or. L'écart de prix entre le cours de l'or et le prix de rachat s'explique par le paiement de 1% pour les frais de refonte et de bourse (estampillage et certificat) et la commission du CUO."
+        ],
+        "warnings": [],
+        "documents": [
+          {
+            "url": "https://www.cours-de-l-or-prix-or-net.net/robots.txt",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:33.295632+00:00",
+            "sha256": "76e7f8fd1f3c7dd2d71c445f69e18754ecc5ff27a47801deae77382cc7606ff0"
+          },
+          {
+            "url": "https://www.cours-de-l-or-prix-or-net.net/",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:33.722739+00:00",
+            "sha256": "8caafe9b8a3eb585fe5441c421795e7e033fee15ff7275587d971f30094961aa"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "buyer_id": "comptoircentral",
+      "status": "ok",
+      "attempted_at": "2026-10-05T21:56:33.811348+00:00",
+      "observation": {
+        "buyer_id": "comptoircentral",
+        "observed_at": "2026-10-05T21:56:34.583265Z",
+        "rates": [
+          {
+            "rate_id": "comptoircentral:gold_items_unspecified:21:indicative:",
+            "purity_carats": "21",
+            "fineness_per_mille": "900",
+            "price_eur_per_gram": "87",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "unknown",
+            "transaction_channel": "in_person_marseille",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://comptoircentraldelor.com/rachat-or-et-dargent/",
+            "observed_at": "2026-10-05T21:56:34.583265Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "buyer_calculator",
+            "source_fields": {},
+            "conditions": [],
+            "warnings": [
+              "Calculator's initial HTML total may differ; extracted active calculator inputs.",
+              "Source carats/fineness mismatch; review required."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "comptoircentral:gold_items_unspecified:18:indicative:",
+            "purity_carats": "18",
+            "fineness_per_mille": "750",
+            "price_eur_per_gram": "80",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "unknown",
+            "transaction_channel": "in_person_marseille",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://comptoircentraldelor.com/rachat-or-et-dargent/",
+            "observed_at": "2026-10-05T21:56:34.583265Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "buyer_calculator",
+            "source_fields": {},
+            "conditions": [],
+            "warnings": [
+              "Calculator's initial HTML total may differ; extracted active calculator inputs."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "comptoircentral:gold_items_unspecified:14:indicative:",
+            "purity_carats": "14",
+            "fineness_per_mille": "585",
+            "price_eur_per_gram": "56",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "unknown",
+            "transaction_channel": "in_person_marseille",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://comptoircentraldelor.com/rachat-or-et-dargent/",
+            "observed_at": "2026-10-05T21:56:34.583265Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "buyer_calculator",
+            "source_fields": {},
+            "conditions": [],
+            "warnings": [
+              "Calculator's initial HTML total may differ; extracted active calculator inputs."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "comptoircentral:gold_items_unspecified:9:indicative:",
+            "purity_carats": "9",
+            "fineness_per_mille": "375",
+            "price_eur_per_gram": "26",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "gold_items_unspecified",
+            "price_basis": "unknown",
+            "transaction_channel": "in_person_marseille",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://comptoircentraldelor.com/rachat-or-et-dargent/",
+            "observed_at": "2026-10-05T21:56:34.583265Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "buyer_calculator",
+            "source_fields": {},
+            "conditions": [],
+            "warnings": [
+              "Calculator's initial HTML total may differ; extracted active calculator inputs."
+            ],
+            "comparison_eligible": false
+          }
+        ],
+        "conditions": [
+          "Cette estimation est indicative. Le montant définitif est déterminé après vérification du poids, du titre et de la nature de l'or.",
+          "La simulation applique une taxe forfaitaire de 11,5 % (11 % + 0,5 % de CRDS) au prix de cession des métaux précieux. Elle reste indicative et doit être vérifiée selon la situation fiscale de la vente.",
+          "Nos experts sont à votre disposition pour une estimation précise et gratuite de vos bijoux, pièces ou lingots.",
+          "Estimation gratuite",
+          "Pour les bijoux et objets en or, une estimation est réalisée en fonction de leur poids et de leur teneur en or. Pour les pièces et lingots d’investissement, leur nature, leur état et les conditions du marché peuvent également être pris en compte.",
+          "Cette information vous permet de comparer plus facilement les offres et de comprendre les conditions proposées. La pesée et l’ estimation de vos objets sont réalisées lors de la transaction, en tenant compte notamment de leur poids, de leur titre et de leur nature.",
+          "Pour les pièces d’investissement, les cours indiqués sont donnés à titre indicatif. Une différence peut notamment exister entre une pièce neuve, conservée dans son conditionnement d’origine, et une pièce ayant déjà circulé.",
+          "Pour les bijoux et objets en or ou en argent, la taxe forfaitaire sur les objets précieux s’applique lorsque les conditions prévues par la réglementation sont réunies. Pour les bijoux, objets d’art, de collection ou d’antiquité, le seuil de 5 000 € doit notamment être pris en compte.",
+          "Pour les pièces et lingots d’or d’investissement, considérés comme des métaux précieux, la taxe forfaitaire s’applique quel que soit le montant de la cession. Elle est actuellement de 11 % du prix de cession, auxquels s’ajoutent 0,5 % de CRDS.",
+          "Le vendeur consommateur dispose d’un délai de rétractation de 48 heures à compter de la signature du contrat. Ce droit ne s’applique pas aux opérations portant sur l’or d’investissement.",
+          "Les modalités d’exercice du droit de rétractation sont indiquées dans le contrat remis au vendeur."
+        ],
+        "warnings": [],
+        "documents": [
+          {
+            "url": "https://comptoircentraldelor.com/robots.txt",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:34.135590+00:00",
+            "sha256": "62f2334e60178972d017a166ef4542f2338ba19176008732197b926ee81ab50d"
+          },
+          {
+            "url": "https://comptoircentraldelor.com/rachat-or-et-dargent/",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:34.583265+00:00",
+            "sha256": "edf2ff29073d231c5f8454b2a1828291b59dfd307f771bff24ef950bab19882c"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "buyer_id": "monnaiesdor",
+      "status": "no_rates",
+      "attempted_at": "2026-10-05T21:56:34.639166+00:00",
+      "observation": {
+        "buyer_id": "monnaiesdor",
+        "observed_at": "2026-10-05T21:56:35.469180Z",
+        "rates": [],
+        "conditions": [
+          "Estimation gratuite sans engagement",
+          "Vous souhaitez vendre une montre de luxe héritée qui ne correspond pas à votre style. Monnaies d’Or à Paris 17e rachète les montres de marques prestigieuses comme Rolex, Cartier, Boucheron, Patek Philippe, Audemars Piguet, Jeaeger LeCoultre, etc. Obtenez une estimation gratuite et un paiement immédiat.",
+          "Faites réaliser une estimation gratuite de vos bijoux , montres, antiquités sans rendez-vous et sans engagement."
+        ],
+        "warnings": [
+          "Page retrieved; no supported numeric buyer-rate structure identified. Adapter required."
+        ],
+        "documents": [
+          {
+            "url": "https://www.monnaiesdor.com/robots.txt",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:35.044310+00:00",
+            "sha256": "2950222484787b682837884fc8125b9bca41b61a3d6dcdf7b646c529052c2085"
+          },
+          {
+            "url": "https://www.monnaiesdor.com/",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:35.469180+00:00",
+            "sha256": "4454191f325ab41ace42d23f200169071069c04d0b02bde5178fa88e060249f7"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "buyer_id": "lesmonnaiesdelyon",
+      "status": "ok",
+      "attempted_at": "2026-10-05T21:56:35.502295+00:00",
+      "observation": {
+        "buyer_id": "lesmonnaiesdelyon",
+        "observed_at": "2026-10-05T21:56:37.290630Z",
+        "rates": [
+          {
+            "rate_id": "lesmonnaiesdelyon:jewellery_for_melting:24:indicative:",
+            "purity_carats": "24",
+            "fineness_per_mille": "999",
+            "price_eur_per_gram": "101",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "jewellery_for_melting",
+            "price_basis": "unknown",
+            "transaction_channel": "in_person_paris",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.lesmonnaiesdelyon.com/achat-or-paris",
+            "observed_at": "2026-10-05T21:56:37.290630Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {
+              "source_component": "GoldSection",
+              "source_label": "24 carats (999‰)"
+            },
+            "conditions": [],
+            "warnings": [
+              "Quotes embedded in buyer's current JavaScript asset; publication timestamp unavailable."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "lesmonnaiesdelyon:jewellery_for_melting:22:indicative:",
+            "purity_carats": "22",
+            "fineness_per_mille": "916",
+            "price_eur_per_gram": "92",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "jewellery_for_melting",
+            "price_basis": "unknown",
+            "transaction_channel": "in_person_paris",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.lesmonnaiesdelyon.com/achat-or-paris",
+            "observed_at": "2026-10-05T21:56:37.290630Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {
+              "source_component": "GoldSection",
+              "source_label": "22 carats (916‰)"
+            },
+            "conditions": [],
+            "warnings": [
+              "Quotes embedded in buyer's current JavaScript asset; publication timestamp unavailable."
+            ],
+            "comparison_eligible": false
+          },
+          {
+            "rate_id": "lesmonnaiesdelyon:jewellery_for_melting:18:indicative:",
+            "purity_carats": "18",
+            "fineness_per_mille": "750",
+            "price_eur_per_gram": "79",
+            "max_price_eur_per_gram": null,
+            "quote_kind": "indicative",
+            "product_kind": "jewellery_for_melting",
+            "price_basis": "unknown",
+            "transaction_channel": "in_person_paris",
+            "min_weight_g": null,
+            "max_weight_g": null,
+            "source_url": "https://www.lesmonnaiesdelyon.com/achat-or-paris",
+            "observed_at": "2026-10-05T21:56:37.290630Z",
+            "source_updated_at": null,
+            "source_date": null,
+            "origin": "displayed",
+            "source_fields": {
+              "source_component": "GoldSection",
+              "source_label": "18 carats (750‰)"
+            },
+            "conditions": [],
+            "warnings": [
+              "Quotes embedded in buyer's current JavaScript asset; publication timestamp unavailable."
+            ],
+            "comparison_eligible": false
+          }
+        ],
+        "conditions": [
+          "Nous pesons et testons votre or sur place. Vous recevez une estimation immédiate, sans engagement.",
+          "Achat d'or Paris 12 (Gare de Lyon) Estimation gratuite dans le 12ème arrondissement.",
+          "Estimation gratuite dans le 12ème arrondissement.",
+          "Les Monnaies de Lyon est un bureau de change indépendant situé au 6 Rue de Lyon, 75012 Paris , à 2 minutes à pied de la Gare de Lyon . Depuis 1987, nous proposons le change de plus de 80 devises étrangères avec une commission fixe de 2€ par opération, ainsi que l' achat et la vente d'or (pièces, lingots, bijoux). Établissement agréé ACPR par la Banque de France (numéro SIREN 342 681 806).",
+          "Les Monnaies de Lyon est l'un des derniers bureaux de change indépendants de Paris 12e. Situé au 6 rue de Lyon, à 2 minutes de la Gare de Lyon, nous changeons plus de 80 devises étrangères en stock immédiat, sans réservation préalable. Notre commission est fixe à 2€ par opération, quel que soit le montant changé.",
+          "Les Monnaies de Lyon : commission fixe 2€ + taux interbancaire compétitif",
+          "Banques traditionnelles : 3 à 5% de commission cachée dans le taux",
+          "Bureaux de change aéroport : 7 à 12% de commission",
+          "Distributeurs ATM à l'étranger : frais bancaires + mauvais taux",
+          "Prix ferme au cours du jour : libre d'accepter ou refuser sans aucun frais. Paiement immédiat si vous acceptez.",
+          "Les Monnaies de Lyon est un bureau de change indépendant fondé en 1987 au 6 rue de Lyon, Paris 12e, par une famille de numismates passionnés. Depuis 37 ans , nous servons les voyageurs, expatriés, professionnels et Parisiens avec une politique simple : commission transparente, prix justes, conseil honnête.",
+          "Notre commission fixe de 2€ n'a pas bougé depuis notre fondation. Notre expertise or s'est étoffée au fil des décennies, faisant de nous une référence pour l'achat de pièces Napoléon et de lingots à Paris Est.",
+          "Pourquoi emporter du cash en voyage reste indispensable en 2026 : acceptation locale, sécurité, frais cachés, pannes réseau. Conseils pratiques pour préparer votre budget.",
+          "À l'heure du paiement sans contact et des néobanques \"spécial voyage\", beaucoup partent à l'étranger sans un seul billet en poche. C'est une erreur . En 2026, voyager uniquement avec une carte bancaire reste risqué : pannes réseau, refus d'acceptation, frais cachés, blocage de carte, vol ou perte. Cet article explique pourquoi emporter des espèces en voyage reste indispensable , dans quelles proportions, et comment préparer son change intelligemment.",
+          "Les Monnaies de Lyon, au 6 Rue de Lyon (Paris 12), propose parmi les meilleurs taux de Paris avec une commission fixe de 2€. Plus de 80 devises disponibles, sans rendez-vous.",
+          "C'est le pire endroit pour changer vos devises . Les bureaux de change des aéroports appliquent des commissions pouvant atteindre 10 à 15% du montant. Pour 1000€ changés en dollars, vous pouvez perdre jusqu'à 150€ par rapport à un bureau de change en ville.",
+          "Partir à l'étranger sans avoir préparé son change, c'est s'exposer à 8 à 15% de commission à l'aéroport. Ce guide vous explique quand et où changer vos devises à Paris.",
+          "Partir en voyage sans avoir préparé son change de devises, c'est s'exposer à des frais inutiles et des mauvaises surprises. Ce guide pratique vous explique quand changer, combien emporter, et comment obtenir les meilleurs taux de change à Paris avant votre départ.",
+          "Pour une estimation fiable, rien ne vaut l'expertise d'un professionnel. Chez Les Monnaies de Lyon, l'expertise est gratuite et sans engagement. Nous utilisons des tests acide et un spectromètre XRF pour une analyse précise.",
+          "3 étapes : apportez votre or sans RDV → expertise en 10 minutes → prix ferme au cours du jour, libre d'accepter ou refuser sans frais."
+        ],
+        "warnings": [],
+        "documents": [
+          {
+            "url": "https://www.lesmonnaiesdelyon.com/robots.txt",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:36.106037+00:00",
+            "sha256": "1f61191d833198c8e3fd1e5fce3d0c09f277c3024094a20ee1a6d82e045433d7"
+          },
+          {
+            "url": "https://www.lesmonnaiesdelyon.com/achat-or-paris",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:36.503496+00:00",
+            "sha256": "3f95a7fcfa044ca0d36ae3561efb737b3124b40247d2348b2bc017b53f0ade4d"
+          },
+          {
+            "url": "https://www.lesmonnaiesdelyon.com/assets/index-BQTQWX11.js",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:36.901198+00:00",
+            "sha256": "70560f731b1739228c4d95ba988bf5ef620c7f1a07ba8f43c934445874c22622"
+          },
+          {
+            "url": "https://www.lesmonnaiesdelyon.com/assets/GoldSection-CXa2WalY.js",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:37.290630+00:00",
+            "sha256": "eb326acd4199b7b033a495ee4f97315a688d5d6e8e4e601875e05b604706c1b7"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "buyer_id": "goldmarket",
+      "status": "failed",
+      "attempted_at": "2026-10-05T21:56:37.314723+00:00",
+      "observation": null,
+      "error": {
+        "type": "HTTPStatusError",
+        "message": "Client error '403 Forbidden' for url 'https://www.goldmarket.fr/rachat-or/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+      },
+      "documents": [
+        {
+          "url": "https://www.goldmarket.fr/robots.txt",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-05T21:56:37.738177+00:00",
+          "sha256": "086c34e9c447fd80e546ad65f70a46bc5adcbeb247f1fb49bd3531fb73132f2e"
+        }
+      ]
+    },
+    {
+      "buyer_id": "bdor",
+      "status": "no_rates",
+      "attempted_at": "2026-10-05T21:56:38.059759+00:00",
+      "observation": {
+        "buyer_id": "bdor",
+        "observed_at": "2026-10-05T21:56:38.915154Z",
+        "rates": [],
+        "conditions": [
+          "Vendre vos bijoux en or peut être une démarche judicieuse pour valoriser des objets que vous n'utilisez plus. L'Agence BDOR, spécialisée dans le rachat d'or , vous propose une expertise gratuite et sans engagement de vos bijoux en or, en argent, en platine et en palladium. Nos experts évaluent vos biens en toute transparence, en tenant compte de la pureté (carats) et du poids de chaque bijou . Cette estimation précise nous permet de vous offrir le meilleur prix, basé sur le cours actuel de l'or .",
+          "A l'Agence BDOR, revendez vos bijoux en Or SANS TAXE , conformément aux * articles 150 du Code général des impôts .",
+          "9 Carats, ils possèdent au minimum 375‰ d'or pur , ils sont reconnaissables par le poinçon trèfle.",
+          "Il existe plusieurs méthodes pour reconnaître la qualité d'or , dont la reconnaissance des poinçons or ou des poinçons argent . Nos experts sont en mesure de vous indiquer la qualité d'or de vos bijoux, cette expertise vous est offerte. Cette qualité influence la valeur intrinsèque de votre bijoux, rendez-nous visite afin de connaître l' estimation de votre bijou .",
+          "Contactez nos experts pour obtenir toutes les informations nécessaires ou venez nous rendre visite pour bénéficier d'une estimation de la valeur de vos bijoux en Or et en Argent ."
+        ],
+        "warnings": [
+          "Page retrieved; no supported numeric buyer-rate structure identified. Adapter required."
+        ],
+        "documents": [
+          {
+            "url": "https://www.bdor.fr/robots.txt",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:38.483668+00:00",
+            "sha256": "e23e0afe09b82834b06fde7c3b1d03225030c80072cb574608d565016b50af34"
+          },
+          {
+            "url": "https://www.bdor.fr/vente-or-argent/rachat-bijoux-strasbourg-colmar",
+            "method": "GET",
+            "http_status": 200,
+            "observed_at": "2026-10-05T21:56:38.915154+00:00",
+            "sha256": "0192ec69763fda4980d31904d8a100e96bcc02ab7851ccd1d65bf87b3b9ff9df"
+          }
+        ]
+      },
+      "error": null
+    }
+  ]
+}

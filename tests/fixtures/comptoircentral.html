@@ -1,0 +1,41 @@
+<select id="cco-carat">
+<option data-rate="87" value="21">21 carats (900 ‰)</option>
+<option data-rate="80" selected="selected" value="18">18 carats (750 ‰)</option>
+<option data-rate="56" value="14">14 carats (585 ‰)</option>
+<option data-rate="26" value="9">9 carats (375 ‰)</option>
+</select>
+<script id="cco-gold-calculator-js-after" type="text/rocketlazyloadscript">
+document.addEventListener('DOMContentLoaded',function(){
+  var root=document.querySelector('.cco-modern-rates');
+  if(!root) return;
+  var tabs=root.querySelectorAll('.cco-metal-tab');
+  var goldBox=root.querySelector('[data-calculator="gold"]'), silverBox=root.querySelector('[data-calculator="silver"]');
+  var select=root.querySelector('#cco-carat'), weight=root.querySelector('#cco-weight');
+  var total=root.querySelector('#cco-total'), rate=root.querySelector('#cco-rate'), totalSmall=root.querySelector('#cco-total-small'), weightDisplay=root.querySelector('#cco-weight-display'), summary=root.querySelector('#cco-summary');
+  var silverSelect=root.querySelector('#cco-silver-type'), silverQty=root.querySelector('#cco-silver-qty'), silverNet=root.querySelector('#cco-silver-net'), silverGross=root.querySelector('#cco-silver-gross'), silverTax=root.querySelector('#cco-silver-tax'), silverNetSmall=root.querySelector('#cco-silver-net-small'), silverSummary=root.querySelector('#cco-silver-summary');
+  var TAX=0.115;
+  function format(n){return new Intl.NumberFormat('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2}).format(n)+' €';}
+  function number(n){return new Intl.NumberFormat('fr-FR',{maximumFractionDigits:2}).format(n);}
+  function calcGold(){
+    var w=parseFloat(String(weight.value).replace(',','.'))||0;
+    var option=select.options[select.selectedIndex], r=parseFloat(option.getAttribute('data-rate'))||0, carat=select.value, value=w*r;
+    total.textContent=format(value); totalSmall.textContent=format(value); rate.textContent=format(r); weightDisplay.textContent=number(w)+' g';
+    summary.textContent='pour '+number(w)+' grammes d\'or '+carat+' carats';
+  }
+  function calcSilver(){
+    var qty=Math.max(0,parseInt(silverQty.value,10)||0), option=silverSelect.options[silverSelect.selectedIndex], r=parseFloat(option.getAttribute('data-rate'))||0;
+    var gross=qty*r, tax=gross*TAX, net=gross-tax;
+    silverGross.textContent=format(gross); silverTax.textContent=format(tax); silverNet.textContent=format(net); silverNetSmall.textContent=format(net);
+    silverSummary.textContent='pour '+number(qty)+' pièce'+(qty>1?'s':'');
+  }
+  tabs.forEach(function(tab){tab.addEventListener('click',function(){
+    var metal=tab.getAttribute('data-metal');
+    tabs.forEach(function(t){var active=t===tab;t.classList.toggle('is-active',active);t.setAttribute('aria-selected',active?'true':'false');});
+    goldBox.hidden=metal!=='gold'; silverBox.hidden=metal!=='silver';
+    if(metal==='silver') calcSilver(); else calcGold();
+  });});
+  select.addEventListener('change',calcGold); weight.addEventListener('input',calcGold); silverSelect.addEventListener('change',calcSilver); silverQty.addEventListener('input',calcSilver);
+  calcGold(); calcSilver();
+});
+//# sourceURL=cco-gold-calculator-js-after
+</script>
