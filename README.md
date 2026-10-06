@@ -31,4 +31,3 @@ Failures preserve previous rates and their original timestamps. Changes above 30
 After a successful collection, the workflow requests a Netlify rebuild via the `NETLIFY_BUILD_HOOK` repository secret. Its payload pins the website build to the exact public data commit. Failed collection runs record outcomes without triggering a rebuild. No website repository token is needed.
 
 Exit codes: 0 = accepted numeric rates from at least one attempted buyer; 1 = none; 2 = partial failures with `--strict`. Collection respects robots rules, request spacing and bounded retries; blocked access is not bypassed.
-
