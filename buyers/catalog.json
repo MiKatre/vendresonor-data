@@ -211,6 +211,126 @@
       "reviewed_conditions": [],
       "conditions_reviewed_at": null,
       "adapter": "discovery_only"
+    },
+    {
+      "buyer_id": "artnumor",
+      "name": "ArtNumOr",
+      "url": "https://artnumor.fr/fr/content/9-prix-particuliers",
+      "transaction_channel": "in_person",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null
+    },
+    {
+      "buyer_id": "ag_gold",
+      "name": "AG Gold",
+      "url": "https://www.ag-gold.fr/tarifs-simulation/",
+      "transaction_channel": "in_person",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null
+    },
+    {
+      "buyer_id": "rafinor",
+      "name": "Rafinor",
+      "url": "https://rachatorparis.com/calculatrice-prix-or-et-argent/",
+      "transaction_channel": "in_person_paris",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null
+    },
+    {
+      "buyer_id": "monex",
+      "name": "Monex Or",
+      "url": "https://monexor.fr/",
+      "transaction_channel": "postal_or_agency",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null
+    },
+    {
+      "buyer_id": "or_avenir",
+      "name": "Or Avenir",
+      "url": "https://www.or-avenir.com/simulateur",
+      "transaction_channel": "in_person",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null
+    },
+    {
+      "buyer_id": "or_et_change",
+      "name": "Or & Change",
+      "url": "https://or-et-change.fr/pages/vendre-votre-or",
+      "transaction_channel": "in_person_paris",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null
+    },
+    {
+      "buyer_id": "lepage",
+      "name": "Lepage",
+      "url": "https://www.lepage.fr/fr/content/28-rachat-d-or-lepage-joaillerie",
+      "transaction_channel": "in_person",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null
+    },
+    {
+      "buyer_id": "oceanor",
+      "name": "Océanor",
+      "url": "https://oceanor.re/content/46-oceanor-rachete-votre-or",
+      "transaction_channel": "in_person",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null
+    },
+    {
+      "buyer_id": "feuillatre",
+      "name": "Bijouterie Feuillatre",
+      "url": "https://www.bijouteriefeuillatre.fr/fr/rachat-or",
+      "transaction_channel": "in_person",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null
+    },
+    {
+      "buyer_id": "maty",
+      "name": "MATY",
+      "url": "https://www.maty.com/informations-rachat-or.html",
+      "transaction_channel": "postal_or_agency",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null
+    },
+    {
+      "buyer_id": "mantes",
+      "name": "Achat Or Mantes",
+      "url": "https://www.achat-or-mantes.com/tarifs-rachat-or-mantes.php",
+      "transaction_channel": "in_person",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null
+    },
+    {
+      "buyer_id": "kolidor",
+      "name": "Kolidor / Comptoir Change Opéra",
+      "url": "https://kolidor.fr/",
+      "transaction_channel": "postal",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null
+    },
+    {
+      "buyer_id": "eurogold",
+      "name": "Euro Gold",
+      "url": "https://www.euro-gold.fr/",
+      "transaction_channel": "in_person",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null
+    },
+    {
+      "buyer_id": "aurum_silver",
+      "name": "Aurum & Silver",
+      "url": "https://www.aurum-silver.fr/ville/aurum-silver-abbeville-80100-rachat-or-et-argent-au-meilleur-prix/",
+      "transaction_channel": "postal_or_agency",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null
+    },
+    {
+      "buyer_id": "bureau_national",
+      "name": "Bureau National de l’Or",
+      "url": "https://bureaunationaldelor.fr/estimation",
+      "transaction_channel": "in_person",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null
     }
   ]
 }

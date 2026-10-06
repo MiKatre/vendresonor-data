@@ -80,6 +80,7 @@ class Rate(BaseModel):
 
 
 class Observation(BaseModel):
+    icon_url: str | None = None
     buyer_id: str
     observed_at: datetime
     rates: list[Rate] = Field(default_factory=list)

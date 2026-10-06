@@ -51,7 +51,17 @@ class Fetcher:
         if not self.robots[origin].can_fetch("VendreSonOr", url):
             raise PermissionError("robots.txt disallows collection of this URL")
 
-    def request(self, method, url, *, check_robots=True, permit_404=False, data=None):
+    def request(
+        self,
+        method,
+        url,
+        *,
+        check_robots=True,
+        permit_404=False,
+        data=None,
+        content=None,
+        headers=None,
+    ):
         if check_robots:
             self.allowed(url)
         for attempt in range(3):
@@ -59,7 +69,12 @@ class Fetcher:
             try:
                 # Explicit redirects ensure every destination passes its own crawl rules.
                 response = self.client.request(
-                    method, url, data=data, follow_redirects=False
+                    method,
+                    url,
+                    data=data,
+                    content=content,
+                    headers=headers,
+                    follow_redirects=False,
                 )
                 self.last_request = time.monotonic()
                 if response.is_redirect:
@@ -188,6 +203,7 @@ def merge_latest(previous, sources, attempts, generated_at):
             "reviewed_conditions": source.get("reviewed_conditions", []),
             "review_notes": source.get("review_notes", []),
             "conditions_reviewed_at": source.get("conditions_reviewed_at"),
+            "icon_url": prior.get("icon_url"),
             "rates": prior.get("rates", []),
             "conditions": prior.get("conditions", []),
             "documents": prior.get("documents", []),
@@ -236,6 +252,9 @@ def merge_latest(previous, sources, attempts, generated_at):
                     "warnings",
                 ]:
                     record[key] = observation[key]
+                record["icon_url"] = observation.get("icon_url") or prior.get(
+                    "icon_url"
+                )
                 if observation["rates"]:
                     record["last_success_at"] = observation["observed_at"]
         elif attempt:

@@ -1,0 +1,298 @@
+<link href="https://kolidor.fr/app/uploads/2025/04/cropped-logo-kolidor-180x180.png" rel="apple-touch-icon"/><link href="https://kolidor.fr/app/uploads/2025/04/cropped-logo-kolidor-192x192.png" rel="icon" sizes="192x192"/><link href="https://kolidor.fr/app/uploads/2025/04/cropped-logo-kolidor-32x32.png" rel="icon" sizes="32x32"/><section class="py-24 md:py-36 relative bg-blue-light" data-gsap="" id="simulation">
+<div class="container mx-auto px-4">
+<!-- Titre et sous-titre -->
+<div class="text-center mb-12">
+<h2 class="text-4xl font-bold italic mb-4" data-anim="" data-from='{"x": -100,"y": 0, "autoAlpha":0, "duration": 1}' data-position="0.25" data-to='{"x": 0,"y": 0,"autoAlpha":1, "duration": 1}'>Évaluez la valeur de vos bijoux selon leur poids !</h2>
+<div class="wysiwyg-custom text-black" data-anim="" data-from='{"x": -100,"y": 0, "autoAlpha":0, "duration": 1}' data-position="0.5" data-to='{"x": 0,"y": 0,"autoAlpha":1, "duration": 1}'>Nos prix sont mis à jour toutes les 10 minutes pour refléter les cours actuels des métaux précieux</div>
+</div>
+<!-- Premier cadre : Curseur pour le poids -->
+<div class="bg-white rounded-lg shadow-md px-8 pb-8 pt-16 mb-6" data-anim="" data-from='{"x": -100,"y": 0, "autoAlpha":0, "duration": 1}' data-position="0.75" data-to='{"x": 0,"y": 0,"autoAlpha":1, "duration": 1}'>
+<div class="flex justify-between items-center mb-4 max-w-5xl mx-auto">
+<h3 class="text-xl font-semibold">Poids estimé de vos bijoux</h3>
+<span class="text-2xl font-bold" id="poids-display">14g</span>
+</div>
+<!-- Slider interactif avec la barre de progression -->
+<div class="relative mt-6 mb-2 max-w-5xl mx-auto">
+<!-- Barre de base (grise) -->
+<div class="w-full h-1 bg-gray-200 rounded-full"></div>
+<!-- Barre de progression (jaune) qui montre la portion sélectionnée -->
+<div class="h-1 bg-gold-medium rounded-full absolute top-0 left-0" id="range-progress" style="width: 14%;"></div>
+<!-- Input range (transparent, par-dessus) -->
+<input class="w-full appearance-none h-1 bg-transparent absolute top-0 left-0 outline-none cursor-pointer z-10" id="poids-range" max="100" min="0" type="range" value="14"/>
+<!-- Curseur personnalisé -->
+<div class="w-8 h-8 bg-white border-2 border-gold-medium rounded-full absolute -top-2 flex items-center justify-center pointer-events-none z-10" id="poids-cursor" style="left: 14%; margin-left: -16px; margin-top: -4px;">
+<div class="w-2 h-2 bg-gold-medium rounded-full"></div>
+</div>
+<!-- Valeurs min et max -->
+<div class="flex justify-between mt-6">
+<span class="text-gray-400 text-sm">0g</span>
+<span class="text-gray-400 text-sm">50g</span>
+<span class="text-gray-400 text-sm">100g</span>
+</div>
+</div>
+</div>
+<!-- Cartes des métaux précieux (sans cadre parent) -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-6" data-anim="" data-from='{"x": -100,"y": 0, "autoAlpha":0, "duration": 1}' data-position="1" data-to='{"x": 0,"y": 0,"autoAlpha":1, "duration": 1}'>
+<div class="rounded-lg shadow-md p-6 text-center bg-white relative flex flex-col justify-between overflow-hidden cursor-pointer transition hover:shadow-lg metal-card" data-metal="or24">
+<h6 class="font-bold text-xl mb-1 text-black">
+<span>Or 24 <span class="text-gold-medium underline">k</span>arats</span>
+</h6>
+<p class="text-gray-600 text-sm mb-6 font-medium">Or pur (999,9‰)</p>
+<div class="text-3xl font-bold text-gold-medium mb-8">
+                        111,7<span class="text-base">€/g</span>
+</div>
+<div class="metal-card-separator h-px w-full mx-auto mb-3 bg-grey-100"></div>
+<p class="metal-card-update text-xs text-center text-gray-400">
+                        Mise à jour il y a 4 minutes
+                    </p>
+</div>
+<div class="rounded-lg shadow-md p-6 text-center bg-simul-cards relative flex flex-col justify-between overflow-hidden cursor-pointer transition hover:shadow-lg metal-card" data-metal="or18">
+<h6 class="font-bold text-xl mb-1 text-white">
+<span>Or 18 <span class="text-white underline">k</span>arats</span>
+</h6>
+<p class="text-white text-sm mb-6 font-medium">Or de haute qualité (750‰)</p>
+<div class="text-3xl font-bold text-white mb-8">
+                        77,1<span class="text-base">€/g</span>
+</div>
+<div class="metal-card-separator h-px w-full mx-auto mb-3 bg-white/60"></div>
+<p class="metal-card-update text-xs text-center text-white">
+                        Mise à jour il y a 4 minutes
+                    </p>
+</div>
+<div class="rounded-lg shadow-md p-6 text-center bg-white relative flex flex-col justify-between overflow-hidden cursor-pointer transition hover:shadow-lg metal-card" data-metal="or14">
+<h6 class="font-bold text-xl mb-1 text-black">
+<span>Or 14 <span class="text-gold-medium underline">k</span>arats</span>
+</h6>
+<p class="text-gray-600 text-sm mb-6 font-medium">Or de bonne qualité (585‰)</p>
+<div class="text-3xl font-bold text-gold-medium mb-8">
+                        54,2<span class="text-base">€/g</span>
+</div>
+<div class="metal-card-separator h-px w-full mx-auto mb-3 bg-grey-100"></div>
+<p class="metal-card-update text-xs text-center text-gray-400">
+                        Mise à jour il y a 4 minutes
+                    </p>
+</div>
+<div class="rounded-lg shadow-md p-6 text-center bg-white relative flex flex-col justify-between overflow-hidden cursor-pointer transition hover:shadow-lg metal-card" data-metal="or9">
+<h6 class="font-bold text-xl mb-1 text-black">
+<span>Or 9 <span class="text-gold-medium underline">k</span>arats</span>
+</h6>
+<p class="text-gray-600 text-sm mb-6 font-medium">Or de qualité standard (375‰)</p>
+<div class="text-3xl font-bold text-gold-medium mb-8">
+                        26,8<span class="text-base">€/g</span>
+</div>
+<div class="metal-card-separator h-px w-full mx-auto mb-3 bg-grey-100"></div>
+<p class="metal-card-update text-xs text-center text-gray-400">
+                        Mise à jour il y a 4 minutes
+                    </p>
+</div>
+<div class="rounded-lg shadow-md p-6 text-center bg-white relative flex flex-col justify-between overflow-hidden cursor-pointer transition hover:shadow-lg metal-card" data-metal="argent">
+<h6 class="font-bold text-xl mb-1 text-black">
+<span>Argent</span>
+</h6>
+<p class="text-gray-600 text-sm mb-6 font-medium">Argent massif (925‰)</p>
+<div class="text-3xl font-bold text-gold-medium mb-8">
+                        0,9<span class="text-base">€/g</span>
+</div>
+<div class="metal-card-separator h-px w-full mx-auto mb-3 bg-grey-100"></div>
+<p class="metal-card-update text-xs text-center text-gray-400">
+                        Mise à jour il y a 4 minutes
+                    </p>
+</div>
+</div>
+<!-- Dernier cadre : Estimation finale -->
+<div class="bg-white rounded-lg shadow-md px-8 py-12" data-anim="" data-from='{"x": -100,"y": 0, "autoAlpha":0, "duration": 1}' data-position="1.25" data-to='{"x": 0,"y": 0,"autoAlpha":1, "duration": 1}'>
+<div class="max-w-5xl mx-auto">
+<div class="flex flex-col md:flex-row md:justify-between md:items-center border-b border-gray-300 pb-5 mb-5">
+<div class="flex flex-wrap items-center gap-x-16">
+<div class="text-xl font-semibold mb-4 md:mb-0" id="estimation-titre">Estimation pour 14g d’Or 18 karats</div>
+<div class="text-3xl font-bold mb-4 md:mb-0" id="estimation-valeur">1 079 €<sup>*</sup></div>
+</div>
+<div class="flex flex-wrap flex-row items-center gap-4">
+<a class="btn secondary gold flex items-center" href="#simulation" id="actualiser-btn">
+<svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+                            Actualiser
+                        </a>
+</div>
+</div>
+<p class="text-sm text-gray-500"><sup>*</sup> Estimation indicative basée sur le cours actuel. Le prix final sera déterminé après expertise précise de vos bijoux par notre équipe.</p>
+<!-- Lien d'aide -->
+<div class="text-center mt-16">
+<a class="text-gold-medium hover:text-gold-dark inline-flex items-center" href="/faq">
+<svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+                        Comment identifier la qualité de mes bijoux ?
+                    </a>
+</div>
+</div>
+</div>
+<div class="mt-8 flex justify-center">
+<button class="btn shine-linear open-form-ask-kit max-w-52" type="button">
+    Demander mon kit gratuit
+</button> </div>
+</div>
+<!-- Script pour la version interactive avec AJAX -->
+<script>
+        (function() {
+            // Données initiales
+            const metauxData = [{"code":"or24","nom":"Or 24 karats","description":"Or pur (999,9\u2030)","pourcentage":0.9999,"marge_percent":"-6","cours_avec_marge":111755.65999999999,"prix_g_raw":111.7,"prix_g":"111,7","couleur":"text-gold-medium","actif":false},{"code":"or18","nom":"Or 18 karats","description":"Or de haute qualit\u00e9 (750\u2030)","pourcentage":0.75,"marge_percent":"-13.5","cours_avec_marge":102838.985,"prix_g_raw":77.1,"prix_g":"77,1","couleur":"text-gold-medium","actif":true},{"code":"or14","nom":"Or 14 karats","description":"Or de bonne qualit\u00e9 (585\u2030)","pourcentage":0.585,"marge_percent":"-22","cours_avec_marge":92733.42,"prix_g_raw":54.2,"prix_g":"54,2","couleur":"text-gold-medium","actif":false},{"code":"or9","nom":"Or 9 karats","description":"Or de qualit\u00e9 standard (375\u2030)","pourcentage":0.375,"marge_percent":"-40","cours_avec_marge":71333.4,"prix_g_raw":26.8,"prix_g":"26,8","couleur":"text-gold-medium","actif":false},{"code":"argent","nom":"Argent","description":"Argent massif (925\u2030)","pourcentage":0.925,"marge_percent":"-45","cours_avec_marge":960.9765000000001,"prix_g_raw":0.9,"prix_g":"0,9","couleur":"text-gold-medium","actif":false}];
+            let poidsActuel = 14;
+            let metalActif = 'or18'; // Par défaut Or 18k
+            // Informations sur les marges détaillées
+            const marginsData = {"or_general":"-15","or_24k":"-6","or_18k":"-13.5","or_14k":"-22","or_9k":"-40","argent":"-45"};
+
+            // Éléments DOM
+            const poidsRange = document.getElementById('poids-range');
+            const poidsDisplay = document.getElementById('poids-display');
+            const poidsCursor = document.getElementById('poids-cursor');
+            const rangeProgress = document.getElementById('range-progress');
+            const estimationTitre = document.getElementById('estimation-titre');
+            const estimationValeur = document.getElementById('estimation-valeur');
+            const actualiserBtn = document.getElementById('actualiser-btn');
+            const metalCards = document.querySelectorAll('.metal-card');
+
+            // Fonction de formatage des nombres (style français)
+            function formatNumber(number) {
+                return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ").replace('.', ',');
+            }
+
+            // Fonction de mise à jour de l'estimation
+            function updateEstimation() {
+                // Trouver le métal actif
+                const metal = metauxData.find(m => m.code === metalActif);
+
+                // Mettre à jour l'affichage
+                estimationTitre.textContent = `Estimation pour ${poidsActuel}g d'${metal.nom}`;
+
+                // Calculer l'estimation
+                const estimation = Math.round(poidsActuel * metal.prix_g_raw);
+                estimationValeur.innerHTML = `${formatNumber(estimation)} €<sup>*</sup>`;
+            }
+
+            // Fonction de mise à jour de l'interface avec les cartes
+            function updateCardSelection() {
+                metalCards.forEach(card => {
+                    if (card.dataset.metal === metalActif) {
+                        // Ajouter la classe de fond pour la carte active
+                        card.classList.add('bg-simul-cards');
+                        card.classList.remove('bg-white');
+
+                        // Rendre tous les textes de la carte active en blanc
+                        const textsElements = card.querySelectorAll('h6, p, div:not(.h-px)');
+                        textsElements.forEach(el => {
+                            el.classList.add('text-white');
+                            el.classList.remove('text-black', 'text-gray-600', 'text-gold-medium', 'text-gray-400');
+                        });
+
+                        // Cas spécial pour le "k" dans "karats"
+                        const kElement = card.querySelector('h6 span span');
+                        if (kElement) {
+                            kElement.classList.add('text-white');
+                            kElement.classList.remove('text-gold-medium');
+                        }
+                        // Séparateur et texte "Mise à jour"
+                        const sep = card.querySelector('.metal-card-separator');
+                        if (sep) {
+                            sep.classList.add('bg-white/60');
+                            sep.classList.remove('bg-grey-100');
+                        }
+                        const updateEl = card.querySelector('.metal-card-update');
+                        if (updateEl) {
+                            updateEl.classList.add('text-white');
+                            updateEl.classList.remove('text-gray-400');
+                        }
+                    } else {
+                        // Retour au style normal pour les cartes inactives
+                        card.classList.remove('bg-simul-cards');
+                        card.classList.add('bg-white');
+
+                        // Restaurer les couleurs de texte originales
+                        const titleElement = card.querySelector('h6');
+                        if (titleElement) {
+                            titleElement.classList.remove('text-white');
+                            titleElement.classList.add('text-black');
+                        }
+
+                        const kElement = card.querySelector('h6 span span');
+                        if (kElement) {
+                            kElement.classList.remove('text-white');
+                            kElement.classList.add('text-gold-medium');
+                        }
+
+                        const descElement = card.querySelector('p');
+                        if (descElement) {
+                            descElement.classList.remove('text-white');
+                            descElement.classList.add('text-gray-600');
+                        }
+
+                        const priceElement = card.querySelector('.text-3xl');
+                        if (priceElement) {
+                            priceElement.classList.remove('text-white');
+                            priceElement.classList.add('text-gold-medium');
+                        }
+                        // Séparateur et texte "Mise à jour"
+                        const sep = card.querySelector('.metal-card-separator');
+                        if (sep) {
+                            sep.classList.remove('bg-white/60');
+                            sep.classList.add('bg-grey-100');
+                        }
+                        const updateEl = card.querySelector('.metal-card-update');
+                        if (updateEl) {
+                            updateEl.classList.remove('text-white');
+                            updateEl.classList.add('text-gray-400');
+                        }
+                    }
+                });
+            }
+
+            // Écouteurs d'événements
+            poidsRange.addEventListener('input', function() {
+                poidsActuel = parseInt(this.value);
+                poidsDisplay.textContent = `${poidsActuel}g`;
+
+                // Mettre à jour la position du curseur
+                const percentage = (poidsActuel / this.max) * 100;
+                const cursorWidth = poidsCursor.offsetWidth;
+                // Calculer la position en prenant en compte la largeur du curseur
+                poidsCursor.style.left = `calc(${percentage}%)`;
+
+                // Mettre à jour la barre de progression
+                rangeProgress.style.width = `${percentage}%`;
+
+                // Mettre à jour l'estimation
+                updateEstimation();
+            });
+
+            // Écouteurs pour les cartes de métal
+            metalCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    metalActif = this.dataset.metal;
+                    updateCardSelection();
+                    updateEstimation();
+                });
+            });
+
+            actualiserBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const btn = this;
+                btn.disabled = true;
+                btn.classList.add('opacity-50');
+                const icon = btn.querySelector('svg');
+                if (icon) icon.classList.add('animate-spin');
+                setTimeout(() => location.reload(), 400);
+            });
+
+            // Initialiser l'interface
+            updateCardSelection();
+        })();
+        </script>
+</section>
+<p>Par CCO, Maison parisienne depuis 1955 Envoi sécurisé et expertise filmée Paiement sous 48h</p><p>Notre estimation repose sur une expertise professionnelle fondée sur le test POC (physique, optique et chimique)</p><p>* Estimation indicative basée sur le cours actuel. Le prix final sera déterminé après expertise précise de vos bijoux par notre équipe.</p><p>Nous filmons en continu l’ouverture de la pochette, la pesée, l’expertise et l’estimation selon le cours du jour. Vous choisissez alors d’accepter ou de refuser cette offre d’achat. Kolidor enverra gratuitement les biens non rachetés.</p><p>Nous vous remboursons les frais d’envoi de votre enveloppe Valeur Déclarée en cas de validation de l’offre de rachat si le montant de l’estimation dépasse 500€.</p><p>Paiement sous 48h ouvrés</p><p>Photos et/ou vidéo de l’estimation</p><p>Découvrez toutes les étapes du rachat de bijoux en détail, de leur envoi jusqu’au paiement en passant par l’analyse de vos bijoux.</p><p>PARFAIT. Nous avons acheté des dollars par packs avec des tarifs attractifs. Ne pouvant acheter 2 packs dans la même commande, nous avons passé 2 commandes le même jour et les frais de transport de la seconde commande nous ont été remboursés. PROFESSIONNALISME. Nous avons eu un problème avec La Poste et l'agence l'a réglé avec diligence (nous sommes en Gironde). C'était notre première expérience et nous continuerons à passer par Comptoir de Change Opéra pour nos prochains achats de devises.
+A recommander les yeux fermés.</p><p>Délai rapide pour pack samurai(yen). 1 jour en retrait agence. E-mail de confirmation pour dire que les devises sont disponibles en agence.
+Le taux est correct et très facile a retirer à l’agence d’opéra. Peu de frais et possibilité de retourner jusqu’à 30% aux mêmes conditions.
+Très pratique et efficace. Je recommande.</p><p>Je suis venu acheter de la livre sterling. En comparant le reçu avec le cours du jour trouvé sur Google, j'ai calculé qu'environ 5% de mon argent est parti en frais de transaction. Cela me paraît correct</p><p>Première expérience et très bon service. J'ai fait le paiement en ligne à 09h30 et mon argent était disponible en retrait dans l'agence à 11h30.
+Rien à dire.
+Je recommande fortement.
+Merci</p>

@@ -1,0 +1,118 @@
+<div class="gpe-metal-price-bar">
+<div class="gpe-metal-type-container">
+<strong>Or</strong>
+<span>
+      €118.800,00 / kg
+    </span>
+</div>
+<div class="gpe-metal-type-container">
+<strong>Argent</strong>
+<span>
+      €1.750,00 / kg
+    </span>
+</div>
+</div>
+<script>
+(function(){
+  const COMMISSION_GOLD = 0.12; // 12% commission
+  const fmt = new Intl.NumberFormat('fr-FR',{
+    style:'currency',
+    currency:'EUR',
+    minimumFractionDigits:2,
+    maximumFractionDigits:2
+  });
+
+  function readBannerPrice(){
+    const text = (document.body && document.body.innerText) ? document.body.innerText : '';
+    const goldMatch = text.match(/Or\s*€\s*([\d.\s]+,\d+)\s*\/\s*kg/i);
+    const toNumber = (fr)=> fr ? Number(fr.replace(/\s/g,'').replace(/\./g,'').replace(',','.')) : NaN;
+    return goldMatch ? toNumber(goldMatch[1]) : NaN;
+  }
+
+  const cleanQty = (v)=>{
+    if(v==null) return 0;
+    const n = parseFloat(String(v).replace(/\s/g,'').replace(',', '.'));
+    return (isFinite(n) && n>=0) ? n : 0;
+  };
+
+  function rowHtml(label, pricePerGram){
+    return `
+      <tr>
+        <td>${label}</td>
+        <td class="fx-th-right price" data-price="${pricePerGram}">${fmt.format(pricePerGram)}</td>
+        <td class="fx-th-right">
+          <input class="qty-input" type="text" inputmode="decimal" autocomplete="off" placeholder="0,00">
+        </td>
+        <td class="fx-th-right total">0,00 €</td>
+      </tr>`;
+  }
+
+  function attachCalculators(tableEl, grandTotalEl){
+    const recalcRow = (tr)=>{
+      const price = parseFloat(tr.querySelector('.price').dataset.price);
+      const qty   = cleanQty(tr.querySelector('.qty-input').value);
+      const total = price * qty;
+      tr.querySelector('.total').textContent = fmt.format(total);
+      return total;
+    };
+
+    const recalcAll = ()=>{
+      let sum=0;
+      tableEl.querySelectorAll('tbody tr').forEach(tr=> sum += recalcRow(tr));
+      grandTotalEl.textContent = fmt.format(sum);
+    };
+
+    tableEl.addEventListener('input', (e)=>{
+      if(e.target.classList.contains('qty-input')) recalcAll();
+    });
+
+    tableEl.addEventListener('blur', (e)=>{
+      if(e.target.classList.contains('qty-input')){
+        const n = cleanQty(e.target.value);
+        e.target.value = n ? String(n).replace('.', ',') : '';
+        recalcAll();
+      }
+    }, true);
+
+    recalcAll();
+  }
+
+  function render(){
+    const ts = document.getElementById('buyback-ts');
+    const goldPerKg = readBannerPrice();
+
+    if(!isFinite(goldPerKg)){
+      ts.textContent = 'Impossible de lire le bandeau Or. Veuillez rafraîchir la page.';
+      return;
+    }
+
+    const goldPerGram = goldPerKg / 1000;
+
+    const goldGrades = [
+      { label:'24K (999‰)', purity:0.999 },
+      { label:'22K (916‰)', purity:0.916 },
+      { label:'18K (750‰)', purity:0.750 },
+      { label:'14K (585‰)', purity:0.585 },
+      { label:'9K (375‰)',  purity:0.375 },
+    ];
+
+    document.getElementById('gold-rows').innerHTML = goldGrades
+      .map(g => rowHtml(
+        g.label,
+        goldPerGram * g.purity * (1 - COMMISSION_GOLD)
+      )).join('');
+
+    attachCalculators(
+      document.getElementById('gold-table'),
+      document.getElementById('gold-grand-total')
+    );
+
+    ts.textContent = `Mise à jour ${new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})} — source : bandeau Or.`;
+  }
+
+  render();
+  setInterval(render, 15*60*1000);
+
+})();
+</script>
+<p>Prix indicatifs, calculés automatiquement depuis le bandeau « Or ». Les prix peuvent varier selon l’état et l’essai.</p><p>Prix indicatifs, calculés automatiquement depuis le bandeau « Or / Argent ». Les prix peuvent varier selon l’état/essai.</p><p>🏦 Paiement sécurisé par virement bancaire ou chèque.</p><p>⚖️ Dans la colonne "Quantité (g)" saisissez le poids pour obtenir une estimation immédiate.</p><p>🔁 Les prix sont mis à jour en temps réel selon les marchés internationaux (frais inclus).</p><p>Politique de remboursement</p>

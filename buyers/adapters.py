@@ -48,7 +48,7 @@ def conditions(html):
             text not in result
             and 15 < len(text) <= 1600
             and re.search(
-                r"indicatif|estimation|frais|commission|minimum|rétractation|rembours|taxe|tarifs.*ligne",
+                r"indicatif|estimation|frais|commission|minimum|rétractation|rembours|taxe|tarifs.*ligne|paiement|chèque|expertise|poids|valable|frais.*envoi",
                 text,
                 re.IGNORECASE,
             )
@@ -563,6 +563,38 @@ def collect_source(source, session):
             )
         js = session.get(urljoin(source["url"], "/" + chunks.pop()))
         obs = lesmonnaiesdelyon(source, session.last_observed_at, html, js)
+    elif adapter == "bureau_national":
+        from .expanded import bureau_national
+
+        scripts = soup(html).find_all(
+            "script", src=re.compile(r"/app/estimation/page-[^/]+\.js")
+        )
+        if len(scripts) != 1:
+            raise SourceChanged("Bureau National estimator asset missing or ambiguous")
+        js = session.get(urljoin(source["url"], scripts[0]["src"]))
+        action = re.search(
+            r'createServerReference\)\("([a-f0-9]+)"[^;]+"estimerAction"', js
+        )
+        if not action or "await z({categorie:w.id,purete:D,poids:I})" not in js:
+            raise SourceChanged("Bureau National public estimator call changed")
+        quotes = []
+        # The source rounds totals according to lot size. Do not infer a linear gram rate.
+        for weight in [1, 10, 50, 100]:
+            response = session.request(
+                "POST",
+                source["url"],
+                headers={
+                    "Next-Action": action[1],
+                    "Content-Type": "text/plain;charset=UTF-8",
+                    "Accept": "text/x-component",
+                    "Origin": "https://bureaunationaldelor.fr",
+                },
+                content=json.dumps(
+                    [{"categorie": "bijou-or", "purete": 750, "poids": weight}]
+                ),
+            )
+            quotes.append((weight, response.text))
+        obs = bureau_national(source, session.last_observed_at, html, quotes)
     elif source.get("adapter") == "discovery_only":
         obs = Observation(
             buyer_id=source["buyer_id"],
@@ -573,6 +605,26 @@ def collect_source(source, session):
             ],
         )
     else:
-        obs = globals()[adapter](source, at, html)
+        from . import expanded
+
+        parser = globals().get(adapter) or getattr(expanded, adapter, None)
+        if not callable(parser) or adapter.startswith("_"):
+            raise SourceChanged("Unsupported buyer adapter")
+        obs = parser(source, at, html)
+    doc = soup(html)
+    icons = [
+        n
+        for n in doc.find_all("link", href=True)
+        if any(
+            rel in {"icon", "apple-touch-icon", "shortcut"} for rel in n.get("rel", [])
+        )
+    ]
+    icon = next(
+        (n for n in icons if "apple-touch-icon" in n.get("rel", [])),
+        icons[0] if icons else None,
+    )
+    candidate = urljoin(source["url"], icon["href"] if icon else "/favicon.ico")
+    if candidate.startswith("https://"):
+        obs.icon_url = candidate
     obs.documents = session.documents.copy()
     return obs

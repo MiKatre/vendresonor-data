@@ -182,5 +182,124 @@
       }
     ],
     "fixture_scope": "Minimal excerpts of captured HTML/JavaScript used by the parser."
+  },
+  "artnumor": {
+    "source_url": "https://artnumor.fr/fr/content/9-prix-particuliers",
+    "captured_on": "2026-10-06",
+    "original_sha256": "21314e4f93849dd4b13d51280de70f90b972021d5a961234f1a37ea38c1e1658",
+    "fixture_sha256": "59c995c237cf3bcc6996278a0c36ed5a2d650b6847fbc6e26e94655bd2ba8c40",
+    "note": "Pricing structures and conditions extracted from live source; unrelated markup omitted."
+  },
+  "ag_gold": {
+    "source_url": "https://www.ag-gold.fr/tarifs-simulation/",
+    "captured_on": "2026-10-06",
+    "original_sha256": "ed044359d22ca87fadcf918f991320b9ebab68837afa5b012a4aa27ccb922d06",
+    "fixture_sha256": "e4c1a08559339a94cb8c6b972d5fb6ef5e22051260b8da7706d55a9e98a63b5c",
+    "note": "Pricing structures and conditions extracted from live source; unrelated markup omitted."
+  },
+  "rafinor": {
+    "source_url": "https://rachatorparis.com/calculatrice-prix-or-et-argent/",
+    "captured_on": "2026-10-06",
+    "original_sha256": "109caeb9117b2f15976cf5b52bd8dae593ae9af8840e1f9265f2fff6a0517f71",
+    "fixture_sha256": "8df9c677dab93ee9bbf1eb8cb1ef0f120223f607b882dc468d67ee9bdb98750e",
+    "note": "Pricing structures and conditions extracted from live source; unrelated markup omitted."
+  },
+  "monex": {
+    "source_url": "https://monexor.fr/",
+    "captured_on": "2026-10-06",
+    "original_sha256": "4849140b80f437ef4fd62d9f2d4a6b7d4058a4cf9df04c23b48393560415771f",
+    "fixture_sha256": "335ff499e7613e792a5d7e19a3d11b2519f02c88aca50f8c351b9e675fabf181",
+    "note": "Pricing structures and conditions extracted from live source; unrelated markup omitted."
+  },
+  "or_avenir": {
+    "source_url": "https://www.or-avenir.com/simulateur",
+    "captured_on": "2026-10-06",
+    "original_sha256": "b66092f4e700eb29938cdb44c7b43eefe14e4ebb80e067fd8f99b4a982f7e71d",
+    "fixture_sha256": "69b367078c2bd2c3664ab7094ff185c9772af3d9362df15c8bac2c70b2bb5cea",
+    "note": "Pricing structures and conditions extracted from live source; unrelated markup omitted."
+  },
+  "or_et_change": {
+    "source_url": "https://or-et-change.fr/pages/vendre-votre-or",
+    "captured_on": "2026-10-06",
+    "original_sha256": "de7a2559dbb9a97253f945b96ce42e741386d68935252caa1c73b9f7abafae9c",
+    "fixture_sha256": "e462ed11f5f920eecfa47fc4619af006befffcff111e811ae1bbe00bf4a5de56",
+    "note": "Pricing structures and conditions extracted from live source; unrelated markup omitted."
+  },
+  "lepage": {
+    "source_url": "https://www.lepage.fr/fr/content/28-rachat-d-or-lepage-joaillerie",
+    "captured_on": "2026-10-06",
+    "original_sha256": "6bce2715c424084314b759058106535835e683c4701b35fc762444681c3e2fd2",
+    "fixture_sha256": "2ba905338b6771323a811765dd521d30551a68c71b24c63c8b440ff69d532e23",
+    "note": "Pricing structures and conditions extracted from live source; unrelated markup omitted."
+  },
+  "oceanor": {
+    "source_url": "https://oceanor.re/content/46-oceanor-rachete-votre-or",
+    "captured_on": "2026-10-06",
+    "original_sha256": "aa820f97dd7427947fd5808a94e65e0d633bcfc7ec0833e114baeb2938ebeaa3",
+    "fixture_sha256": "2edadd946a2f0416917cbe0583416736f4f95534f21c3ca8be059f56b9cffb9c",
+    "note": "Pricing structures and conditions extracted from live source; unrelated markup omitted."
+  },
+  "feuillatre": {
+    "source_url": "https://www.bijouteriefeuillatre.fr/fr/rachat-or",
+    "captured_on": "2026-10-06",
+    "original_sha256": "a0923674e6148840379b395d29e76c233846bba3d640375f8c1530c43091190c",
+    "fixture_sha256": "da542eb42fc77e406a53608893a683e761a95a9b0e10638352e4067e3b0a57e7",
+    "note": "Pricing structures and conditions extracted from live source; unrelated markup omitted."
+  },
+  "maty": {
+    "source_url": "https://www.maty.com/informations-rachat-or.html",
+    "captured_on": "2026-10-06",
+    "original_sha256": "3481f2d7a89a1c6d07673991c54912a4f465a5b54bf09930902733055008a2e5",
+    "fixture_sha256": "ec6c80a339417d7849cca2769cc5eebd19fb3cc48ad1bdb13d38dddc2d2111d7",
+    "note": "Pricing structures and conditions extracted from live source; unrelated markup omitted."
+  },
+  "mantes": {
+    "source_url": "https://www.achat-or-mantes.com/tarifs-rachat-or-mantes.php",
+    "captured_on": "2026-10-06",
+    "original_sha256": "018390fee97688eb681848ad1aaff117e4201bb512e71047866afbc0dfecf6a7",
+    "fixture_sha256": "e50a5d53816647f915f7456de8105f64f287e4c355d410274884e3c25b507d65",
+    "note": "Pricing structures and conditions extracted from live source; unrelated markup omitted."
+  },
+  "kolidor": {
+    "source_url": "https://kolidor.fr/",
+    "captured_on": "2026-10-06",
+    "original_sha256": "c0dead2eddd8f51b72d289be9e818d4231ef2a9642c6b74816d15a3beebdcda2",
+    "fixture_sha256": "1f8b3281de7d731e070667116cbcd5f08420cec76d1f8058d6a4083a4a817f55",
+    "note": "Pricing structures and conditions extracted from live source; unrelated markup omitted."
+  },
+  "eurogold": {
+    "source_url": "https://www.euro-gold.fr/",
+    "captured_on": "2026-10-06",
+    "original_sha256": "0f6abaa7972f4294fe1e2db18de801a0f8125da937b725f0a1b5f73950e82a79",
+    "fixture_sha256": "29d93a7e1d2b33759beeaeb78f47f97018675efc561a2cceb46b4e032e1a32a2",
+    "note": "Pricing structures and conditions extracted from live source; unrelated markup omitted."
+  },
+  "aurum_silver": {
+    "source_url": "https://www.aurum-silver.fr/ville/aurum-silver-abbeville-80100-rachat-or-et-argent-au-meilleur-prix/",
+    "captured_on": "2026-10-06",
+    "original_sha256": "e63f0591b3b3ebbb444f8da3f74456bc3d0905baeb5d476885ffd9539a770e2e",
+    "fixture_sha256": "a5bc3d96c917229f8ed707992880c534d968fb3b4dc2bfcbc0eaebed9c8179be",
+    "note": "Pricing structures and conditions extracted from live source; unrelated markup omitted."
+  },
+  "bureau_national.html": {
+    "source_url": "https://bureaunationaldelor.fr/estimation",
+    "captured_on": "2026-10-06",
+    "original_sha256": "30daa8eab7e590d28bc553b42ffb7b98d8dbf614ed75ec22c92cb69c359cef27",
+    "fixture_sha256": "a4bad38d11f5d8ae9ec3c29aae8f5b7452cb287f16fed3d7a077f33e8e715d8d",
+    "note": "Relevant asset discovery, read-only public estimator call and real response; unrelated markup omitted."
+  },
+  "bureau_national.js": {
+    "source_url": "https://bureaunationaldelor.fr/estimation",
+    "captured_on": "2026-10-06",
+    "original_sha256": "086f83cfd469f1ba415a2e8f6ee6858e78c4e275d2079ae78c017e32f7c9b374",
+    "fixture_sha256": "63c8c4b1651a4ba7f9728b6c18334431633385d162fc5faf57f6231ae086ec15",
+    "note": "Relevant asset discovery, read-only public estimator call and real response; unrelated markup omitted."
+  },
+  "bureau_national.txt": {
+    "source_url": "https://bureaunationaldelor.fr/estimation",
+    "captured_on": "2026-10-06",
+    "original_sha256": "0033072d66874938eefbaa1da97a526a713ee0c8ee2d31f493d0e4bd8bcb049a",
+    "fixture_sha256": "0033072d66874938eefbaa1da97a526a713ee0c8ee2d31f493d0e4bd8bcb049a",
+    "note": "Relevant asset discovery, read-only public estimator call and real response; unrelated markup omitted."
   }
 }

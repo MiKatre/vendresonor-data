@@ -69,3 +69,6 @@ jobs:
           PY
           fi
           test "$COLLECTION_OUTCOME" = success
+      - name: Check 25-buyer coverage goal
+        if: always() && steps.collect.outcome == 'success'
+        run: python scripts/check_coverage.py --target 25 >> "$GITHUB_STEP_SUMMARY"
