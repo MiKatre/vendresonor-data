@@ -39,6 +39,7 @@ def parse(ident, html=None):
         ("kolidor", 4),
         ("eurogold", 3),
         ("aurum_silver", 5),
+        ("sophie_lamblin", 1),
     ],
 )
 def test_captured_buying_quotes(ident, count):
@@ -150,4 +151,26 @@ def test_official_icon_resolution():
             )
 
     obs = adapters.collect_source(CATALOG["lepage"], Session())
-    assert obs.icon_url == "https://www.lepage.fr/brand.png"
+    assert obs.icon_url is None
+    from types import SimpleNamespace
+
+    class Images:
+        def request(self, method, url):
+            assert method == "GET"
+            if url.endswith("brand.png"):
+                raise ValueError("Unavailable favicon")
+            return SimpleNamespace(
+                headers={"content-type": "image/png"}, content=b"png"
+            )
+
+    html = '<link rel="icon" href="/brand.png"><img class="logo" src="/logo.png">'
+    assert (
+        adapters.discover_icon("https://buyer.test/prices", html, Images())
+        == "https://buyer.test/logo.png"
+    )
+    assert (
+        adapters.discover_icon(
+            "https://buyer.test/prices", '<link rel="icon" href="data:bad">', Images()
+        )
+        is None
+    )

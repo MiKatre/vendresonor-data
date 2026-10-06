@@ -301,5 +301,12 @@
     "original_sha256": "0033072d66874938eefbaa1da97a526a713ee0c8ee2d31f493d0e4bd8bcb049a",
     "fixture_sha256": "0033072d66874938eefbaa1da97a526a713ee0c8ee2d31f493d0e4bd8bcb049a",
     "note": "Relevant asset discovery, read-only public estimator call and real response; unrelated markup omitted."
+  },
+  "sophie_lamblin": {
+    "source_url": "https://sophielamblin.com/rachat-or.php",
+    "captured_on": "2026-10-06",
+    "original_sha256": "744e228471fbb5166c0a7b4d4381367c70e59194ef530648a8f5e0b294cbe676",
+    "fixture_sha256": "24d5c67f8b5be2ac8213c357fe8d71510e7a5bc185c9921584715e41df8d92b1",
+    "note": "Published buying statement and conditions; unrelated markup omitted."
   }
 }

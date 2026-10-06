@@ -18,7 +18,7 @@ uv run --locked python -m buyers.collect
 - JSON stdout: `uv run --locked python -m buyers.collect --output - --no-history`.
 - Options: `--catalog`, `--output`, `--history-dir`, `--timeout`, `--strict`.
 
-30 catalogued buyers; goal: **25 distinct buyers with accepted numeric quotes per run**. Rates carry purity, decimal EUR/g, quote type, product, channel, source URL, observation time and conditions. Source publication dates are included when available. Some buyers publish formulas, block automated access or leave expired offers online; gaps are explicit. Official favicon URLs are discovered from source markup.
+31 catalogued buyers; goal: **25 distinct buyers with accepted numeric quotes per run**. Rates carry purity, decimal EUR/g, quote type, product, channel, source URL, observation time and conditions. Source publication dates are included when available. Some buyers publish formulas, block automated access or leave expired offers online; gaps are explicit. Official favicon URLs are discovered from source markup.
 
 Failures preserve previous rates and their original timestamps. Changes above 30% are quarantined. Snapshot generation time does not refresh individual rates. The website suspends estimates after 24 hours. Expired dated offers are rejected. Source publication dates remain distinct from collection times.
 

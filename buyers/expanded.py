@@ -448,3 +448,35 @@ def bureau_national(source, at, html, quotes):
             )
         )
     return result(source, at, rates, html)
+
+
+def sophie_lamblin(source, at, html):
+    from datetime import datetime
+
+    text = clean_text(html)
+    quote = re.search(
+        rf"Tarif indicatif de reprise Cours enregistré le (\d{{2}}/\d{{2}}/\d{{4}})\s+({NUMBER})€ le gramme pour l’or 18 carats — 750 ‰",
+        text,
+    )
+    if not quote:
+        raise SourceChanged("Sophie Lamblin dated buying quote missing")
+    dated = datetime.strptime(quote[1], "%d/%m/%Y").date().isoformat()
+    return result(
+        source,
+        at,
+        [
+            make(
+                source,
+                at,
+                18,
+                decimal(quote[2]),
+                fineness_per_mille=750,
+                source_date=dated,
+                product_kind="jewellery_for_melting",
+                conditions=[
+                    "Estimation sur rendez-vous; poids net et titre contrôlés à l'atelier. Proposition définitive après expertise."
+                ],
+            )
+        ],
+        html,
+    )

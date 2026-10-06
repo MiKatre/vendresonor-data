@@ -524,6 +524,47 @@ def lesmonnaiesdelyon(source, at, html, js):
     return result(source, at, rates, html)
 
 
+def discover_icon(source_url, html, session):
+    """Use a declared favicon or logo; image errors never invalidate buying rates."""
+    doc = soup(html)
+    icons = [
+        n
+        for n in doc.find_all("link", href=True)
+        if any(rel in {"icon", "apple-touch-icon"} for rel in n.get("rel", []))
+    ]
+    icons.sort(key=lambda n: "apple-touch-icon" not in n.get("rel", []))
+    candidates = [n["href"] for n in icons[:2]]
+    for node in doc.find_all("img"):
+        if (
+            "logo"
+            in " ".join(
+                [str(node.get("class", "")), node.get("alt", ""), node.get("src", "")]
+            ).lower()
+        ):
+            logo = node.get("src") or node.get("srcset", "").split(",")[0].split(" ")[0]
+            if logo:
+                candidates.append(logo)
+                break
+    if not candidates:
+        candidates = ["/favicon.ico"]
+    for candidate in candidates:
+        url = urljoin(source_url, candidate)
+        if not url.startswith("https://"):
+            continue
+        try:
+            response = session.request("GET", url)
+            if (
+                response.headers.get("content-type", "")
+                .split(";")[0]
+                .startswith("image/")
+                and 0 < len(response.content) <= 512000
+            ):
+                return url
+        except Exception:  # An unavailable brand asset must not discard a valid price.
+            continue
+    return None
+
+
 def collect_source(source, session):
     html = session.get(source["url"])
     at = session.last_observed_at
@@ -611,20 +652,6 @@ def collect_source(source, session):
         if not callable(parser) or adapter.startswith("_"):
             raise SourceChanged("Unsupported buyer adapter")
         obs = parser(source, at, html)
-    doc = soup(html)
-    icons = [
-        n
-        for n in doc.find_all("link", href=True)
-        if any(
-            rel in {"icon", "apple-touch-icon", "shortcut"} for rel in n.get("rel", [])
-        )
-    ]
-    icon = next(
-        (n for n in icons if "apple-touch-icon" in n.get("rel", [])),
-        icons[0] if icons else None,
-    )
-    candidate = urljoin(source["url"], icon["href"] if icon else "/favicon.ico")
-    if candidate.startswith("https://"):
-        obs.icon_url = candidate
+    obs.icon_url = discover_icon(source["url"], html, session)
     obs.documents = session.documents.copy()
     return obs

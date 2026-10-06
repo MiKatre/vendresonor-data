@@ -331,6 +331,14 @@
       "transaction_channel": "in_person",
       "reviewed_conditions": [],
       "conditions_reviewed_at": null
+    },
+    {
+      "buyer_id": "sophie_lamblin",
+      "name": "Sophie Lamblin",
+      "url": "https://sophielamblin.com/rachat-or.php",
+      "transaction_channel": "in_person",
+      "reviewed_conditions": [],
+      "conditions_reviewed_at": null
     }
   ]
 }
