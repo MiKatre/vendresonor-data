@@ -1,0 +1,11 @@
+{
+  "buyers": [
+    {"buyer_id":"swissgoldexchange","name":"Swiss Gold Exchange","url":"https://swissgoldexchange.ch/fr/","location":"Bâle","channel":"agency_and_postal"},
+    {"buyer_id":"goldencash","name":"Golden Cash","url":"https://www.goldencash.ch/estimation/","location":"Genève","channel":"agency"},
+    {"buyer_id":"bijouxor","name":"Bijouxor","url":"https://www.bijouxor.ch/or-achat.htm","location":"Clarens · Montreux","channel":"agency_and_postal"},
+    {"buyer_id":"geiger","name":"Geiger Edelmetalle","url":"https://www.geiger-edelmetalle.ch/Services/Altgoldankauf/","location":"Niederglatt · Zurich","channel":"agency"},
+    {"buyer_id":"hausgold","name":"Haus des Goldes","url":"https://www.haus-des-goldes.ch/aktuelle-ankaufspreise/","location":"Steckborn","channel":"agency"},
+    {"buyer_id":"orcash","name":"OrCash Swiss","url":"https://www.orcash.ch/","location":"Coppet","channel":"agency"},
+    {"buyer_id":"valorum","name":"Valorum","url":"https://www.valorum.ch/estimer-mon-or","location":"Genève · Lausanne","channel":"agency"}
+  ]
+}

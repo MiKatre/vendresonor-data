@@ -29,12 +29,18 @@ jobs:
         id: collect
         continue-on-error: true
         run: uv run --locked python -m buyers.collect
+      - name: Collect Swiss pilot buying rates
+        id: swiss
+        continue-on-error: true
+        run: uv run --locked python -m buyers.collect_swiss --target 5
       - name: Upload observations and statuses
         if: always() && (steps.collect.outcome == 'success' || steps.collect.outcome == 'failure')
         uses: actions/upload-artifact@v4
         with:
           name: buyer-rates-${{ github.run_id }}
-          path: data/buyers/
+          path: |
+            data/buyers/
+            data/swiss/
           if-no-files-found: warn
           retention-days: 14
       - name: Publish generated JSON
@@ -43,13 +49,13 @@ jobs:
           if [ ! -f data/buyers/latest.json ]; then exit 0; fi
           git config user.name "VendreSonOr Bot"
           git config user.email "bot@vendresonor.net"
-          git add data/buyers/latest.json data/buyers/history/
+          git add data/buyers/latest.json data/buyers/history/ data/swiss/latest.json data/swiss/history/
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "chore(data): update buyer rates"
           git pull --rebase origin "$GITHUB_REF_NAME"
           git push origin "HEAD:$GITHUB_REF_NAME"
       - name: Rebuild the website with this data commit
-        if: steps.collect.outcome == 'success' && github.ref == 'refs/heads/master'
+        if: steps.collect.outcome == 'success' && steps.swiss.outcome == 'success' && github.ref == 'refs/heads/master'
         env:
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: python scripts/trigger_build.py
@@ -72,3 +78,18 @@ jobs:
       - name: Check 25-buyer coverage goal
         if: always() && steps.collect.outcome == 'success'
         run: python scripts/check_coverage.py --target 25 >> "$GITHUB_STEP_SUMMARY"
+      - name: Report Swiss pilot outcome
+        if: always() && (steps.swiss.outcome == 'success' || steps.swiss.outcome == 'failure')
+        env:
+          SWISS_OUTCOME: ${{ steps.swiss.outcome }}
+        run: |
+          uv run --locked python - <<'PYREPORT' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          from buyers.collect_swiss import coverage
+          d = json.loads(Path('data/swiss/latest.json').read_text())
+          print(f"Swiss pilot: {coverage(d)} current buyers available for comparison; ECB: {d['fx']['status']}")
+          for b in d['buyers']:
+              print(f"- {b['name']}: {b['status']}; residency: {b['eligibility']['status']}")
+          PYREPORT
+          test "$SWISS_OUTCOME" = success

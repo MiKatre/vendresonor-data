@@ -1,0 +1,30 @@
+{
+  "swissgoldexchange": {
+    "captured_at": "2026-10-06",
+    "original_sha256": "024888a6cce52fa512e8a9b76df54e5a4999acf78efa537d0a37f9df6a8d2a64"
+  },
+  "goldencash": {
+    "captured_at": "2026-10-06",
+    "original_sha256": "bbb1931ebbc62e75b5254cb61dcd05b890756b47d8c10d0376ba237749dda354"
+  },
+  "bijouxor": {
+    "captured_at": "2026-10-06",
+    "original_sha256": "fe490bc6ae4979fe367fba90113eda31d683792d5d890a85465102f4d027d801"
+  },
+  "geiger": {
+    "captured_at": "2026-10-06",
+    "original_sha256": "42ec4a7cc8273076ef617be9f975f53b9e6383a6cc9070eb56d9f8192a0f2da4"
+  },
+  "hausgold": {
+    "captured_at": "2026-10-06",
+    "original_sha256": "6d21a806089e8fd3cb30371d1f3da0146845cc5fabd959af3f651b9cae30da2f"
+  },
+  "orcash": {
+    "captured_at": "2026-10-06",
+    "original_sha256": "fb0617d345e798cb7308d2299324c6938525ee5d0bb7aff4ff23a7c6721d875b"
+  },
+  "valorum": {
+    "captured_at": "2026-10-06",
+    "original_sha256": "cffd596fe96f8de98a12c939627e4aefedccbc573041bb66519091d3c370f7c0"
+  }
+}

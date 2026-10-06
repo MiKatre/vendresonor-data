@@ -37,3 +37,15 @@ python scripts/check_coverage.py --target 25
 ```
 
 Exit codes: 0 = accepted numeric rates from at least one attempted buyer; 1 = none; 2 = partial failures with `--strict`. Collection respects robots rules, request spacing and bounded retries; blocked access is not bypassed.
+
+## Swiss pilot
+
+- Run: `uv run --locked python -m buyers.collect_swiss --target 5`.
+- Catalog: `buyers/swiss_catalog.json`; separate CHF snapshot: `data/swiss/latest.json`.
+- Seven buyers; gate: five current numeric sources excluding Swiss-only customers and dated tariffs older than three days.
+- Purity, minimum weight, original CHF/g, source conditions, residency policy, official icon and HTTP document hashes retained. Unknown French-resident eligibility stays unknown.
+- Golden Cash: live buyer API only; static fallback and spot ticker excluded. Geiger: public export and the buyer's own alloy formula. No theoretical spot fallback.
+- ECB daily XML: CHF per EUR, dated; euro equivalent = CHF / rate. Reference conversion excludes banking fees. FX failure disables conversion; CHF observations remain available.
+- Buyer failures retain original observation dates and prices with `failed` status. Changes above 30% and future source dates quarantined. Valorum's stale source is retained separately.
+- Same six-hour workflow collects both markets. Rebuild requires both collectors to succeed; website uses the same immutable data commit for France and Switzerland.
+- Exit 0: coverage gate and ECB succeeded; exit 1: insufficient coverage or FX failure. Raw observations archived even on partial failure.
