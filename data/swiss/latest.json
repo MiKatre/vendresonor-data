@@ -2,13 +2,13 @@
   "schema_version": 1,
   "market": "CH",
   "currency": "CHF",
-  "generated_at": "2026-10-11T22:03:33.748042+00:00",
+  "generated_at": "2026-10-12T06:05:59.918577+00:00",
   "fx": {
     "base_currency": "EUR",
     "quote_currency": "CHF",
     "chf_per_eur": "0.9313",
     "date": "2026-10-09",
-    "observed_at": "2026-10-11T22:03:33.748042+00:00",
+    "observed_at": "2026-10-12T06:05:59.918577+00:00",
     "source_url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
     "status": "ok",
     "documents": [
@@ -16,14 +16,14 @@
         "url": "https://www.ecb.europa.eu/robots.txt",
         "method": "GET",
         "http_status": 200,
-        "observed_at": "2026-10-11T22:03:52.283279+00:00",
+        "observed_at": "2026-10-12T06:06:20.260514+00:00",
         "sha256": "8e55738f64103300babd50db62b59ff5fd47fa7e51a497a7e2f13bf6669b6655"
       },
       {
         "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
         "method": "GET",
         "http_status": 200,
-        "observed_at": "2026-10-11T22:03:52.686985+00:00",
+        "observed_at": "2026-10-12T06:06:20.670700+00:00",
         "sha256": "cf79007a1de55aea7158681ed3731e72ae15f80a92a916d7e0eb32f5640142cd"
       }
     ]
@@ -37,7 +37,7 @@
       "channel": "agency_and_postal",
       "currency": "CHF",
       "status": "ok",
-      "observed_at": "2026-10-11T22:03:34.854697+00:00",
+      "observed_at": "2026-10-12T06:06:01.221063+00:00",
       "rates": [
         {
           "purity_carats": 24,
@@ -137,21 +137,21 @@
           "url": "https://swissgoldexchange.ch/robots.txt",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:34.430611+00:00",
+          "observed_at": "2026-10-12T06:06:00.798539+00:00",
           "sha256": "f65b9b2f7ef964a414a2839c976ec960e2b118b7bb11514d2493d518d87bf7e6"
         },
         {
           "url": "https://swissgoldexchange.ch/fr/",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:34.854697+00:00",
+          "observed_at": "2026-10-12T06:06:01.221063+00:00",
           "sha256": "352364f9db5c79cc90ed0fda3f4849b56bf4e93328f6f0897eacd5e2dafb80a6"
         },
         {
           "url": "https://swissgoldexchange.ch/bilder/marke-180.png",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:35.391726+00:00",
+          "observed_at": "2026-10-12T06:06:01.759605+00:00",
           "sha256": "5e2d1ddd42518d5c86a5d631d5d0eceebec4c0cd27c54f7df22cc4ac212a410c"
         }
       ],
@@ -174,7 +174,7 @@
       "warnings": [],
       "source_updated_at": "2026-10-11T23:56:00+02:00",
       "error": null,
-      "attempted_at": "2026-10-11T22:03:33.748042+00:00"
+      "attempted_at": "2026-10-12T06:05:59.918577+00:00"
     },
     {
       "buyer_id": "goldencash",
@@ -184,12 +184,12 @@
       "channel": "agency",
       "currency": "CHF",
       "status": "ok",
-      "observed_at": "2026-10-11T22:03:38.525929+00:00",
+      "observed_at": "2026-10-12T06:06:06.934845+00:00",
       "rates": [
         {
           "purity_carats": 22,
           "purity_permille": 916,
-          "price_chf_per_gram": "93.24",
+          "price_chf_per_gram": "93.13",
           "min_weight_g": 10,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -201,7 +201,7 @@
         {
           "purity_carats": 18,
           "purity_permille": 750,
-          "price_chf_per_gram": "76.28",
+          "price_chf_per_gram": "76.19",
           "min_weight_g": 10,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -213,7 +213,7 @@
         {
           "purity_carats": 14,
           "purity_permille": 585,
-          "price_chf_per_gram": "59.33",
+          "price_chf_per_gram": "59.26",
           "min_weight_g": 10,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -225,7 +225,7 @@
         {
           "purity_carats": 9,
           "purity_permille": 375,
-          "price_chf_per_gram": "38.14",
+          "price_chf_per_gram": "38.1",
           "min_weight_g": 10,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -239,7 +239,7 @@
         {
           "purity_carats": 22,
           "purity_permille": 916,
-          "price_chf_per_gram": "93.24",
+          "price_chf_per_gram": "93.13",
           "min_weight_g": 10,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -251,7 +251,7 @@
         {
           "purity_carats": 18,
           "purity_permille": 750,
-          "price_chf_per_gram": "76.28",
+          "price_chf_per_gram": "76.19",
           "min_weight_g": 10,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -263,7 +263,7 @@
         {
           "purity_carats": 14,
           "purity_permille": 585,
-          "price_chf_per_gram": "59.33",
+          "price_chf_per_gram": "59.26",
           "min_weight_g": 10,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -275,7 +275,7 @@
         {
           "purity_carats": 9,
           "purity_permille": 375,
-          "price_chf_per_gram": "38.14",
+          "price_chf_per_gram": "38.1",
           "min_weight_g": 10,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -290,35 +290,35 @@
           "url": "https://www.goldencash.ch/robots.txt",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:36.276641+00:00",
+          "observed_at": "2026-10-12T06:06:02.889423+00:00",
           "sha256": "80885b7dad7deec85677c2a3066986bdc0a275107ec4ce3d831ac2a2904c79d2"
         },
         {
           "url": "https://www.goldencash.ch/estimation/",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:36.817414+00:00",
+          "observed_at": "2026-10-12T06:06:03.445141+00:00",
           "sha256": "bbb1931ebbc62e75b5254cb61dcd05b890756b47d8c10d0376ba237749dda354"
         },
         {
           "url": "https://www.goldencash.ch/_astro/estimation.astro_astro_type_script_index_0_lang.BsCcrJPw.js",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:37.239808+00:00",
+          "observed_at": "2026-10-12T06:06:03.872809+00:00",
           "sha256": "1644bd5107998882b6e8ed2a478b0fd0f27452a047d1b39e834162bbf2044e2a"
         },
         {
           "url": "https://www.goldencash.ch/api/prices",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:38.525929+00:00",
-          "sha256": "3e7990c708d5da8641eecbeb873a99442795c368340fd9ea2d9694290af75b73"
+          "observed_at": "2026-10-12T06:06:06.934845+00:00",
+          "sha256": "fe4f5f8a6cc2f666451767c8950a1cd16a0dbababac8b846796d08d4bf10d7e0"
         },
         {
           "url": "https://www.goldencash.ch/apple-touch-icon.png",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:39.184114+00:00",
+          "observed_at": "2026-10-12T06:06:07.608252+00:00",
           "sha256": "bbc2a1eec557db99488bc040632d0ffd6fe401bc648ad8c526cd4defe602af52"
         }
       ],
@@ -342,9 +342,9 @@
       },
       "condition_summary": "Minimum 10 g. Virement uniquement. Démarche douanière pour les objets non achetés en Suisse.",
       "warnings": [],
-      "source_updated_at": "2026-10-12T00:03:38+02:00",
+      "source_updated_at": "2026-10-12T08:06:06+02:00",
       "error": null,
-      "attempted_at": "2026-10-11T22:03:33.748042+00:00"
+      "attempted_at": "2026-10-12T06:05:59.918577+00:00"
     },
     {
       "buyer_id": "bijouxor",
@@ -354,7 +354,7 @@
       "channel": "agency_and_postal",
       "currency": "CHF",
       "status": "ok",
-      "observed_at": "2026-10-11T22:03:40.497567+00:00",
+      "observed_at": "2026-10-12T06:06:09.018842+00:00",
       "rates": [
         {
           "purity_carats": 22,
@@ -418,21 +418,21 @@
           "url": "https://www.bijouxor.ch/robots.txt",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:40.067317+00:00",
+          "observed_at": "2026-10-12T06:06:08.597039+00:00",
           "sha256": "12596982da53ffa2b8040cf413a45d01b5a124ad9cbf710dfb84e6d4706a0353"
         },
         {
           "url": "https://www.bijouxor.ch/or-achat.htm",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:40.497567+00:00",
+          "observed_at": "2026-10-12T06:06:09.018842+00:00",
           "sha256": "fe490bc6ae4979fe367fba90113eda31d683792d5d890a85465102f4d027d801"
         },
         {
           "url": "https://www.bijouxor.ch/achat-or-bijoux.ico",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:40.924626+00:00",
+          "observed_at": "2026-10-12T06:06:09.439982+00:00",
           "sha256": "c162c1b23ec0741153b54e9a96d8345e51ed45b9b349b3c786b053949530fe84"
         }
       ],
@@ -454,7 +454,7 @@
       ],
       "source_updated_at": null,
       "error": null,
-      "attempted_at": "2026-10-11T22:03:33.748042+00:00"
+      "attempted_at": "2026-10-12T06:05:59.918577+00:00"
     },
     {
       "buyer_id": "geiger",
@@ -464,89 +464,89 @@
       "channel": "agency",
       "currency": "CHF",
       "status": "ok",
-      "observed_at": "2026-10-11T22:03:42.992558+00:00",
+      "observed_at": "2026-10-12T06:06:11.463592+00:00",
       "rates": [
         {
           "purity_carats": 8,
           "purity_permille": 333.0,
-          "price_chf_per_gram": "33.24",
+          "price_chf_per_gram": "33.16",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
           "source_fields": {
-            "pure_gold_buying_base_chf_per_gram": "99.81",
+            "pure_gold_buying_base_chf_per_gram": "99.57",
             "calculator_alloy": "333 (8 Karat)"
           }
         },
         {
           "purity_carats": 9,
           "purity_permille": 375.0,
-          "price_chf_per_gram": "37.43",
+          "price_chf_per_gram": "37.34",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
           "source_fields": {
-            "pure_gold_buying_base_chf_per_gram": "99.81",
+            "pure_gold_buying_base_chf_per_gram": "99.57",
             "calculator_alloy": "375 (9 Karat)"
           }
         },
         {
           "purity_carats": 14,
           "purity_permille": 585.0,
-          "price_chf_per_gram": "58.39",
+          "price_chf_per_gram": "58.25",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
           "source_fields": {
-            "pure_gold_buying_base_chf_per_gram": "99.81",
+            "pure_gold_buying_base_chf_per_gram": "99.57",
             "calculator_alloy": "585 (14 Karat)"
           }
         },
         {
           "purity_carats": 18,
           "purity_permille": 750.0,
-          "price_chf_per_gram": "74.86",
+          "price_chf_per_gram": "74.68",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
           "source_fields": {
-            "pure_gold_buying_base_chf_per_gram": "99.81",
+            "pure_gold_buying_base_chf_per_gram": "99.57",
             "calculator_alloy": "750 (18 Karat)"
           }
         },
         {
           "purity_carats": 21.6,
           "purity_permille": 900.0,
-          "price_chf_per_gram": "89.83",
+          "price_chf_per_gram": "89.61",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
           "source_fields": {
-            "pure_gold_buying_base_chf_per_gram": "99.81",
+            "pure_gold_buying_base_chf_per_gram": "99.57",
             "calculator_alloy": "900"
           }
         },
         {
           "purity_carats": 22,
           "purity_permille": 916.0,
-          "price_chf_per_gram": "91.43",
+          "price_chf_per_gram": "91.21",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
           "source_fields": {
-            "pure_gold_buying_base_chf_per_gram": "99.81",
+            "pure_gold_buying_base_chf_per_gram": "99.57",
             "calculator_alloy": "916 (22 Karat)"
           }
         },
         {
           "purity_carats": 24,
           "purity_permille": 999.9,
-          "price_chf_per_gram": "99.80",
+          "price_chf_per_gram": "99.56",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
           "source_fields": {
-            "pure_gold_buying_base_chf_per_gram": "99.81",
+            "pure_gold_buying_base_chf_per_gram": "99.57",
             "calculator_alloy": "999,9 Schmelzgold"
           }
         }
@@ -555,84 +555,84 @@
         {
           "purity_carats": 8,
           "purity_permille": 333.0,
-          "price_chf_per_gram": "33.24",
+          "price_chf_per_gram": "33.16",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
           "source_fields": {
-            "pure_gold_buying_base_chf_per_gram": "99.81",
+            "pure_gold_buying_base_chf_per_gram": "99.57",
             "calculator_alloy": "333 (8 Karat)"
           }
         },
         {
           "purity_carats": 9,
           "purity_permille": 375.0,
-          "price_chf_per_gram": "37.43",
+          "price_chf_per_gram": "37.34",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
           "source_fields": {
-            "pure_gold_buying_base_chf_per_gram": "99.81",
+            "pure_gold_buying_base_chf_per_gram": "99.57",
             "calculator_alloy": "375 (9 Karat)"
           }
         },
         {
           "purity_carats": 14,
           "purity_permille": 585.0,
-          "price_chf_per_gram": "58.39",
+          "price_chf_per_gram": "58.25",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
           "source_fields": {
-            "pure_gold_buying_base_chf_per_gram": "99.81",
+            "pure_gold_buying_base_chf_per_gram": "99.57",
             "calculator_alloy": "585 (14 Karat)"
           }
         },
         {
           "purity_carats": 18,
           "purity_permille": 750.0,
-          "price_chf_per_gram": "74.86",
+          "price_chf_per_gram": "74.68",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
           "source_fields": {
-            "pure_gold_buying_base_chf_per_gram": "99.81",
+            "pure_gold_buying_base_chf_per_gram": "99.57",
             "calculator_alloy": "750 (18 Karat)"
           }
         },
         {
           "purity_carats": 21.6,
           "purity_permille": 900.0,
-          "price_chf_per_gram": "89.83",
+          "price_chf_per_gram": "89.61",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
           "source_fields": {
-            "pure_gold_buying_base_chf_per_gram": "99.81",
+            "pure_gold_buying_base_chf_per_gram": "99.57",
             "calculator_alloy": "900"
           }
         },
         {
           "purity_carats": 22,
           "purity_permille": 916.0,
-          "price_chf_per_gram": "91.43",
+          "price_chf_per_gram": "91.21",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
           "source_fields": {
-            "pure_gold_buying_base_chf_per_gram": "99.81",
+            "pure_gold_buying_base_chf_per_gram": "99.57",
             "calculator_alloy": "916 (22 Karat)"
           }
         },
         {
           "purity_carats": 24,
           "purity_permille": 999.9,
-          "price_chf_per_gram": "99.80",
+          "price_chf_per_gram": "99.56",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
           "source_fields": {
-            "pure_gold_buying_base_chf_per_gram": "99.81",
+            "pure_gold_buying_base_chf_per_gram": "99.57",
             "calculator_alloy": "999,9 Schmelzgold"
           }
         }
@@ -642,35 +642,35 @@
           "url": "https://www.geiger-edelmetalle.ch/robots.txt",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:41.845258+00:00",
+          "observed_at": "2026-10-12T06:06:10.274780+00:00",
           "sha256": "36131989b8d67406d3ce4794259766c3dd427e6b861767a4db6dd9e77700bac2"
         },
         {
           "url": "https://www.geiger-edelmetalle.ch/Services/Altgoldankauf/",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:42.501059+00:00",
+          "observed_at": "2026-10-12T06:06:10.948877+00:00",
           "sha256": "f013e15b9ccf864124f848143ee583be82d6cc1fdf54f7d61afe9987529080f4"
         },
         {
           "url": "https://www.geiger-edelmetalle.ch/store-api/product-export/SWPESMV3NU5XNUPSTGFOVVNHMW/altgoldankauf.csv",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:42.992558+00:00",
-          "sha256": "40eb79867a8b9240774842d15b37d52754efe7765426718670fb143faf146c72"
+          "observed_at": "2026-10-12T06:06:11.463592+00:00",
+          "sha256": "d3c399729c16841791a4c4edc0c7f2c148b14e15fecd6068b6b41bca3ebffc3b"
         },
         {
           "url": "https://media.geiger-edelmetalle.ch/robots.txt",
           "method": "GET",
           "http_status": 404,
-          "observed_at": "2026-10-11T22:03:43.748150+00:00",
+          "observed_at": "2026-10-12T06:06:12.178645+00:00",
           "sha256": "82e45382e7d625da9fd553fe7ffad1cc3723573f619e00b822f856bfa7919749"
         },
         {
           "url": "https://media.geiger-edelmetalle.ch/rt:fit/w:3000/h:0/g:sm/plain/local:///media/1d/21/13/1645792824/Icon_Website_256x256.png@webp",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:44.178963+00:00",
+          "observed_at": "2026-10-12T06:06:12.604588+00:00",
           "sha256": "779fb7948cad7ec5303c693c5929ede6e80e7211f071b2ad8e321c8f0c55ad56"
         }
       ],
@@ -701,7 +701,7 @@
       ],
       "source_updated_at": null,
       "error": null,
-      "attempted_at": "2026-10-11T22:03:33.748042+00:00"
+      "attempted_at": "2026-10-12T06:05:59.918577+00:00"
     },
     {
       "buyer_id": "hausgold",
@@ -711,12 +711,12 @@
       "channel": "agency",
       "currency": "CHF",
       "status": "ok",
-      "observed_at": "2026-10-11T22:03:46.216865+00:00",
+      "observed_at": "2026-10-12T06:06:14.819456+00:00",
       "rates": [
         {
           "purity_carats": 24.0,
           "purity_permille": 999.9,
-          "price_chf_per_gram": "100.89",
+          "price_chf_per_gram": "100.66",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -725,7 +725,7 @@
         {
           "purity_carats": 22.0,
           "purity_permille": 916.0,
-          "price_chf_per_gram": "77.02",
+          "price_chf_per_gram": "76.85",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -734,7 +734,7 @@
         {
           "purity_carats": 21.6,
           "purity_permille": 900.0,
-          "price_chf_per_gram": "75.68",
+          "price_chf_per_gram": "75.50",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -743,7 +743,7 @@
         {
           "purity_carats": 21.0,
           "purity_permille": 875.0,
-          "price_chf_per_gram": "73.58",
+          "price_chf_per_gram": "73.41",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -752,7 +752,7 @@
         {
           "purity_carats": 18.0,
           "purity_permille": 750.0,
-          "price_chf_per_gram": "63.07",
+          "price_chf_per_gram": "62.92",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -761,7 +761,7 @@
         {
           "purity_carats": 14.0,
           "purity_permille": 585.0,
-          "price_chf_per_gram": "49.19",
+          "price_chf_per_gram": "49.08",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -770,7 +770,7 @@
         {
           "purity_carats": 9.0,
           "purity_permille": 375.0,
-          "price_chf_per_gram": "31.53",
+          "price_chf_per_gram": "31.46",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -781,7 +781,7 @@
         {
           "purity_carats": 24.0,
           "purity_permille": 999.9,
-          "price_chf_per_gram": "100.89",
+          "price_chf_per_gram": "100.66",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -790,7 +790,7 @@
         {
           "purity_carats": 22.0,
           "purity_permille": 916.0,
-          "price_chf_per_gram": "77.02",
+          "price_chf_per_gram": "76.85",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -799,7 +799,7 @@
         {
           "purity_carats": 21.6,
           "purity_permille": 900.0,
-          "price_chf_per_gram": "75.68",
+          "price_chf_per_gram": "75.50",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -808,7 +808,7 @@
         {
           "purity_carats": 21.0,
           "purity_permille": 875.0,
-          "price_chf_per_gram": "73.58",
+          "price_chf_per_gram": "73.41",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -817,7 +817,7 @@
         {
           "purity_carats": 18.0,
           "purity_permille": 750.0,
-          "price_chf_per_gram": "63.07",
+          "price_chf_per_gram": "62.92",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -826,7 +826,7 @@
         {
           "purity_carats": 14.0,
           "purity_permille": 585.0,
-          "price_chf_per_gram": "49.19",
+          "price_chf_per_gram": "49.08",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -835,7 +835,7 @@
         {
           "purity_carats": 9.0,
           "purity_permille": 375.0,
-          "price_chf_per_gram": "31.53",
+          "price_chf_per_gram": "31.46",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -847,21 +847,21 @@
           "url": "https://www.haus-des-goldes.ch/robots.txt",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:45.362818+00:00",
+          "observed_at": "2026-10-12T06:06:13.852774+00:00",
           "sha256": "1338d0cf24985371f0c3bc7a9baa5155df49d69a8705de3c31271c1475194348"
         },
         {
           "url": "https://www.haus-des-goldes.ch/aktuelle-ankaufspreise/",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:46.216865+00:00",
-          "sha256": "70ea04df1aebd541247126c0a6ce5fec5b6cc077c885d75b321bf421991fbac4"
+          "observed_at": "2026-10-12T06:06:14.819456+00:00",
+          "sha256": "190ee6d3997a174e5ea09b2a434e52e397b2a1ad4d652fc93dbd6a9a5797676f"
         },
         {
           "url": "https://www.haus-des-goldes.ch/wp-content/uploads/2025/08/favicon-geschaeftslogo-unternehmen-name-300x300.webp",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:46.644819+00:00",
+          "observed_at": "2026-10-12T06:06:15.242682+00:00",
           "sha256": "abc32d08004fa4e6f8b055fc984a709b5c9b43c0233c5e4169677b694a1d6574"
         }
       ],
@@ -884,7 +884,7 @@
       ],
       "source_updated_at": null,
       "error": null,
-      "attempted_at": "2026-10-11T22:03:33.748042+00:00"
+      "attempted_at": "2026-10-12T06:05:59.918577+00:00"
     },
     {
       "buyer_id": "orcash",
@@ -894,12 +894,12 @@
       "channel": "agency",
       "currency": "CHF",
       "status": "ok",
-      "observed_at": "2026-10-11T22:03:48.538984+00:00",
+      "observed_at": "2026-10-12T06:06:16.871046+00:00",
       "rates": [
         {
           "purity_carats": 22.0,
           "purity_permille": 916,
-          "price_chf_per_gram": "93.37",
+          "price_chf_per_gram": "93.14",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -908,7 +908,7 @@
         {
           "purity_carats": 21.6,
           "purity_permille": 900,
-          "price_chf_per_gram": "91.74",
+          "price_chf_per_gram": "91.51",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -917,7 +917,7 @@
         {
           "purity_carats": 18.0,
           "purity_permille": 750,
-          "price_chf_per_gram": "76.87",
+          "price_chf_per_gram": "76.68",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -926,7 +926,7 @@
         {
           "purity_carats": 14.0,
           "purity_permille": 585,
-          "price_chf_per_gram": "59.11",
+          "price_chf_per_gram": "58.96",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -935,7 +935,7 @@
         {
           "purity_carats": 9.0,
           "purity_permille": 375,
-          "price_chf_per_gram": "37.80",
+          "price_chf_per_gram": "37.71",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -946,7 +946,7 @@
         {
           "purity_carats": 22.0,
           "purity_permille": 916,
-          "price_chf_per_gram": "93.37",
+          "price_chf_per_gram": "93.14",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -955,7 +955,7 @@
         {
           "purity_carats": 21.6,
           "purity_permille": 900,
-          "price_chf_per_gram": "91.74",
+          "price_chf_per_gram": "91.51",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -964,7 +964,7 @@
         {
           "purity_carats": 18.0,
           "purity_permille": 750,
-          "price_chf_per_gram": "76.87",
+          "price_chf_per_gram": "76.68",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -973,7 +973,7 @@
         {
           "purity_carats": 14.0,
           "purity_permille": 585,
-          "price_chf_per_gram": "59.11",
+          "price_chf_per_gram": "58.96",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -982,7 +982,7 @@
         {
           "purity_carats": 9.0,
           "purity_permille": 375,
-          "price_chf_per_gram": "37.80",
+          "price_chf_per_gram": "37.71",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -994,21 +994,21 @@
           "url": "https://www.orcash.ch/robots.txt",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:47.659972+00:00",
+          "observed_at": "2026-10-12T06:06:16.084967+00:00",
           "sha256": "bdc4a04f46d6e19b3135b76c3c04ebed9780eb75195704976b5c5fa1259cbc2e"
         },
         {
           "url": "https://www.orcash.ch/",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:48.538984+00:00",
-          "sha256": "de311e124347c21efb388eeadac096b6c6aafee218e755a020bcb99203132c88"
+          "observed_at": "2026-10-12T06:06:16.871046+00:00",
+          "sha256": "024c4e790c199a57d0e98ff84b018195ec13e74c1e551dc24549d97e5f1139be"
         },
         {
           "url": "https://www.orcash.ch/assets/remote/logo.jpg",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:49.227296+00:00",
+          "observed_at": "2026-10-12T06:06:17.567415+00:00",
           "sha256": "07b3956967033b34d88e4590ba7b075eb08491c80b049644330aa83e2e5ea494"
         }
       ],
@@ -1033,9 +1033,9 @@
       },
       "condition_summary": "Réservé aux personnes domiciliées en Suisse.",
       "warnings": [],
-      "source_updated_at": "2026-10-12T00:03:00+02:00",
+      "source_updated_at": "2026-10-12T08:05:00+02:00",
       "error": null,
-      "attempted_at": "2026-10-11T22:03:33.748042+00:00"
+      "attempted_at": "2026-10-12T06:05:59.918577+00:00"
     },
     {
       "buyer_id": "valorum",
@@ -1045,7 +1045,7 @@
       "channel": "agency",
       "currency": "CHF",
       "status": "stale_source",
-      "observed_at": "2026-10-11T22:03:50.669653+00:00",
+      "observed_at": "2026-10-12T06:06:18.999948+00:00",
       "rates": [
         {
           "purity_carats": 24,
@@ -1163,21 +1163,21 @@
           "url": "https://www.valorum.ch/robots.txt",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:50.200758+00:00",
+          "observed_at": "2026-10-12T06:06:18.536370+00:00",
           "sha256": "0d78a4dfccbe57d29ed04f8975b58c178a1b9d15256b69e8d24d1a25405b738a"
         },
         {
           "url": "https://www.valorum.ch/estimer-mon-or",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:50.669653+00:00",
-          "sha256": "5ed227d436a6c7e06f5bc770f41d6857abe8dcdcd12c7b596d722b47dd04c7b9"
+          "observed_at": "2026-10-12T06:06:18.999948+00:00",
+          "sha256": "27413dfcd9b1c3c0cf22a948ab475d0414675699f23b7e9fdd7393c3c0c160d6"
         },
         {
           "url": "https://www.valorum.ch/web/image/website/1/favicon?unique=47a2287",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-10-11T22:03:51.109474+00:00",
+          "observed_at": "2026-10-12T06:06:19.442076+00:00",
           "sha256": "84d526a5e7e2b3578bb9e6c20538c96495d4e6145673894c6aa0cead67fb5ea4"
         }
       ],
@@ -1200,7 +1200,7 @@
       "warnings": [],
       "source_updated_at": "2026-09-30T11:21:26+02:00",
       "error": null,
-      "attempted_at": "2026-10-11T22:03:33.748042+00:00"
+      "attempted_at": "2026-10-12T06:05:59.918577+00:00"
     }
   ],
   "collection": {
