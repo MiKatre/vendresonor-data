@@ -30,7 +30,7 @@ Weight brackets and ranges are retained. MATY cash-cheque rates exclude gift vou
 
 **Collect buyer rates** runs at 00:17, 06:17, 12:17 and 18:17 UTC, plus manual dispatch. GitHub may delay scheduled runs. Tests precede collection; observations are uploaded and generated JSON is committed to `master`.
 
-After a successful collection, the workflow requests a Netlify rebuild via the `NETLIFY_BUILD_HOOK` repository secret. Its payload pins the website build to the exact public data commit. Failed collection runs record outcomes without triggering a rebuild. No website repository token is needed. The final coverage gate fails below 25 accepted buyers, after publishing available fresh observations and requesting the rebuild; failed sources never count as coverage.
+After a successful collection, the workflow requests a Netlify rebuild via the `NETLIFY_BUILD_HOOK` repository secret. Its payload pins the website build to the exact public data commit. Collector execution errors record outcomes; a successful collector in either market can still trigger a rebuild. No website repository token is needed. CI uses `--ci`: source HTTP blocks, network failures, zero quotes and expired offers produce warnings; parser/validation errors and zero usable buyers fail the action. Coverage below 25 produces a warning and step summary, not an execution failure. Failed sources never count as coverage. Publishing and build-hook failures remain fatal.
 
 ```sh
 python scripts/check_coverage.py --target 25
@@ -42,10 +42,11 @@ Exit codes: 0 = accepted numeric rates from at least one attempted buyer; 1 = no
 
 - Run: `uv run --locked python -m buyers.collect_swiss --target 5`.
 - Catalog: `buyers/swiss_catalog.json`; separate CHF snapshot: `data/swiss/latest.json`.
-- Seven buyers; gate: five current numeric sources excluding Swiss-only customers and dated tariffs older than three days.
+- Seven buyers; goal: five current numeric sources excluding Swiss-only customers and dated tariffs older than three days.
 - Purity, minimum weight, original CHF/g, source conditions, residency policy, official icon and HTTP document hashes retained. Unknown French-resident eligibility stays unknown.
 - Golden Cash: live buyer API only; static fallback and spot ticker excluded. Geiger: public export and the buyer's own alloy formula. No theoretical spot fallback.
 - ECB daily XML: CHF per EUR, dated; euro equivalent = CHF / rate. Reference conversion excludes banking fees. FX failure disables conversion; CHF observations remain available.
 - Buyer failures retain original observation dates and prices with `failed` status. Changes above 30% and future source dates quarantined. Valorum's stale source is retained separately.
 - Same six-hour workflow collects both markets. French collection success triggers the rebuild; Swiss coverage failures are reported without blocking French updates. Website uses the same immutable data commit for both markets.
-- Exit 0: coverage gate and ECB succeeded; exit 1: insufficient coverage or FX failure. Raw observations archived even on partial failure.
+- Default exit 0: coverage goal and ECB succeeded; exit 1: insufficient coverage or FX failure. In CI (`--ci`), coverage shortfalls and ECB network failures warn; parser errors or zero usable buyers fail. Raw observations archived even on partial failure.
+- Availability is generic: zero prices are unavailable quotes, not evidence of a closure. No buyer-specific holiday logic or reopening dates. Previous prices keep their original timestamps.

@@ -94,7 +94,7 @@ def test_weight_brackets_and_article_range_preserved():
 
 
 def test_expired_offer_never_accepted_and_publication_date_retained():
-    with pytest.raises(adapters.SourceChanged, match="validity period"):
+    with pytest.raises(adapters.SourceUnavailable, match="validity period"):
         parse("oceanor")
     assert {r.source_date for r in parse("eurogold").rates} == {"2026-09-28"}
 

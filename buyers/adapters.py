@@ -19,6 +19,10 @@ class SourceChanged(ValueError):
     pass
 
 
+class SourceUnavailable(SourceChanged):
+    """Recognized source data is unavailable, not a changed parser structure."""
+
+
 def decimal(text):
     value = re.sub(r"[\s\u00a0\u202f]", "", str(text)).replace(",", ".")
     if value.startswith("."):

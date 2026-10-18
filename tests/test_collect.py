@@ -5,6 +5,8 @@ import httpx
 import pytest
 
 from buyers import collect as module
+from buyers.adapters import SourceChanged, SourceUnavailable
+from buyers.health import error_details
 from buyers.models import Observation, Rate
 
 AT = datetime(2026, 10, 5, 22, 0, tzinfo=timezone.utc)
@@ -137,6 +139,55 @@ def test_complete_failure_and_strict_partial(tmp_path, monkeypatch):
     monkeypatch.setattr(module, "collect", lambda *args: [attempt(), bad])
     assert module.main(args) == 0
     assert module.main(args + ["--strict"]) == 2
+
+
+@pytest.mark.parametrize(
+    "exc,expected",
+    [
+        (SourceUnavailable("expired offer"), 0),
+        (httpx.ReadTimeout("offline"), 0),
+        (SourceChanged("formula changed"), 1),
+        (RuntimeError("bug"), 1),
+    ],
+)
+def test_ci_partial_source_outage_vs_parser_failure(
+    tmp_path, monkeypatch, exc, expected
+):
+    other = {**SOURCE, "buyer_id": "other"}
+    catalog = tmp_path / "catalog.json"
+    catalog.write_text(json.dumps({"buyers": [SOURCE, other]}))
+    bad = {**attempt("failed"), "buyer_id": "other", "error": error_details(exc)}
+    monkeypatch.setattr(module, "collect", lambda *args: [attempt(), bad])
+    output = tmp_path / "latest.json"
+    assert (
+        module.main(
+            [
+                "--catalog",
+                str(catalog),
+                "--output",
+                str(output),
+                "--no-history",
+                "--ci",
+            ]
+        )
+        == expected
+    )
+    assert json.loads(output.read_text())["buyers"][1]["status"] == "failed"
+    all_failed = [{**bad, "buyer_id": source["buyer_id"]} for source in [SOURCE, other]]
+    monkeypatch.setattr(module, "collect", lambda *args: all_failed)
+    assert (
+        module.main(
+            [
+                "--catalog",
+                str(catalog),
+                "--output",
+                str(output),
+                "--no-history",
+                "--ci",
+            ]
+        )
+        == 1
+    )
 
 
 def test_invalid_previous_never_overwritten(tmp_path):

@@ -2,16 +2,17 @@
 
 import argparse
 import json
+import re
 import sys
 import uuid
 from pathlib import Path
 from urllib.parse import urljoin
-import re
 
 import httpx
 
-from .collect import ROOT, USER_AGENT, Fetcher, atomic_write, now
 from .adapters import discover_icon, soup
+from .collect import ROOT, USER_AGENT, Fetcher, atomic_write, now
+from .health import error_details, report_health
 from .swiss import FX_URL, parse, parse_fx, quote_status, trusted_rates
 
 
@@ -99,7 +100,7 @@ def collect_snapshot(sources, fetcher, previous=None, *, at=None):
                 ]:
                     buyer[key] = old[ident].get(key, buyer.get(key))
                 buyer["accepted_rates"] = trusted_rates(old[ident])
-            buyer["error"] = {"type": type(exc).__name__, "message": str(exc)[:600]}
+            buyer["error"] = error_details(exc)
         buyer["attempted_at"] = at.isoformat()
         if buyer["status"] == "failed":
             buyer["attempt_documents"] = fetcher.documents.copy()
@@ -121,6 +122,7 @@ def collect_snapshot(sources, fetcher, previous=None, *, at=None):
             **((previous or {}).get("fx") or {}),
             "status": "failed",
             "error": str(exc)[:600],
+            "error_severity": error_details(exc)["severity"],
             "attempted_at": at.isoformat(),
         }
     return {
@@ -143,14 +145,19 @@ def coverage(snapshot):
     )
 
 
-def main():
+def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--catalog", type=Path, default=ROOT / "buyers/swiss_catalog.json")
     p.add_argument("--output", type=Path, default=ROOT / "data/swiss/latest.json")
     p.add_argument("--history-dir", type=Path, default=ROOT / "data/swiss/history")
     p.add_argument("--no-history", action="store_true")
     p.add_argument("--target", type=int, default=5)
-    a = p.parse_args()
+    p.add_argument(
+        "--ci",
+        action="store_true",
+        help="Warn for coverage/FX unavailability; fail on parser errors or no usable data",
+    )
+    a = p.parse_args(argv)
     sources = json.loads(a.catalog.read_text())["buyers"]
     if len({s["buyer_id"] for s in sources}) != len(sources):
         raise ValueError("duplicate Swiss buyer IDs")
@@ -173,6 +180,8 @@ def main():
         f"Swiss coverage: {count} usable buyers (excluding Swiss-only and outdated sources); ECB: {snapshot['fx']['status']}",
         file=sys.stderr,
     )
+    if a.ci:
+        return report_health(snapshot, count, target=a.target)
     return 0 if count >= a.target and snapshot["fx"]["status"] == "ok" else 1
 
 

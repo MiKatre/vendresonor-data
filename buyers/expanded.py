@@ -1,9 +1,17 @@
 """Additional buyer parsers: explicit buyback structures, never generic spot tables."""
 
 import re
-from decimal import Decimal, ROUND_HALF_UP
+from decimal import ROUND_HALF_UP, Decimal
 
-from .adapters import SourceChanged, clean_text, decimal, make, result, soup
+from .adapters import (
+    SourceChanged,
+    SourceUnavailable,
+    clean_text,
+    decimal,
+    make,
+    result,
+    soup,
+)
 
 NUMBER = r"[\d.,\s\u00a0\u202f]+"
 CARATS = {375: 9, 585: 14, 750: 18, 875: 21, 916: 22, 999: 24, 900: Decimal("21.6")}
@@ -211,7 +219,9 @@ def oceanor(source, at, html):
         <= today
         <= datetime.strptime(validity[2], "%d/%m/%Y").date()
     ):
-        raise SourceChanged("Oceanor published offer is outside its validity period")
+        raise SourceUnavailable(
+            "Oceanor published offer is outside its validity period"
+        )
     rates = [
         make(
             source,

@@ -1,13 +1,13 @@
 """Swiss buying quotes. CHF is never passed to the French EUR models."""
 
 import re
-from datetime import datetime, timedelta, date
-from decimal import Decimal, ROUND_HALF_UP
+from datetime import date, datetime, timedelta
+from decimal import ROUND_HALF_UP, Decimal
 from urllib.parse import urljoin
-from zoneinfo import ZoneInfo
 from xml.etree import ElementTree
+from zoneinfo import ZoneInfo
 
-from .adapters import SourceChanged, clean_text, decimal, soup
+from .adapters import SourceChanged, SourceUnavailable, clean_text, decimal, soup
 
 FX_URL = "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
 SWISS = ZoneInfo("Europe/Zurich")
@@ -16,12 +16,14 @@ PERMILLE = {8: 333, 9: 375, 14: 585, 18: 750, 21: 875, 21.6: 900, 22: 916, 24: 9
 
 def rate(carats, price, *, permille=None, minimum=0, fields=None):
     value = decimal(price)
-    if not value.is_finite() or not 0 < value < 1000:
-        raise SourceChanged("invalid CHF buying price")
     if carats not in PERMILLE:
         raise SourceChanged("unrecognized gold purity")
     if permille is not None and abs(permille - PERMILLE[carats]) > 1.1:
         raise SourceChanged("carat and fineness disagree")
+    if value == 0:
+        raise SourceUnavailable("Published CHF buying price is zero; quote unavailable")
+    if not value.is_finite() or not 0 < value < 1000:
+        raise SourceChanged("invalid CHF buying price")
     return {
         "purity_carats": carats,
         "purity_permille": permille or PERMILLE[carats],

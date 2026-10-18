@@ -1,13 +1,18 @@
 """Captured real buyer structures: buying/spot, restrictions, staleness, API fallbacks."""
 
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
+import httpx
 import pytest
+
+from buyers import collect_swiss as module
+from buyers.adapters import SourceChanged, SourceUnavailable
+from buyers.collect_swiss import collect_snapshot, coverage
+from buyers.health import error_details
 from buyers.swiss import parse, parse_fx, quote_status
-from buyers.adapters import SourceChanged
-from buyers.collect_swiss import coverage, collect_snapshot
 
 FIXTURES = Path(__file__).parent / "fixtures/swiss"
 SOURCES = {
@@ -65,6 +70,119 @@ def test_spot_and_coin_prices_never_become_buying_offers():
         == "107.63"
     )
     assert len(captured("bijouxor")["rates"]) == 3  # excludes 640 CHF/coin
+
+
+@pytest.mark.parametrize("carats", [9, 14, 18, 22, 24])
+def test_zero_price_is_unavailable_for_any_buyer_not_a_closure(carats):
+    from buyers.swiss import rate
+
+    with pytest.raises(SourceUnavailable, match="zero"):
+        rate(carats, "00")
+    with pytest.raises(SourceChanged, match="invalid CHF"):
+        rate(carats, "1000")
+
+
+def test_zero_price_does_not_hide_changed_purity():
+    from buyers.swiss import rate
+
+    for carats, permille in [(19, 750), (18, 900)]:
+        with pytest.raises(SourceChanged) as error:
+            rate(carats, "00", permille=permille)
+        assert error_details(error.value)["severity"] == "error"
+
+
+def test_zero_prices_retain_original_provenance_and_recover():
+    original = {
+        "buyer_id": "bijouxor",
+        **captured("bijouxor"),
+        "status": "ok",
+        "observed_at": "2026-10-05T10:00:00+00:00",
+        "documents": [],
+    }
+
+    class Fetcher:
+        last_observed_at = AT
+        zero = True
+
+        def __init__(self):
+            self.documents = []
+
+        def get(self, url):
+            if url.endswith("eurofxref-daily.xml"):
+                return '<root><Cube time="2026-10-05"><Cube currency="CHF" rate="0.9311"/></Cube></root>'
+            html = (FIXTURES / "bijouxor.html").read_text()
+            if self.zero:
+                html = re.sub(r"[\d.,]+ CHF par gramme", "00 CHF par gramme", html)
+            return html
+
+    fetcher = Fetcher()
+    snapshot = collect_snapshot(
+        [SOURCES["bijouxor"]],
+        fetcher,
+        {"buyers": [original]},
+        at=AT,
+    )
+    buyer = snapshot["buyers"][0]
+    assert buyer["status"] == "failed" and buyer["error"]["severity"] == "warning"
+    assert buyer["rates"] == original["rates"]
+    assert buyer["observed_at"] == original["observed_at"]
+    assert coverage(snapshot) == 0
+    fetcher.zero = False
+    recovered = collect_snapshot([SOURCES["bijouxor"]], fetcher, snapshot, at=AT)
+    assert recovered["buyers"][0]["status"] == "ok" and coverage(recovered) == 1
+
+
+@pytest.mark.parametrize(
+    "exc,usable,fx_error,expected",
+    [
+        (SourceUnavailable("zero quote"), True, None, 0),
+        (SourceChanged("formula changed"), True, None, 1),
+        (SourceUnavailable("zero quote"), False, None, 1),
+        (SourceUnavailable("zero quote"), True, httpx.ReadTimeout("offline"), 0),
+        (SourceUnavailable("zero quote"), True, SourceChanged("bad XML"), 1),
+    ],
+)
+def test_ci_coverage_warning_and_execution_errors(
+    tmp_path,
+    monkeypatch,
+    exc,
+    usable,
+    fx_error,
+    expected,
+):
+    snapshot = {
+        "schema_version": 1,
+        "market": "CH",
+        "buyers": [
+            {
+                "buyer_id": "outage",
+                "status": "failed",
+                "error": error_details(exc),
+                "rates": [],
+                "eligibility": {"status": "unknown"},
+            }
+        ],
+        "fx": {"status": "ok"},
+    }
+    if usable:
+        snapshot["buyers"].append(
+            {
+                "buyer_id": "available",
+                "status": "ok",
+                "rates": [{"price": "80"}],
+                "eligibility": {"status": "unknown"},
+            }
+        )
+    if fx_error:
+        snapshot["fx"] = {
+            "status": "failed",
+            "error": str(fx_error),
+            "error_severity": error_details(fx_error)["severity"],
+        }
+    monkeypatch.setattr(module, "collect_snapshot", lambda *a, **kw: snapshot)
+    args = ["--output", str(tmp_path / "latest.json"), "--no-history", "--target", "5"]
+    assert module.main(args) == 1  # Strict coverage remains available outside CI.
+    assert module.main(args + ["--ci"]) == expected
 
 
 def test_foreign_customer_conditions_and_minimum_are_preserved():

@@ -17,6 +17,7 @@ from urllib.robotparser import RobotFileParser
 import httpx
 
 from .adapters import collect_source
+from .health import error_details, report_health
 from .models import Observation
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -168,7 +169,7 @@ def collect(sources, fetcher):
                     "status": "failed",
                     "attempted_at": started.isoformat(),
                     "observation": None,
-                    "error": {"type": type(exc).__name__, "message": str(exc)[:700]},
+                    "error": error_details(exc),
                     "documents": fetcher.documents.copy(),
                 }
             )
@@ -312,6 +313,11 @@ def main(argv=None):
         action="store_true",
         help="Exit 2 on any failed, quarantined or unsupported source",
     )
+    parser.add_argument(
+        "--ci",
+        action="store_true",
+        help="Warn for source unavailability; fail on parser errors or no usable data",
+    )
     args = parser.parse_args(argv)
     catalog = json.loads(args.catalog.read_text())["buyers"]
     identifiers = {s["buyer_id"] for s in catalog}
@@ -367,6 +373,14 @@ def main(argv=None):
         f"Collected {count} records; {numeric_buyers}/{len(selected)} buyers with usable numeric observations.",
         file=sys.stderr,
     )
+    if args.ci:
+        health = report_health(
+            latest,
+            numeric_buyers,
+            attempted_ids={s["buyer_id"] for s in selected},
+        )
+        if health:
+            return health
     if not numeric_buyers:
         return 1
     return (
