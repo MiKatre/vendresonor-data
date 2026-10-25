@@ -1,0 +1,1238 @@
+{
+  "schema_version": 1,
+  "market": "CH",
+  "currency": "CHF",
+  "generated_at": "2026-10-25T04:49:59.169757+00:00",
+  "fx": {
+    "base_currency": "EUR",
+    "quote_currency": "CHF",
+    "chf_per_eur": "0.9227",
+    "date": "2026-10-23",
+    "observed_at": "2026-10-25T04:49:59.169757+00:00",
+    "source_url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
+    "status": "ok",
+    "documents": [
+      {
+        "url": "https://www.ecb.europa.eu/robots.txt",
+        "method": "GET",
+        "http_status": 200,
+        "observed_at": "2026-10-25T04:50:16.846351+00:00",
+        "sha256": "8e55738f64103300babd50db62b59ff5fd47fa7e51a497a7e2f13bf6669b6655"
+      },
+      {
+        "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
+        "method": "GET",
+        "http_status": 200,
+        "observed_at": "2026-10-25T04:50:17.252911+00:00",
+        "sha256": "034261f6f1f522d896ad6c7ad2e6791f7c7d73bc91cfce272c65785993379a98"
+      }
+    ]
+  },
+  "buyers": [
+    {
+      "buyer_id": "swissgoldexchange",
+      "name": "Swiss Gold Exchange",
+      "url": "https://swissgoldexchange.ch/fr/",
+      "location": "Bâle",
+      "channel": "agency_and_postal",
+      "currency": "CHF",
+      "status": "ok",
+      "observed_at": "2026-10-25T04:50:00.332579+00:00",
+      "rates": [
+        {
+          "purity_carats": 24,
+          "purity_permille": 999.0,
+          "price_chf_per_gram": "102.27",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 22,
+          "purity_permille": 916.0,
+          "price_chf_per_gram": "92.13",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 18,
+          "purity_permille": 750.0,
+          "price_chf_per_gram": "75.43",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 14,
+          "purity_permille": 585.0,
+          "price_chf_per_gram": "58.84",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 9,
+          "purity_permille": 375.0,
+          "price_chf_per_gram": "37.72",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        }
+      ],
+      "accepted_rates": [
+        {
+          "purity_carats": 24,
+          "purity_permille": 999.0,
+          "price_chf_per_gram": "102.27",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 22,
+          "purity_permille": 916.0,
+          "price_chf_per_gram": "92.13",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 18,
+          "purity_permille": 750.0,
+          "price_chf_per_gram": "75.43",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 14,
+          "purity_permille": 585.0,
+          "price_chf_per_gram": "58.84",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 9,
+          "purity_permille": 375.0,
+          "price_chf_per_gram": "37.72",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        }
+      ],
+      "documents": [
+        {
+          "url": "https://swissgoldexchange.ch/robots.txt",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:49:59.900082+00:00",
+          "sha256": "f65b9b2f7ef964a414a2839c976ec960e2b118b7bb11514d2493d518d87bf7e6"
+        },
+        {
+          "url": "https://swissgoldexchange.ch/fr/",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:00.332579+00:00",
+          "sha256": "c59c611e7996d0f2a4e21d7ac7f68a57e074e65389c8480f350f40a54753b1c3"
+        },
+        {
+          "url": "https://swissgoldexchange.ch/bilder/marke-180.png",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:00.892122+00:00",
+          "sha256": "5e2d1ddd42518d5c86a5d631d5d0eceebec4c0cd27c54f7df22cc4ac212a410c"
+        }
+      ],
+      "icon_url": "https://swissgoldexchange.ch/bilder/marke-180.png",
+      "conditions": [
+        "Titre vérifié sur la pierre de touche, poids sur la balance étalonnée, prix de rachat au gramme. Paiement immédiat, à deux minutes de la gare CFF.",
+        "Prix indicatifs sans engagement, calculés chaque minute à partir du cours actuel. Seul le prix figurant sur votre décompte en magasin fait foi.",
+        "Paiement immédiat En espèces ou par virement, le jour même, contre pièce d'identité.",
+        "Sans rendez-vous Du lundi au samedi de 10:00 à 20:00 , le dimanche de 12:00 à 18:00 , à deux minutes de la gare CFF.",
+        "Oui. De nombreuses pièces anciennes et étrangères n'en portent pas. Nous déterminons alors le titre à l'aide de la pierre de touche.",
+        "Oui, à l'intérieur de la Suisse. Le déroulement assuré figure sur Vendre son or par la poste . Depuis l'étranger, ce n'est pas possible.",
+        "Chez nous, à l'Elisabethenanlage 7, près de l'Hotel Metropol, à deux minutes de la gare CFF, sans rendez-vous. Ce à quoi il faut veiller lors de toute vente d'or figure dans le Guide : vendre son or à Bâle .",
+        "Vendre son or par la poste"
+      ],
+      "eligibility": {
+        "status": "unknown",
+        "statement": null,
+        "source_url": "https://swissgoldexchange.ch/fr/"
+      },
+      "condition_summary": "Titre vérifié et pesée sur place. Envoi postal annoncé uniquement depuis la Suisse.",
+      "warnings": [],
+      "source_updated_at": "2026-10-25T05:41:00+01:00",
+      "error": null,
+      "attempted_at": "2026-10-25T04:49:59.169757+00:00"
+    },
+    {
+      "buyer_id": "goldencash",
+      "name": "Golden Cash",
+      "url": "https://www.goldencash.ch/estimation/",
+      "location": "Genève",
+      "channel": "agency",
+      "currency": "CHF",
+      "status": "ok",
+      "observed_at": "2026-10-25T04:50:04.185738+00:00",
+      "rates": [
+        {
+          "purity_carats": 22,
+          "purity_permille": 916,
+          "price_chf_per_gram": "88.42",
+          "min_weight_g": 10,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "endpoint": "https://www.goldencash.ch/api/prices",
+            "mode": "api"
+          }
+        },
+        {
+          "purity_carats": 18,
+          "purity_permille": 750,
+          "price_chf_per_gram": "72.35",
+          "min_weight_g": 10,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "endpoint": "https://www.goldencash.ch/api/prices",
+            "mode": "api"
+          }
+        },
+        {
+          "purity_carats": 14,
+          "purity_permille": 585,
+          "price_chf_per_gram": "56.27",
+          "min_weight_g": 10,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "endpoint": "https://www.goldencash.ch/api/prices",
+            "mode": "api"
+          }
+        },
+        {
+          "purity_carats": 9,
+          "purity_permille": 375,
+          "price_chf_per_gram": "36.17",
+          "min_weight_g": 10,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "endpoint": "https://www.goldencash.ch/api/prices",
+            "mode": "api"
+          }
+        }
+      ],
+      "accepted_rates": [
+        {
+          "purity_carats": 22,
+          "purity_permille": 916,
+          "price_chf_per_gram": "88.42",
+          "min_weight_g": 10,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "endpoint": "https://www.goldencash.ch/api/prices",
+            "mode": "api"
+          }
+        },
+        {
+          "purity_carats": 18,
+          "purity_permille": 750,
+          "price_chf_per_gram": "72.35",
+          "min_weight_g": 10,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "endpoint": "https://www.goldencash.ch/api/prices",
+            "mode": "api"
+          }
+        },
+        {
+          "purity_carats": 14,
+          "purity_permille": 585,
+          "price_chf_per_gram": "56.27",
+          "min_weight_g": 10,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "endpoint": "https://www.goldencash.ch/api/prices",
+            "mode": "api"
+          }
+        },
+        {
+          "purity_carats": 9,
+          "purity_permille": 375,
+          "price_chf_per_gram": "36.17",
+          "min_weight_g": 10,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "endpoint": "https://www.goldencash.ch/api/prices",
+            "mode": "api"
+          }
+        }
+      ],
+      "documents": [
+        {
+          "url": "https://www.goldencash.ch/robots.txt",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:01.895889+00:00",
+          "sha256": "80885b7dad7deec85677c2a3066986bdc0a275107ec4ce3d831ac2a2904c79d2"
+        },
+        {
+          "url": "https://www.goldencash.ch/estimation/",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:02.443289+00:00",
+          "sha256": "c5afdb7b335d0d713755a8a21db884efa6b8cbb7b6a6187b4e3e934c485affe7"
+        },
+        {
+          "url": "https://www.goldencash.ch/_astro/estimation.astro_astro_type_script_index_0_lang.BsCcrJPw.js",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:02.866221+00:00",
+          "sha256": "1644bd5107998882b6e8ed2a478b0fd0f27452a047d1b39e834162bbf2044e2a"
+        },
+        {
+          "url": "https://www.goldencash.ch/api/prices",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:04.185738+00:00",
+          "sha256": "027d72f27873662d7bdbb7d9e072090b1d0353952451f96cdf3b426092da5903"
+        },
+        {
+          "url": "https://www.goldencash.ch/apple-touch-icon.png",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:04.850677+00:00",
+          "sha256": "bbc2a1eec557db99488bc040632d0ffd6fe401bc648ad8c526cd4defe602af52"
+        }
+      ],
+      "icon_url": "https://www.goldencash.ch/apple-touch-icon.png",
+      "conditions": [
+        "Calculateur basé sur les cours actuels du marché. Prix nets, sans frais cachés, ni commissions imaginaires.",
+        "Non-résidents CH, objets non achetés en Suisse : la vente se déroule en deux visites.",
+        "Muni de cette estimation, vous acquittez la TVA (8,1%) à un bureau de douane suisse, puis vous revenez avec la quittance : nous vous faisons alors une offre d'achat ferme, libre à vous de l'accepter.",
+        "Prix net, sans frais cachés",
+        "Cette estimation est indicative. Le prix final est déterminé en agence après contrôle au spectromètre. Les prix sont mis à jour en continu selon les cours des marchés actifs.",
+        "Non-résidents CH, objets non achetés en Suisse : deux visites, estimation gratuite puis passage à la douane pour la TVA (8,1%) avant notre offre ferme. Détail de la démarche",
+        "Nos prix sont NETS , pas de frais cachés. Minimum 10 grammes.",
+        "Notre calculateur de rachat d'or vous permet d'obtenir une estimation instantanée et gratuite de la valeur de vos bijoux en or. Le fonctionnement est simple : sélectionnez le carat de votre or (9K, 14K, 18K ou 22K), indiquez le poids en grammes et notre outil calculera automatiquement la valeur de votre or sur la base des cours actuels du marché. Les prix affichés sont des prix nets. Sans frais cachés, ni commissions imaginaires.",
+        "L'analyse par spectromètre à fluorescence X (XRF) est une méthode utilisée par les professionnels de l'or ayant reçu une formation adéquate. L'appareil émet un faisceau de rayons X qui permet d'identifier et de quantifier chaque composant de l'alliage. En quelques secondes, nous obtenons la composition de votre or : pourcentage d'or, d'argent, de cuivre, de palladium ou de tout autre métal présent.",
+        "Non-résidents CH, objets non achetés en Suisse : TVA à acquitter à la douane avant notre offre ferme. Détail"
+      ],
+      "eligibility": {
+        "status": "conditional",
+        "statement": "Non-résidents CH, objets non achetés en Suisse : deux visites, estimation gratuite puis passage à la douane pour la TVA (8,1%) avant notre offre ferme. Détail de la démarche",
+        "source_url": "https://www.goldencash.ch/estimation/"
+      },
+      "condition_summary": "Minimum 10 g. Virement uniquement. Démarche douanière pour les objets non achetés en Suisse.",
+      "warnings": [],
+      "source_updated_at": "2026-10-25T05:50:04+01:00",
+      "error": null,
+      "attempted_at": "2026-10-25T04:49:59.169757+00:00"
+    },
+    {
+      "buyer_id": "bijouxor",
+      "name": "Bijouxor",
+      "url": "https://www.bijouxor.ch/or-achat.htm",
+      "location": "Clarens · Montreux",
+      "channel": "agency_and_postal",
+      "currency": "CHF",
+      "status": "failed",
+      "observed_at": "2026-10-18T04:41:40.479818+00:00",
+      "rates": [
+        {
+          "purity_carats": 22,
+          "purity_permille": 916,
+          "price_chf_per_gram": "90",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 18,
+          "purity_permille": 750,
+          "price_chf_per_gram": "74",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 14,
+          "purity_permille": 585,
+          "price_chf_per_gram": "56",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        }
+      ],
+      "accepted_rates": [
+        {
+          "purity_carats": 22,
+          "purity_permille": 916,
+          "price_chf_per_gram": "90",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 18,
+          "purity_permille": 750,
+          "price_chf_per_gram": "74",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 14,
+          "purity_permille": 585,
+          "price_chf_per_gram": "56",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        }
+      ],
+      "documents": [
+        {
+          "url": "https://www.bijouxor.ch/robots.txt",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-18T04:41:40.057661+00:00",
+          "sha256": "12596982da53ffa2b8040cf413a45d01b5a124ad9cbf710dfb84e6d4706a0353"
+        },
+        {
+          "url": "https://www.bijouxor.ch/or-achat.htm",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-18T04:41:40.479818+00:00",
+          "sha256": "03eb0a2c0a79fd12b5032cd0c8ae4970a2f7221bc3ce33ed88708707eec41f9c"
+        },
+        {
+          "url": "https://www.bijouxor.ch/achat-or-bijoux.ico",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-18T04:41:40.900591+00:00",
+          "sha256": "c162c1b23ec0741153b54e9a96d8345e51ed45b9b349b3c786b053949530fe84"
+        }
+      ],
+      "icon_url": "https://www.bijouxor.ch/achat-or-bijoux.ico",
+      "conditions": [
+        "Etablis depuis 20 ans dans le canton de Vaud, nous sommes acheteur d’or pour la fabrication de nos produits et bijoux. A cet effet nous disposons du poinçon fédéral de maître, déposé au bureau central du contrôle des métaux précieux. Nous recevons sur rendez-vous .",
+        "Nous payons Cash, à un bon prix , après vérification de l’alliage. >>Calculez la valeur de l'or 18k sur notre site ici! Attention, des acheteurs d'or  arnaquent les clients en Suisse Romande , bien qu'annonçant des prix élevés. la video d'\"à bon entendeur\" sur les acheteurs d'or de Suisse Romande ici Nous achetons tous bijoux, quelque soit son alliage, ainsi que les diamants. Nous vous dessertissons les pierres de valeur gratuitement si vous désirez les reprendre. Vous pouvez également nous faire parvenir les bijoux contre signature par poste sécurisée pour un devis d’achat Détails ici ..",
+        "Nous achetons tous bijoux, quelque soit son alliage, ainsi que les diamants.",
+        "Vous pouvez également nous faire parvenir les bijoux contre signature par poste sécurisée pour un devis d’achat Détails ici .."
+      ],
+      "eligibility": {
+        "status": "unknown",
+        "statement": null,
+        "source_url": "https://www.bijouxor.ch/or-achat.htm"
+      },
+      "condition_summary": "Sur rendez-vous, après vérification de l’alliage. Envoi sécurisé proposé ; départ depuis la France à confirmer.",
+      "warnings": [
+        "Le vendeur ne date pas ses tarifs ; seule la collecte est horodatée."
+      ],
+      "source_updated_at": null,
+      "error": {
+        "type": "SourceUnavailable",
+        "message": "Published CHF buying price is zero; quote unavailable",
+        "severity": "warning"
+      },
+      "attempted_at": "2026-10-25T04:49:59.169757+00:00",
+      "attempt_documents": [
+        {
+          "url": "https://www.bijouxor.ch/robots.txt",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:05.860354+00:00",
+          "sha256": "12596982da53ffa2b8040cf413a45d01b5a124ad9cbf710dfb84e6d4706a0353"
+        },
+        {
+          "url": "https://www.bijouxor.ch/or-achat.htm",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:06.284407+00:00",
+          "sha256": "894c2406c37ef6564993a059e3f48cb0a717119a3adcec96447bf8d97088f99b"
+        }
+      ]
+    },
+    {
+      "buyer_id": "geiger",
+      "name": "Geiger Edelmetalle",
+      "url": "https://www.geiger-edelmetalle.ch/Services/Altgoldankauf/",
+      "location": "Niederglatt · Zurich",
+      "channel": "agency",
+      "currency": "CHF",
+      "status": "ok",
+      "observed_at": "2026-10-25T04:50:08.306007+00:00",
+      "rates": [
+        {
+          "purity_carats": 8,
+          "purity_permille": 333.0,
+          "price_chf_per_gram": "31.42",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "pure_gold_buying_base_chf_per_gram": "94.36",
+            "calculator_alloy": "333 (8 Karat)"
+          }
+        },
+        {
+          "purity_carats": 9,
+          "purity_permille": 375.0,
+          "price_chf_per_gram": "35.39",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "pure_gold_buying_base_chf_per_gram": "94.36",
+            "calculator_alloy": "375 (9 Karat)"
+          }
+        },
+        {
+          "purity_carats": 14,
+          "purity_permille": 585.0,
+          "price_chf_per_gram": "55.20",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "pure_gold_buying_base_chf_per_gram": "94.36",
+            "calculator_alloy": "585 (14 Karat)"
+          }
+        },
+        {
+          "purity_carats": 18,
+          "purity_permille": 750.0,
+          "price_chf_per_gram": "70.77",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "pure_gold_buying_base_chf_per_gram": "94.36",
+            "calculator_alloy": "750 (18 Karat)"
+          }
+        },
+        {
+          "purity_carats": 21.6,
+          "purity_permille": 900.0,
+          "price_chf_per_gram": "84.92",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "pure_gold_buying_base_chf_per_gram": "94.36",
+            "calculator_alloy": "900"
+          }
+        },
+        {
+          "purity_carats": 22,
+          "purity_permille": 916.0,
+          "price_chf_per_gram": "86.43",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "pure_gold_buying_base_chf_per_gram": "94.36",
+            "calculator_alloy": "916 (22 Karat)"
+          }
+        },
+        {
+          "purity_carats": 24,
+          "purity_permille": 999.9,
+          "price_chf_per_gram": "94.35",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "pure_gold_buying_base_chf_per_gram": "94.36",
+            "calculator_alloy": "999,9 Schmelzgold"
+          }
+        }
+      ],
+      "accepted_rates": [
+        {
+          "purity_carats": 8,
+          "purity_permille": 333.0,
+          "price_chf_per_gram": "31.42",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "pure_gold_buying_base_chf_per_gram": "94.36",
+            "calculator_alloy": "333 (8 Karat)"
+          }
+        },
+        {
+          "purity_carats": 9,
+          "purity_permille": 375.0,
+          "price_chf_per_gram": "35.39",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "pure_gold_buying_base_chf_per_gram": "94.36",
+            "calculator_alloy": "375 (9 Karat)"
+          }
+        },
+        {
+          "purity_carats": 14,
+          "purity_permille": 585.0,
+          "price_chf_per_gram": "55.20",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "pure_gold_buying_base_chf_per_gram": "94.36",
+            "calculator_alloy": "585 (14 Karat)"
+          }
+        },
+        {
+          "purity_carats": 18,
+          "purity_permille": 750.0,
+          "price_chf_per_gram": "70.77",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "pure_gold_buying_base_chf_per_gram": "94.36",
+            "calculator_alloy": "750 (18 Karat)"
+          }
+        },
+        {
+          "purity_carats": 21.6,
+          "purity_permille": 900.0,
+          "price_chf_per_gram": "84.92",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "pure_gold_buying_base_chf_per_gram": "94.36",
+            "calculator_alloy": "900"
+          }
+        },
+        {
+          "purity_carats": 22,
+          "purity_permille": 916.0,
+          "price_chf_per_gram": "86.43",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "pure_gold_buying_base_chf_per_gram": "94.36",
+            "calculator_alloy": "916 (22 Karat)"
+          }
+        },
+        {
+          "purity_carats": 24,
+          "purity_permille": 999.9,
+          "price_chf_per_gram": "94.35",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {
+            "pure_gold_buying_base_chf_per_gram": "94.36",
+            "calculator_alloy": "999,9 Schmelzgold"
+          }
+        }
+      ],
+      "documents": [
+        {
+          "url": "https://www.geiger-edelmetalle.ch/robots.txt",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:07.135726+00:00",
+          "sha256": "36131989b8d67406d3ce4794259766c3dd427e6b861767a4db6dd9e77700bac2"
+        },
+        {
+          "url": "https://www.geiger-edelmetalle.ch/Services/Altgoldankauf/",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:07.793894+00:00",
+          "sha256": "5da771c5b6a5a5060bd8165762ef0f027dcbc655186473cc3b0fcaff47b94f90"
+        },
+        {
+          "url": "https://www.geiger-edelmetalle.ch/store-api/product-export/SWPESMV3NU5XNUPSTGFOVVNHMW/altgoldankauf.csv",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:08.306007+00:00",
+          "sha256": "092bdd55c6d6334716f208c9ce0c2f23086dac11140e2920f5f1cdd3391b906f"
+        },
+        {
+          "url": "https://media.geiger-edelmetalle.ch/robots.txt",
+          "method": "GET",
+          "http_status": 404,
+          "observed_at": "2026-10-25T04:50:09.039084+00:00",
+          "sha256": "82e45382e7d625da9fd553fe7ffad1cc3723573f619e00b822f856bfa7919749"
+        },
+        {
+          "url": "https://media.geiger-edelmetalle.ch/rt:fit/w:3000/h:0/g:sm/plain/local:///media/1d/21/13/1645792824/Icon_Website_256x256.png@webp",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:09.468625+00:00",
+          "sha256": "779fb7948cad7ec5303c693c5929ede6e80e7211f071b2ad8e321c8f0c55ad56"
+        }
+      ],
+      "icon_url": "https://media.geiger-edelmetalle.ch/rt:fit/w:3000/h:0/g:sm/plain/local:///media/1d/21/13/1645792824/Icon_Website_256x256.png@webp",
+      "conditions": [
+        "Wichtiger Hinweis zum Ankauf:",
+        "Vom 31. August bis einschliesslich 2. September 2026 ist leider kein Ankauf von Altgold sowie Numismatik möglich. Der Ankauf von regulären Edelmetallbarren und Münzen findet weiterhin wie gewohnt statt. Vielen Dank für Ihr Verständnis.",
+        "Diskret und unkompliziert kaufen wir gerne Ihren nicht mehr getragenen Schmuck wie z. B. Ringe, Ketten, Armreifen, Broschen oder Ohrringe aus Gold an. Schmuck aus Platin und Palladium können wir leider nicht ankaufen.",
+        "Altgold Ankauf nur in der Filiale Niederglatt (ZH)",
+        "Wir sind von Montag bis Freitag jeweils von 09:00 bis 12:30 Uhr sowie von 13:30 bis 18:00 Uhr vor Ort und stehen Ihnen für den Ankauf gerne zur Verfügung.",
+        "Die Geiger Edelmetalle AG in Niederglatt verfügt über eine offizielle Ankaufsbewilligung des Eidgenössischen Zentralamts für Edelmetallkontrolle und gehört zu den registrierten Ankäufern für den gewerbsmässigen Ankauf von Altedelmetallen.",
+        "Hier sehen Sie tagesaktuelle Ankaufspreise für alle Legierungen:",
+        "Bei grösseren Mengen Altgold oder ab einem Bruttogewicht von 100 Gramm profitieren Sie von attraktiveren Ankaufspreisen.",
+        "Der Ankauf von Edelsteinen sowie das Entfernen von Edelsteinen aus Schmuckstücken ist leider nicht möglich.",
+        "Bitte beachten Sie, dass wir für den Abschluss des Geschäfts eine Kopie Ihres Ausweises und Ihre Personalien benötigen.",
+        "Silber, Palladium und Platin - Barren und Münzen - sind mehrwertsteuerpflichtig. Deshalb: Ankauf dieser Ware aus dem Ausland ist nur gegen Vorweisung eines offiziellen Einfuhrzollnachweises möglich. Bei Bijouterie/Juwelierwaren aus Gold/Platin/Palladium und Silber sowie Numismatik gelten die gleichen Regelungen.",
+        "Für den Altgoldankauf muss ein Termin vereinbart werden. Nutzen Sie dafür einfach den folgenden Terminkalender:",
+        "Grundsätzlich sind mündliche Grobbeurteilungen ohne Kostenfolge, wenn aber eine schriftliche oder Einzelschätzungen benötigt wird, werden wir je nach Aufwand eine Gebühr verlangen. (CHF 120/pro Stunde)"
+      ],
+      "eligibility": {
+        "status": "conditional",
+        "statement": "Silber, Palladium und Platin - Barren und Münzen - sind mehrwertsteuerpflichtig. Deshalb: Ankauf dieser Ware aus dem Ausland ist nur gegen Vorweisung eines offiziellen Einfuhrzollnachweises möglich. Bei Bijouterie/Juwelierwaren aus Gold/Platin/Palladium und Silber sowie Numismatik gelten die gleichen Regelungen.",
+        "source_url": "https://www.geiger-edelmetalle.ch/Services/Altgoldankauf/"
+      },
+      "condition_summary": "Niederglatt uniquement, sur rendez-vous. Justificatif officiel d’importation demandé pour les bijoux venant de l’étranger.",
+      "warnings": [
+        "Le vendeur ne date pas ses tarifs ; seule la collecte est horodatée."
+      ],
+      "source_updated_at": null,
+      "error": null,
+      "attempted_at": "2026-10-25T04:49:59.169757+00:00"
+    },
+    {
+      "buyer_id": "hausgold",
+      "name": "Haus des Goldes",
+      "url": "https://www.haus-des-goldes.ch/aktuelle-ankaufspreise/",
+      "location": "Steckborn",
+      "channel": "agency",
+      "currency": "CHF",
+      "status": "ok",
+      "observed_at": "2026-10-25T04:50:11.192098+00:00",
+      "rates": [
+        {
+          "purity_carats": 24.0,
+          "purity_permille": 999.9,
+          "price_chf_per_gram": "95.34",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 22.0,
+          "purity_permille": 916.0,
+          "price_chf_per_gram": "72.78",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 21.6,
+          "purity_permille": 900.0,
+          "price_chf_per_gram": "71.51",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 21.0,
+          "purity_permille": 875.0,
+          "price_chf_per_gram": "69.52",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 18.0,
+          "purity_permille": 750.0,
+          "price_chf_per_gram": "59.59",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 14.0,
+          "purity_permille": 585.0,
+          "price_chf_per_gram": "46.48",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 9.0,
+          "purity_permille": 375.0,
+          "price_chf_per_gram": "29.80",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        }
+      ],
+      "accepted_rates": [
+        {
+          "purity_carats": 24.0,
+          "purity_permille": 999.9,
+          "price_chf_per_gram": "95.34",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 22.0,
+          "purity_permille": 916.0,
+          "price_chf_per_gram": "72.78",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 21.6,
+          "purity_permille": 900.0,
+          "price_chf_per_gram": "71.51",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 21.0,
+          "purity_permille": 875.0,
+          "price_chf_per_gram": "69.52",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 18.0,
+          "purity_permille": 750.0,
+          "price_chf_per_gram": "59.59",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 14.0,
+          "purity_permille": 585.0,
+          "price_chf_per_gram": "46.48",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 9.0,
+          "purity_permille": 375.0,
+          "price_chf_per_gram": "29.80",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        }
+      ],
+      "documents": [
+        {
+          "url": "https://www.haus-des-goldes.ch/robots.txt",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:10.360588+00:00",
+          "sha256": "1338d0cf24985371f0c3bc7a9baa5155df49d69a8705de3c31271c1475194348"
+        },
+        {
+          "url": "https://www.haus-des-goldes.ch/aktuelle-ankaufspreise/",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:11.192098+00:00",
+          "sha256": "35dbc56be9464d54bd38da30c870c887130842e87580fae29655554b5c70947a"
+        },
+        {
+          "url": "https://www.haus-des-goldes.ch/wp-content/uploads/2025/08/favicon-geschaeftslogo-unternehmen-name-300x300.webp.pagespeed.ce.AS1eUbnzkm.webp",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:11.623296+00:00",
+          "sha256": "abc32d08004fa4e6f8b055fc984a709b5c9b43c0233c5e4169677b694a1d6574"
+        }
+      ],
+      "icon_url": "https://www.haus-des-goldes.ch/wp-content/uploads/2025/08/favicon-geschaeftslogo-unternehmen-name-300x300.webp.pagespeed.ce.AS1eUbnzkm.webp",
+      "conditions": [
+        "Beim Goldankauf kommt es auf Vertrauen, Erfahrung und faire Preise an. Deshalb zeigen wir Ihnen transparent, wie der Verkauf bei uns abläuft.",
+        "Unser Ankauf basiert auf dem tagesaktuellen Goldpreis. Ihre Edelmetalle werden von Fachleuten geprüft – und Sie erhalten ein Angebot, das überzeugt.",
+        "Keine versteckten Gebühren",
+        "Wunschtermin / Wunschzeit *",
+        "Termine ausserhalb der Öffnungszeiten nach Vereinbarung."
+      ],
+      "eligibility": {
+        "status": "unknown",
+        "statement": null,
+        "source_url": "https://www.haus-des-goldes.ch/aktuelle-ankaufspreise/"
+      },
+      "condition_summary": "Accueil des résidents français à confirmer avant déplacement.",
+      "warnings": [
+        "Le vendeur ne date pas ses tarifs ; seule la collecte est horodatée."
+      ],
+      "source_updated_at": null,
+      "error": null,
+      "attempted_at": "2026-10-25T04:49:59.169757+00:00"
+    },
+    {
+      "buyer_id": "orcash",
+      "name": "OrCash Swiss",
+      "url": "https://www.orcash.ch/",
+      "location": "Coppet",
+      "channel": "agency",
+      "currency": "CHF",
+      "status": "ok",
+      "observed_at": "2026-10-25T04:50:13.298923+00:00",
+      "rates": [
+        {
+          "purity_carats": 22.0,
+          "purity_permille": 916,
+          "price_chf_per_gram": "88.39",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 21.6,
+          "purity_permille": 900,
+          "price_chf_per_gram": "86.85",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 18.0,
+          "purity_permille": 750,
+          "price_chf_per_gram": "72.77",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 14.0,
+          "purity_permille": 585,
+          "price_chf_per_gram": "55.96",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 9.0,
+          "purity_permille": 375,
+          "price_chf_per_gram": "35.79",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        }
+      ],
+      "accepted_rates": [
+        {
+          "purity_carats": 22.0,
+          "purity_permille": 916,
+          "price_chf_per_gram": "88.39",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 21.6,
+          "purity_permille": 900,
+          "price_chf_per_gram": "86.85",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 18.0,
+          "purity_permille": 750,
+          "price_chf_per_gram": "72.77",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 14.0,
+          "purity_permille": 585,
+          "price_chf_per_gram": "55.96",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 9.0,
+          "purity_permille": 375,
+          "price_chf_per_gram": "35.79",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        }
+      ],
+      "documents": [
+        {
+          "url": "https://www.orcash.ch/robots.txt",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:12.412137+00:00",
+          "sha256": "bdc4a04f46d6e19b3135b76c3c04ebed9780eb75195704976b5c5fa1259cbc2e"
+        },
+        {
+          "url": "https://www.orcash.ch/",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:13.298923+00:00",
+          "sha256": "182b3ea9d9a8afa23018ca7a464d0cb51488f98abd332c80314d339cfe18c571"
+        },
+        {
+          "url": "https://www.orcash.ch/assets/remote/logo.jpg",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:14.008855+00:00",
+          "sha256": "07b3956967033b34d88e4590ba7b075eb08491c80b049644330aa83e2e5ea494"
+        }
+      ],
+      "icon_url": "https://www.orcash.ch/assets/remote/logo.jpg",
+      "conditions": [
+        "Taux de rachat indicatifs de OrCash . Indiquez le poids en grammes pour estimer le paiement — puis appelez pour confirmer.",
+        "Les taux sont indicatifs — le prix final est fixé par OrCash après examen. Données de marché en temps réel.",
+        "OrCash Swiss est enregistré auprès de l’Office fédéral de la douane et de la sécurité des frontières (OFDF) pour l’achat professionnel de métaux précieux usagés. Toutes les transactions sont effectuées conformément aux exigences légales suisses.",
+        "Politique d’achat Bien que l’achat de métaux précieux auprès de personnes domiciliées à l’étranger puisse être autorisé sous certaines conditions légales, douanières et fiscales, OrCash Swiss Sàrl a fait le choix, dans un souci de conformité, de traçabilité et de simplicité administrative, de limiter ses achats aux personnes domiciliées en Suisse.",
+        "OrCash Swiss rachète l’or et l’argent sous toutes leurs formes. L’évaluation est gratuite et le paiement est organisé immédiatement par virement bancaire.",
+        "Paiement par virement bancaire.",
+        "OrCash Swiss reçoit ses clients sur rendez-vous pour le rachat d’or, d’argent, de bijoux destinés à la fonte et de pièces d’or ou d’argent. Le bureau est situé à Coppet, avec un accès simple depuis Genève, Nyon, Vaud et la Suisse romande.",
+        "Or, argent, bijoux ou pièces : passez chez OrCash Swiss pour une estimation gratuite, expliquée devant vous, avec paiement immédiat si vous acceptez l’offre.",
+        "Oui. L’expertise est sans obligation : vous pouvez refuser l’offre et repartir avec vos objets.",
+        "Oui, si vous acceptez l’offre après vérification, le paiement se fait immédiatement par virement bancaire.",
+        "Les avis Google reflètent ce que les clients apprécient le plus : un prix clair, une explication simple, un paiement rapide et un accueil direct à Coppet."
+      ],
+      "eligibility": {
+        "status": "swiss_residents_only",
+        "statement": "Politique d’achat Bien que l’achat de métaux précieux auprès de personnes domiciliées à l’étranger puisse être autorisé sous certaines conditions légales, douanières et fiscales, OrCash Swiss Sàrl a fait le choix, dans un souci de conformité, de traçabilité et de simplicité administrative, de limiter ses achats aux personnes domiciliées en Suisse.",
+        "source_url": "https://www.orcash.ch/"
+      },
+      "condition_summary": "Réservé aux personnes domiciliées en Suisse.",
+      "warnings": [],
+      "source_updated_at": "2026-10-25T05:50:00+01:00",
+      "error": null,
+      "attempted_at": "2026-10-25T04:49:59.169757+00:00"
+    },
+    {
+      "buyer_id": "valorum",
+      "name": "Valorum",
+      "url": "https://www.valorum.ch/estimer-mon-or",
+      "location": "Genève · Lausanne",
+      "channel": "agency",
+      "currency": "CHF",
+      "status": "stale_source",
+      "observed_at": "2026-10-25T04:50:15.615662+00:00",
+      "rates": [
+        {
+          "purity_carats": 24,
+          "purity_permille": 999.9,
+          "price_chf_per_gram": "103.32",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 22,
+          "purity_permille": 916,
+          "price_chf_per_gram": "92.93",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 21,
+          "purity_permille": 875,
+          "price_chf_per_gram": "86.89",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 18,
+          "purity_permille": 750,
+          "price_chf_per_gram": "77.43",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 14,
+          "purity_permille": 585,
+          "price_chf_per_gram": "55.32",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 9,
+          "purity_permille": 375,
+          "price_chf_per_gram": "31.14",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        }
+      ],
+      "accepted_rates": [
+        {
+          "purity_carats": 24,
+          "purity_permille": 999.9,
+          "price_chf_per_gram": "103.32",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 22,
+          "purity_permille": 916,
+          "price_chf_per_gram": "92.93",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 21,
+          "purity_permille": 875,
+          "price_chf_per_gram": "86.89",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 18,
+          "purity_permille": 750,
+          "price_chf_per_gram": "77.43",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 14,
+          "purity_permille": 585,
+          "price_chf_per_gram": "55.32",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        },
+        {
+          "purity_carats": 9,
+          "purity_permille": 375,
+          "price_chf_per_gram": "31.14",
+          "min_weight_g": 0,
+          "quote_kind": "indicative",
+          "product_kind": "gold_items",
+          "source_fields": {}
+        }
+      ],
+      "documents": [
+        {
+          "url": "https://www.valorum.ch/robots.txt",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:15.146981+00:00",
+          "sha256": "0d78a4dfccbe57d29ed04f8975b58c178a1b9d15256b69e8d24d1a25405b738a"
+        },
+        {
+          "url": "https://www.valorum.ch/estimer-mon-or",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:15.615662+00:00",
+          "sha256": "61c5878d56b11d59f8249e693b3595d5ea1c311bc6001d2f448d9396072cc18c"
+        },
+        {
+          "url": "https://www.valorum.ch/web/image/website/1/favicon?unique=47a2287",
+          "method": "GET",
+          "http_status": 200,
+          "observed_at": "2026-10-25T04:50:16.059764+00:00",
+          "sha256": "84d526a5e7e2b3578bb9e6c20538c96495d4e6145673894c6aa0cead67fb5ea4"
+        }
+      ],
+      "icon_url": "https://www.valorum.ch/web/image/website/1/favicon?unique=47a2287",
+      "conditions": [
+        "Notre Maison Vendre vos biens Enchères Nos services Conditions Prêt sur gage Expertise Estimer votre or Média Presse et actualités Partenaires INVESTIR",
+        "Valeurs de référence horaires données à titre indicatif, par gramme. Dernière mise à jour : 30/09/2026 11:21:26",
+        "Cette estimation est donnée à titre indicatif sur la base du cours actuel de l'or. Une expertise en agence permet de prendre en compte l'état du bijou, son poinçon, les pierres éventuelles et sa valeur de revente.",
+        "Notre calculateur vous permet d'obtenir une première estimation indicative de vos bijoux en or. Pour une expertise plus précise, n'hésitez pas à nous contacter ou à prendre rendez-vous dans l'une de nos agences de Genève et Lausanne.",
+        "Prendre rendez-vous",
+        "Nos spécialistes vous reçoivent sur rendez-vous à Genève et Lausanne pour une estimation précise de vos biens, sans engagement.",
+        "Samedi : sur rendez-vous 09h00 à 14h00"
+      ],
+      "eligibility": {
+        "status": "unknown",
+        "statement": null,
+        "source_url": "https://www.valorum.ch/estimer-mon-or"
+      },
+      "condition_summary": "Accueil des résidents français à confirmer avant déplacement.",
+      "warnings": [],
+      "source_updated_at": "2026-09-30T11:21:26+02:00",
+      "error": null,
+      "attempted_at": "2026-10-25T04:49:59.169757+00:00"
+    }
+  ],
+  "collection": {
+    "outcomes": {
+      "swissgoldexchange": "ok",
+      "goldencash": "ok",
+      "bijouxor": "failed",
+      "geiger": "ok",
+      "hausgold": "ok",
+      "orcash": "ok",
+      "valorum": "stale_source"
+    }
+  }
+}
