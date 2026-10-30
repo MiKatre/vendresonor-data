@@ -1,5 +1,6 @@
 """Additional buyer parsers: explicit buyback structures, never generic spot tables."""
 
+import json
 import re
 from decimal import ROUND_HALF_UP, Decimal
 
@@ -70,37 +71,50 @@ def ag_gold(source, at, html):
     return result(source, at, rates, html)
 
 
-def rafinor(source, at, html):
-    rates = {}
-    for row in soup(html).select("tr"):
-        cells = row.find_all("td", recursive=False)
-        label = (
-            re.fullmatch(r"Bijoux Or (\d+) carats", cells[0].get_text(strip=True))
-            if cells
-            else None
-        )
-        if not label:
-            continue
-        cell = row.select_one(".se-price[data-price]")
-        if not cell or decimal(cell["data-price"]) != unit_price(
-            cell.get_text(" ", strip=True)
-        ):
-            raise SourceChanged("Rafinor displayed and calculator prices disagree")
-        rate = make(
+def rafinor(source, at, html, payload):
+    text = clean_text(html)
+    if "avant commissions et taxes" not in text:
+        raise SourceChanged("Rafinor price basis statement missing")
+    purities = [22, 18, 14]
+    if not all(
+        f"['Bijoux or {carats} carats', 'or', {carats} / 24]" in html
+        for carats in purities
+    ):
+        raise SourceChanged("Rafinor jewellery calculator changed")
+    # The page embeds fallback prices; only the live buyer feed is a current quote.
+    try:
+        data = json.loads(payload)
+        fine = decimal(data["rachat"]["or"])
+        spot = decimal(data["spot"]["or"])
+        expired = data["perime"]
+    except (KeyError, TypeError, ValueError) as exc:
+        raise SourceChanged("Rafinor rates feed changed") from exc
+    if expired is not False:
+        raise SourceUnavailable("Rafinor rates feed is expired")
+    warnings = (
+        ["Source buying price equals its spot reference; review required."]
+        if fine == spot
+        else []
+    )
+    rates = [
+        make(
             source,
             at,
-            label[1],
-            decimal(cell["data-price"]),
+            carats,
+            (fine * carats / 24).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP),
             product_kind="jewellery_for_melting",
+            origin="buyer_calculator",
             price_basis="before_commissions_and_taxes",
+            source_fields={
+                "buyer_fine_gold_eur_per_gram": str(fine),
+                "source_spot_eur_per_gram": str(spot),
+                "source_updated_at": str(data.get("maj")),
+            },
+            warnings=warnings,
         )
-        if (
-            label[1] in rates
-            and rates[label[1]].price_eur_per_gram != rate.price_eur_per_gram
-        ):
-            raise SourceChanged("Rafinor duplicate purity prices disagree")
-        rates[label[1]] = rate
-    return result(source, at, list(rates.values()), html)
+        for carats in purities
+    ]
+    return result(source, at, rates, html)
 
 
 def monex(source, at, html):

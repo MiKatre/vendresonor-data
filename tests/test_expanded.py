@@ -17,10 +17,11 @@ CATALOG = {
 AT = datetime(2026, 10, 6, 12, tzinfo=timezone.utc)
 
 
-def parse(ident, html=None):
-    return getattr(expanded, ident)(
-        CATALOG[ident], AT, html or (FIXTURES / f"{ident}.html").read_text()
-    )
+def parse(ident, html=None, payload=None):
+    args = [CATALOG[ident], AT, html or (FIXTURES / f"{ident}.html").read_text()]
+    if ident == "rafinor":
+        args.append(payload or (FIXTURES / "rafinor.json").read_text())
+    return getattr(expanded, ident)(*args)
 
 
 @pytest.mark.parametrize(
@@ -67,14 +68,34 @@ def test_source_commission_and_reference_required():
         parse("or_et_change", html.replace("COMMISSION_GOLD", "COMMISSION_UNKNOWN"))
 
 
-def test_duplicate_rafinor_calculator_inputs_must_agree():
-    html = (FIXTURES / "rafinor.html").read_text()
-    doc = adapters.soup(html)
-    row = next(n for n in doc.find_all("tr") if "Bijoux Or 18 carats" in n.get_text())
-    row.select_one(".se-price")["data-price"] = "1"
-    changed = str(doc)
+def rafinor_feed(**changes):
+    return json.dumps(
+        {**json.loads((FIXTURES / "rafinor.json").read_text()), **changes}
+    )
+
+
+def test_rafinor_uses_live_feed_not_embedded_fallback():
+    rates = {r.purity_carats: r for r in parse("rafinor").rates}
+    assert rates[18].price_eur_per_gram == Decimal("83.75")
+    assert rates[22].price_eur_per_gram == Decimal("102.36")
+    assert rates[14].price_eur_per_gram == Decimal("65.14")
+
+
+def test_rafinor_flags_buying_price_equal_to_spot():
+    assert all("spot" in r.warnings[0] for r in parse("rafinor").rates)
+    feed = rafinor_feed(spot={"or": 120, "argent": 1.5})
+    assert not any(r.warnings for r in parse("rafinor", payload=feed).rates)
+
+
+def test_rafinor_expired_feed_is_unavailable():
+    with pytest.raises(adapters.SourceUnavailable):
+        parse("rafinor", payload=rafinor_feed(perime=True))
+
+
+@pytest.mark.parametrize("payload", ["{}", "not json", '{"rachat": null}'])
+def test_rafinor_changed_feed_fails(payload):
     with pytest.raises(adapters.SourceChanged):
-        parse("rafinor", changed)
+        parse("rafinor", payload=payload)
 
 
 def test_weight_brackets_and_article_range_preserved():

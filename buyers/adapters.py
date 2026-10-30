@@ -608,6 +608,11 @@ def collect_source(source, session):
             )
         js = session.get(urljoin(source["url"], "/" + chunks.pop()))
         obs = lesmonnaiesdelyon(source, session.last_observed_at, html, js)
+    elif adapter == "rafinor":
+        from .expanded import rafinor
+
+        payload = session.get(urljoin(source["url"], "/wp-json/rafinor/v1/cours"))
+        obs = rafinor(source, session.last_observed_at, html, payload)
     elif adapter == "bureau_national":
         from .expanded import bureau_national
 

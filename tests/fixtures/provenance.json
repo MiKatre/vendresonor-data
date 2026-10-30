@@ -199,10 +199,12 @@
   },
   "rafinor": {
     "source_url": "https://rachatorparis.com/calculatrice-prix-or-et-argent/",
-    "captured_on": "2026-10-06",
-    "original_sha256": "109caeb9117b2f15976cf5b52bd8dae593ae9af8840e1f9265f2fff6a0517f71",
-    "fixture_sha256": "8df9c677dab93ee9bbf1eb8cb1ef0f120223f607b882dc468d67ee9bdb98750e",
-    "note": "Pricing structures and conditions extracted from live source; unrelated markup omitted."
+    "captured_on": "2026-10-30",
+    "original_sha256": "225980ad65f16149307e14a7d46eb71164cdc548fa1dfff16dda9c1e1901a117",
+    "fixture_sha256": "b4a175230b91e56e1dec4416b59ca25205e93b17785d7704c6c65df23b6af5e0",
+    "note": "Pricing structures and conditions extracted from live source; unrelated markup omitted.",
+    "endpoint_url": "https://rachatorparis.com/wp-json/rafinor/v1/cours",
+    "endpoint_fixture_sha256": "7014b4749987f3c1f5622f2e901fa1f5ac580bded53d68cf12b2e3c9005f633a"
   },
   "monex": {
     "source_url": "https://monexor.fr/",
