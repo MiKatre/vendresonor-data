@@ -8,11 +8,13 @@ from .adapters import (
     SourceChanged,
     SourceUnavailable,
     clean_text,
+    conditions,
     decimal,
     make,
     result,
     soup,
 )
+from .models import Observation
 
 NUMBER = r"[\d.,\s\u00a0\u202f]+"
 CARATS = {375: 9, 585: 14, 750: 18, 875: 21, 916: 22, 999: 24, 900: Decimal("21.6")}
@@ -91,11 +93,14 @@ def rafinor(source, at, html, payload):
         raise SourceChanged("Rafinor rates feed changed") from exc
     if expired is not False:
         raise SourceUnavailable("Rafinor rates feed is expired")
-    warnings = (
-        ["Source buying price equals its spot reference; review required."]
-        if fine == spot
-        else []
-    )
+    # A price identical to spot is a market reference, not a buyer offer.
+    if fine == spot:
+        return Observation(
+            buyer_id=source["buyer_id"],
+            observed_at=at,
+            conditions=conditions(html),
+            warnings=["Source buying price equals its spot reference; not published."],
+        )
     rates = [
         make(
             source,
@@ -110,7 +115,6 @@ def rafinor(source, at, html, payload):
                 "source_spot_eur_per_gram": str(spot),
                 "source_updated_at": str(data.get("maj")),
             },
-            warnings=warnings,
         )
         for carats in purities
     ]

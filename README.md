@@ -45,6 +45,7 @@ Exit codes: 0 = accepted numeric rates from at least one attempted buyer; 1 = no
 - Seven buyers; goal: five current numeric sources excluding Swiss-only customers and dated tariffs older than three days.
 - Purity, minimum weight, original CHF/g, source conditions, residency policy, official icon and HTTP document hashes retained. Unknown French-resident eligibility stays unknown.
 - Golden Cash: live buyer API only; static fallback and spot ticker excluded. Geiger: public export and the buyer's own alloy formula. No theoretical spot fallback.
+- Rafinor: live buyer feed only. Price equal to feed's spot: published as `no_rates`, previous prices cleared.
 - ECB daily XML: CHF per EUR, dated; euro equivalent = CHF / rate. Reference conversion excludes banking fees. FX failure disables conversion; CHF observations remain available.
 - Buyer failures retain original observation dates and prices with `failed` status. Changes above 30% and future source dates quarantined. Valorum's stale source is retained separately.
 - Same six-hour workflow collects both markets. French collection success triggers the rebuild; Swiss coverage failures are reported without blocking French updates. Website uses the same immutable data commit for both markets.

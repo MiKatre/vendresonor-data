@@ -262,3 +262,18 @@ def test_http_retries_and_robots_no_bypass():
         with pytest.raises(PermissionError):
             f.get("https://buyer.test/private")
         assert "https://buyer.test/private" not in hits
+
+
+def test_no_rates_observation_clears_previous_prices():
+    empty = Observation(buyer_id="test", observed_at=AT).model_dump(mode="json")
+    previous = {"buyers": [{"buyer_id": "test", "rates": [{"rate_id": "old"}]}]}
+    attempt = {
+        "buyer_id": "test",
+        "status": "no_rates",
+        "attempted_at": AT.isoformat(),
+        "observation": empty,
+        "error": None,
+    }
+    buyer = module.merge_latest(previous, [SOURCE], [attempt], AT)["buyers"][0]
+    assert buyer["status"] == "no_rates"
+    assert buyer["rates"] == []

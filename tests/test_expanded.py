@@ -29,7 +29,6 @@ def parse(ident, html=None, payload=None):
     [
         ("artnumor", 5),
         ("ag_gold", 5),
-        ("rafinor", 3),
         ("monex", 4),
         ("or_avenir", 5),
         ("or_et_change", 5),
@@ -75,16 +74,22 @@ def rafinor_feed(**changes):
 
 
 def test_rafinor_uses_live_feed_not_embedded_fallback():
-    rates = {r.purity_carats: r for r in parse("rafinor").rates}
+    feed = rafinor_feed(spot={"or": 120, "argent": 1.5})
+    rates = {r.purity_carats: r for r in parse("rafinor", payload=feed).rates}
     assert rates[18].price_eur_per_gram == Decimal("83.75")
     assert rates[22].price_eur_per_gram == Decimal("102.36")
     assert rates[14].price_eur_per_gram == Decimal("65.14")
 
 
-def test_rafinor_flags_buying_price_equal_to_spot():
-    assert all("spot" in r.warnings[0] for r in parse("rafinor").rates)
-    feed = rafinor_feed(spot={"or": 120, "argent": 1.5})
-    assert not any(r.warnings for r in parse("rafinor", payload=feed).rates)
+def test_rafinor_publishes_no_rates_while_price_equals_spot():
+    obs = parse("rafinor")
+    assert obs.rates == []
+    assert "spot" in obs.warnings[0]
+
+
+def test_rafinor_calculator_change_fails():
+    with pytest.raises(adapters.SourceChanged):
+        parse("rafinor", "<p>Estimation avant commissions et taxes</p>")
 
 
 def test_rafinor_expired_feed_is_unavailable():
