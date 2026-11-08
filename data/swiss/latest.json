@@ -2,13 +2,13 @@
   "schema_version": 1,
   "market": "CH",
   "currency": "CHF",
-  "generated_at": "2026-11-07T21:57:33.962110+00:00",
+  "generated_at": "2026-11-08T06:10:47.770262+00:00",
   "fx": {
     "base_currency": "EUR",
     "quote_currency": "CHF",
     "chf_per_eur": "0.9143",
     "date": "2026-11-06",
-    "observed_at": "2026-11-07T21:57:33.962110+00:00",
+    "observed_at": "2026-11-08T06:10:47.770262+00:00",
     "source_url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
     "status": "ok",
     "documents": [
@@ -16,14 +16,14 @@
         "url": "https://www.ecb.europa.eu/robots.txt",
         "method": "GET",
         "http_status": 200,
-        "observed_at": "2026-11-07T21:57:52.247492+00:00",
+        "observed_at": "2026-11-08T06:11:07.766080+00:00",
         "sha256": "8e55738f64103300babd50db62b59ff5fd47fa7e51a497a7e2f13bf6669b6655"
       },
       {
         "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
         "method": "GET",
         "http_status": 200,
-        "observed_at": "2026-11-07T21:57:52.669335+00:00",
+        "observed_at": "2026-11-08T06:11:08.206084+00:00",
         "sha256": "84cba0d3dcc8f88bf78af2141786404ae391d545eac5c37f9dc67af9a7c9d615"
       }
     ]
@@ -37,7 +37,7 @@
       "channel": "agency_and_postal",
       "currency": "CHF",
       "status": "ok",
-      "observed_at": "2026-11-07T21:57:35.097239+00:00",
+      "observed_at": "2026-11-08T06:10:49.200728+00:00",
       "rates": [
         {
           "purity_carats": 24,
@@ -137,21 +137,21 @@
           "url": "https://swissgoldexchange.ch/robots.txt",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:34.669022+00:00",
+          "observed_at": "2026-11-08T06:10:48.736462+00:00",
           "sha256": "f65b9b2f7ef964a414a2839c976ec960e2b118b7bb11514d2493d518d87bf7e6"
         },
         {
           "url": "https://swissgoldexchange.ch/fr/",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:35.097239+00:00",
-          "sha256": "539724cf93b1a54b0105333c79cb3500c129ea73fce9776dd34593f95b12a695"
+          "observed_at": "2026-11-08T06:10:49.200728+00:00",
+          "sha256": "375253b7107f13defd8b0b404e3dcff8914e00ca54698d17d548a2e35d95b223"
         },
         {
           "url": "https://swissgoldexchange.ch/bilder/marke-180.png",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:35.647221+00:00",
+          "observed_at": "2026-11-08T06:10:49.822615+00:00",
           "sha256": "5e2d1ddd42518d5c86a5d631d5d0eceebec4c0cd27c54f7df22cc4ac212a410c"
         }
       ],
@@ -173,9 +173,9 @@
       },
       "condition_summary": "Titre vérifié et pesée sur place. Envoi postal annoncé uniquement depuis la Suisse.",
       "warnings": [],
-      "source_updated_at": "2026-11-07T22:56:00+01:00",
+      "source_updated_at": "2026-11-08T06:45:00+01:00",
       "error": null,
-      "attempted_at": "2026-11-07T21:57:33.962110+00:00"
+      "attempted_at": "2026-11-08T06:10:47.770262+00:00"
     },
     {
       "buyer_id": "goldencash",
@@ -185,7 +185,7 @@
       "channel": "agency",
       "currency": "CHF",
       "status": "ok",
-      "observed_at": "2026-11-07T21:57:38.815786+00:00",
+      "observed_at": "2026-11-08T06:10:53.359272+00:00",
       "rates": [
         {
           "purity_carats": 22,
@@ -291,35 +291,35 @@
           "url": "https://www.goldencash.ch/robots.txt",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:36.663912+00:00",
+          "observed_at": "2026-11-08T06:10:50.972163+00:00",
           "sha256": "80885b7dad7deec85677c2a3066986bdc0a275107ec4ce3d831ac2a2904c79d2"
         },
         {
           "url": "https://www.goldencash.ch/estimation/",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:37.209776+00:00",
+          "observed_at": "2026-11-08T06:10:51.607759+00:00",
           "sha256": "6d0bb77d74aef597da791d3b57735b2650659c7b5e7eb6fa5b40b7f1e23d1ab6"
         },
         {
           "url": "https://www.goldencash.ch/_astro/estimation.astro_astro_type_script_index_0_lang.BsCcrJPw.js",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:37.633178+00:00",
+          "observed_at": "2026-11-08T06:10:52.076921+00:00",
           "sha256": "1644bd5107998882b6e8ed2a478b0fd0f27452a047d1b39e834162bbf2044e2a"
         },
         {
           "url": "https://www.goldencash.ch/api/prices",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:38.815786+00:00",
-          "sha256": "3648b3787bdd185ef60b273eba545feb284f73e10295a23c07e13f422679a3bf"
+          "observed_at": "2026-11-08T06:10:53.359272+00:00",
+          "sha256": "0563b027596ecc0990ee2e4bcfb4897fd8e517d6bc50e39ae45376b6e627b501"
         },
         {
           "url": "https://www.goldencash.ch/apple-touch-icon.png",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:39.480302+00:00",
+          "observed_at": "2026-11-08T06:10:54.157230+00:00",
           "sha256": "bbc2a1eec557db99488bc040632d0ffd6fe401bc648ad8c526cd4defe602af52"
         }
       ],
@@ -343,9 +343,9 @@
       },
       "condition_summary": "Minimum 10 g. Virement uniquement. Démarche douanière pour les objets non achetés en Suisse.",
       "warnings": [],
-      "source_updated_at": "2026-11-07T22:57:38+01:00",
+      "source_updated_at": "2026-11-08T07:10:53+01:00",
       "error": null,
-      "attempted_at": "2026-11-07T21:57:33.962110+00:00"
+      "attempted_at": "2026-11-08T06:10:47.770262+00:00"
     },
     {
       "buyer_id": "bijouxor",
@@ -355,7 +355,7 @@
       "channel": "agency_and_postal",
       "currency": "CHF",
       "status": "ok",
-      "observed_at": "2026-11-07T21:57:41.142164+00:00",
+      "observed_at": "2026-11-08T06:10:55.580348+00:00",
       "rates": [
         {
           "purity_carats": 22,
@@ -419,21 +419,21 @@
           "url": "https://www.bijouxor.ch/robots.txt",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:40.711040+00:00",
+          "observed_at": "2026-11-08T06:10:55.118534+00:00",
           "sha256": "12596982da53ffa2b8040cf413a45d01b5a124ad9cbf710dfb84e6d4706a0353"
         },
         {
           "url": "https://www.bijouxor.ch/or-achat.htm",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:41.142164+00:00",
+          "observed_at": "2026-11-08T06:10:55.580348+00:00",
           "sha256": "30f03f9db32058f23cdae72f1903e219da3e6dcd320bbe51605cd35aa757b37c"
         },
         {
           "url": "https://www.bijouxor.ch/achat-or-bijoux.ico",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:41.572739+00:00",
+          "observed_at": "2026-11-08T06:10:56.042036+00:00",
           "sha256": "c162c1b23ec0741153b54e9a96d8345e51ed45b9b349b3c786b053949530fe84"
         }
       ],
@@ -455,7 +455,7 @@
       ],
       "source_updated_at": null,
       "error": null,
-      "attempted_at": "2026-11-07T21:57:33.962110+00:00"
+      "attempted_at": "2026-11-08T06:10:47.770262+00:00"
     },
     {
       "buyer_id": "geiger",
@@ -465,7 +465,7 @@
       "channel": "agency",
       "currency": "CHF",
       "status": "ok",
-      "observed_at": "2026-11-07T21:57:43.585643+00:00",
+      "observed_at": "2026-11-08T06:10:58.449710+00:00",
       "rates": [
         {
           "purity_carats": 8,
@@ -643,35 +643,35 @@
           "url": "https://www.geiger-edelmetalle.ch/robots.txt",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:42.409311+00:00",
+          "observed_at": "2026-11-08T06:10:57.113314+00:00",
           "sha256": "36131989b8d67406d3ce4794259766c3dd427e6b861767a4db6dd9e77700bac2"
         },
         {
           "url": "https://www.geiger-edelmetalle.ch/Services/Altgoldankauf/",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:43.091719+00:00",
+          "observed_at": "2026-11-08T06:10:57.883635+00:00",
           "sha256": "ca9d91aa09c17782f44ec7c12ec557fdc607a34d79e56557112584f04c091bb8"
         },
         {
           "url": "https://www.geiger-edelmetalle.ch/store-api/product-export/SWPESMV3NU5XNUPSTGFOVVNHMW/altgoldankauf.csv",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:43.585643+00:00",
+          "observed_at": "2026-11-08T06:10:58.449710+00:00",
           "sha256": "fe6a42268d08358161a102f544435a2b4a99fb1d2ddaba73c2274e0ad5e6283b"
         },
         {
           "url": "https://media.geiger-edelmetalle.ch/robots.txt",
           "method": "GET",
           "http_status": 404,
-          "observed_at": "2026-11-07T21:57:44.345144+00:00",
+          "observed_at": "2026-11-08T06:10:59.383504+00:00",
           "sha256": "82e45382e7d625da9fd553fe7ffad1cc3723573f619e00b822f856bfa7919749"
         },
         {
           "url": "https://media.geiger-edelmetalle.ch/rt:fit/w:3000/h:0/g:sm/plain/local:///media/1d/21/13/1645792824/Icon_Website_256x256.png@webp",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:44.778233+00:00",
+          "observed_at": "2026-11-08T06:10:59.842471+00:00",
           "sha256": "779fb7948cad7ec5303c693c5929ede6e80e7211f071b2ad8e321c8f0c55ad56"
         }
       ],
@@ -702,7 +702,7 @@
       ],
       "source_updated_at": null,
       "error": null,
-      "attempted_at": "2026-11-07T21:57:33.962110+00:00"
+      "attempted_at": "2026-11-08T06:10:47.770262+00:00"
     },
     {
       "buyer_id": "hausgold",
@@ -712,7 +712,7 @@
       "channel": "agency",
       "currency": "CHF",
       "status": "ok",
-      "observed_at": "2026-11-07T21:57:46.553903+00:00",
+      "observed_at": "2026-11-08T06:11:01.716176+00:00",
       "rates": [
         {
           "purity_carats": 24.0,
@@ -848,21 +848,21 @@
           "url": "https://www.haus-des-goldes.ch/robots.txt",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:45.734381+00:00",
+          "observed_at": "2026-11-08T06:11:00.870936+00:00",
           "sha256": "1338d0cf24985371f0c3bc7a9baa5155df49d69a8705de3c31271c1475194348"
         },
         {
           "url": "https://www.haus-des-goldes.ch/aktuelle-ankaufspreise/",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:46.553903+00:00",
-          "sha256": "5efac032867956b1a1eea72f7fbddc0a7b3e9d023c1963361299b50f49618c9a"
+          "observed_at": "2026-11-08T06:11:01.716176+00:00",
+          "sha256": "b5a356bbf1fd863a850c305dc6d447a3a160c5ab6b22131bbd2772a114dbcc3c"
         },
         {
           "url": "https://www.haus-des-goldes.ch/wp-content/uploads/2025/08/favicon-geschaeftslogo-unternehmen-name-300x300.webp",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:46.981015+00:00",
+          "observed_at": "2026-11-08T06:11:02.169106+00:00",
           "sha256": "abc32d08004fa4e6f8b055fc984a709b5c9b43c0233c5e4169677b694a1d6574"
         }
       ],
@@ -885,7 +885,7 @@
       ],
       "source_updated_at": null,
       "error": null,
-      "attempted_at": "2026-11-07T21:57:33.962110+00:00"
+      "attempted_at": "2026-11-08T06:10:47.770262+00:00"
     },
     {
       "buyer_id": "orcash",
@@ -895,7 +895,7 @@
       "channel": "agency",
       "currency": "CHF",
       "status": "ok",
-      "observed_at": "2026-11-07T21:57:48.639680+00:00",
+      "observed_at": "2026-11-08T06:11:04.016866+00:00",
       "rates": [
         {
           "purity_carats": 22.0,
@@ -995,21 +995,21 @@
           "url": "https://www.orcash.ch/robots.txt",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:47.812116+00:00",
+          "observed_at": "2026-11-08T06:11:03.059629+00:00",
           "sha256": "452c79baad65cdf250c3f2a9bbc1f25ca3f2580ed5af0dcf718bb213f7a1a997"
         },
         {
           "url": "https://www.orcash.ch/",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:48.639680+00:00",
-          "sha256": "d8da7e6a45d24a52e67ce102b2c6273f26cd5471db7d12f09346b4b7e8933fd8"
+          "observed_at": "2026-11-08T06:11:04.016866+00:00",
+          "sha256": "666727ca19514433807f8817320f6307c23fb15d9b7193c13236123060dbff44"
         },
         {
           "url": "https://www.orcash.ch/assets/remote/logo.jpg",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:49.363428+00:00",
+          "observed_at": "2026-11-08T06:11:04.818244+00:00",
           "sha256": "07b3956967033b34d88e4590ba7b075eb08491c80b049644330aa83e2e5ea494"
         }
       ],
@@ -1034,9 +1034,9 @@
       },
       "condition_summary": "Réservé aux personnes domiciliées en Suisse.",
       "warnings": [],
-      "source_updated_at": "2026-11-07T22:57:00+01:00",
+      "source_updated_at": "2026-11-08T07:10:00+01:00",
       "error": null,
-      "attempted_at": "2026-11-07T21:57:33.962110+00:00"
+      "attempted_at": "2026-11-08T06:10:47.770262+00:00"
     },
     {
       "buyer_id": "valorum",
@@ -1046,7 +1046,7 @@
       "channel": "agency",
       "currency": "CHF",
       "status": "stale_source",
-      "observed_at": "2026-11-07T21:57:50.979943+00:00",
+      "observed_at": "2026-11-08T06:11:06.461734+00:00",
       "rates": [
         {
           "purity_carats": 24,
@@ -1164,21 +1164,21 @@
           "url": "https://www.valorum.ch/robots.txt",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:50.506604+00:00",
+          "observed_at": "2026-11-08T06:11:05.971533+00:00",
           "sha256": "0d78a4dfccbe57d29ed04f8975b58c178a1b9d15256b69e8d24d1a25405b738a"
         },
         {
           "url": "https://www.valorum.ch/estimer-mon-or",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:50.979943+00:00",
-          "sha256": "25c454622ea5a46a3e4e4979bc329a74e1a136bd6628e946a3b9f915269309a3"
+          "observed_at": "2026-11-08T06:11:06.461734+00:00",
+          "sha256": "84cc001f69f25b4dbf8992bc4c5ccad64d0dba22c5e6002afe241656f2026aa5"
         },
         {
           "url": "https://www.valorum.ch/web/image/website/1/favicon?unique=0f70fae",
           "method": "GET",
           "http_status": 200,
-          "observed_at": "2026-11-07T21:57:51.422853+00:00",
+          "observed_at": "2026-11-08T06:11:06.942587+00:00",
           "sha256": "84d526a5e7e2b3578bb9e6c20538c96495d4e6145673894c6aa0cead67fb5ea4"
         }
       ],
@@ -1201,7 +1201,7 @@
       "warnings": [],
       "source_updated_at": "2026-09-30T11:21:26+02:00",
       "error": null,
-      "attempted_at": "2026-11-07T21:57:33.962110+00:00"
+      "attempted_at": "2026-11-08T06:10:47.770262+00:00"
     }
   ],
   "collection": {
