@@ -397,7 +397,7 @@ def eurogold(source, at, html):
     from datetime import datetime
 
     text = clean_text(html)
-    dated = re.search(r"COURS DE L OR .*?-le (\d{2}/\d{2}/\d{4})", text)
+    dated = re.search(r"COURS DE L OR .*?-le\s*(\d{2}/\d{2}/\d{4})", text)
     if not dated:
         raise SourceChanged("Euro Gold tariff date missing")
     source_date = datetime.strptime(dated[1], "%d/%m/%Y").date().isoformat()

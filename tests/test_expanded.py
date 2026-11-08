@@ -125,6 +125,13 @@ def test_expired_offer_never_accepted_and_publication_date_retained():
     assert {r.source_date for r in parse("eurogold").rates} == {"2026-09-28"}
 
 
+def test_eurogold_date_tolerates_non_breaking_space():
+    html = (FIXTURES / "eurogold.html").read_text()
+    html = html.replace("-le 28/09/2026", "-le\u00a0 05/11/2026")
+    assert "05/11/2026" in html
+    assert {r.source_date for r in parse("eurogold", html).rates} == {"2026-11-05"}
+
+
 def test_bureau_national_exact_weight_ranges_and_asset_refresh():
     payload = (FIXTURES / "bureau_national.txt").read_text()
     obs = expanded.bureau_national(CATALOG["bureau_national"], AT, "", [(1, payload)])
