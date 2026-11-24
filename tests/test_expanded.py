@@ -125,6 +125,21 @@ def test_expired_offer_never_accepted_and_publication_date_retained():
     assert {r.source_date for r in parse("eurogold").rates} == {"2026-09-28"}
 
 
+def test_lepage_contact_on_request_publishes_no_rates():
+    html = (
+        "<main><p>Chez LEPAGE, le prix de rachat de votre or est déterminé en "
+        "fonction du cours de l’or, qui fluctue régulièrement. Pour obtenir des "
+        "informations sur les tarifs en vigueur et connaître les modalités de "
+        "notre service de rachat d’or, nous vous invitons à nous contacter au "
+        "03 20 12 04 04.</p></main>"
+    )
+    obs = parse("lepage", html=html)
+    assert obs.rates == []
+    assert "on request" in obs.warnings[0]
+    with pytest.raises(adapters.SourceChanged):
+        parse("lepage", html="<main><p>Page modifiée sans mention de tarifs.</p></main>")
+
+
 def test_eurogold_date_tolerates_non_breaking_space():
     html = (FIXTURES / "eurogold.html").read_text()
     html = html.replace("-le 28/09/2026", "-le\u00a0 05/11/2026")

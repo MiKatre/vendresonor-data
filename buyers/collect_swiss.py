@@ -2,7 +2,6 @@
 
 import argparse
 import json
-import re
 import sys
 import uuid
 from pathlib import Path
@@ -13,7 +12,14 @@ import httpx
 from .adapters import discover_icon, soup
 from .collect import ROOT, USER_AGENT, Fetcher, atomic_write, now
 from .health import error_details, report_health
-from .swiss import FX_URL, parse, parse_fx, quote_status, trusted_rates
+from .swiss import (
+    FX_URL,
+    geiger_export_url,
+    parse,
+    parse_fx,
+    quote_status,
+    trusted_rates,
+)
 
 
 def collect_snapshot(sources, fetcher, previous=None, *, at=None):
@@ -58,20 +64,8 @@ def collect_snapshot(sources, fetcher, previous=None, *, at=None):
                 payload["_endpoint"] = endpoint
                 observed = fetcher.last_observed_at
             elif ident == "geiger":
-                script = next(
-                    (
-                        n.get_text()
-                        for n in soup(html).find_all("script")
-                        if "altgoldankauf.csv" in n.get_text()
-                    ),
-                    "",
-                )
-                endpoint = re.search(
-                    r"xhr.open\('GET', '([^']+altgoldankauf\.csv)'", script
-                )
-                if not endpoint:
-                    raise ValueError("buyer export reference missing")
-                payload = fetcher.get(urljoin(source["url"], endpoint[1]))
+                endpoint = geiger_export_url(html)
+                payload = fetcher.get(urljoin(source["url"], endpoint))
                 observed = fetcher.last_observed_at
             observation = parse(source, html, payload)
             status = quote_status(observation, at, old.get(ident))

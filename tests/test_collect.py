@@ -69,6 +69,11 @@ def test_large_changes_quarantined():
     assert b["status"] == "quarantined"
     assert b["rates"][0]["price_eur_per_gram"] == "80"
     assert b["quarantined_rates"][0]["price_eur_per_gram"] == "200"
+    dropped = module.merge_latest(
+        previous, [SOURCE], [attempt(price="57")], AT.isoformat()
+    )["buyers"][0]
+    assert dropped["status"] == "quarantined"
+    assert dropped["rates"][0]["price_eur_per_gram"] == "80"
 
 
 def test_future_source_quarantined_without_previous():

@@ -12,7 +12,7 @@ from buyers import collect_swiss as module
 from buyers.adapters import SourceChanged, SourceUnavailable
 from buyers.collect_swiss import collect_snapshot, coverage
 from buyers.health import error_details
-from buyers.swiss import parse, parse_fx, quote_status
+from buyers.swiss import geiger_export_url, parse, parse_fx, quote_status
 
 FIXTURES = Path(__file__).parent / "fixtures/swiss"
 SOURCES = {
@@ -211,9 +211,24 @@ def test_live_api_failure_must_not_use_static_fallback():
     with pytest.raises(SourceChanged, match="fallback excluded"):
         captured("goldencash", payload=payload)
     with pytest.raises(SourceChanged, match="identifier changed"):
-        captured("geiger", payload="unknown\n99.34")
+        captured("geiger", payload="unknown\n85")
+    with pytest.raises(SourceChanged, match="identifier changed"):
+        captured("geiger", payload="2230003\n85\n\n2230003\n86\n")
     r = next(r for r in captured("geiger")["rates"] if r["purity_carats"] == 18)
-    assert r["price_chf_per_gram"] == "74.51"  # buyer's published 99.34 base * 750/1000
+    assert r["price_chf_per_gram"] == "63.75"  # buyer's published 85 base * 750/1000
+    reordered = captured("geiger", payload="\ufeff2130001\n0.77\n\n2230003\n85\n")
+    assert (
+        next(x for x in reordered["rates"] if x["purity_carats"] == 18)[
+            "price_chf_per_gram"
+        ]
+        == "63.75"
+    )
+    assert (
+        geiger_export_url((FIXTURES / "geiger.html").read_text())
+        == "/store-api/product-export/SWPESMV3NU5XNUPSTGFOVVNHMW/altgoldankauf.csv"
+    )
+    with pytest.raises(SourceChanged, match="export reference missing"):
+        geiger_export_url("<html><script>console.log('none')</script></html>")
 
 
 def test_old_source_future_date_and_large_price_jump_are_quarantined():
@@ -301,13 +316,50 @@ def test_quarantine_does_not_accept_the_same_bad_jump_next_run():
         captured("swissgoldexchange", html)
 
 
+def test_symmetric_price_drop_quarantine_prevents_recovery_trap():
+    obs = captured("swissgoldexchange")
+    # A -28.8% drop has inverse +40.4% and must be quarantined symmetrically so it
+    # cannot poison accepted_rates and trap recovery on the following run.
+    dropped = {
+        **obs,
+        "rates": [
+            {**r, "price_chf_per_gram": "38.29"}
+            if r["purity_carats"] == 14
+            else r
+            for r in obs["rates"]
+        ],
+    }
+    baseline = {
+        **obs,
+        "rates": [
+            {**r, "price_chf_per_gram": "53.78"}
+            if r["purity_carats"] == 14
+            else r
+            for r in obs["rates"]
+        ],
+    }
+    assert quote_status(dropped, AT, baseline) == "quarantined"
+    # Any accepted drop (e.g. -20%) can also legally recover (+25%) without trapping.
+    mild_drop = {
+        **obs,
+        "rates": [
+            {**r, "price_chf_per_gram": "43.02"}
+            if r["purity_carats"] == 14
+            else r
+            for r in obs["rates"]
+        ],
+    }
+    assert quote_status(mild_drop, AT, baseline) == "ok"
+    assert quote_status(baseline, AT, mild_drop) == "ok"
+
+
 @pytest.mark.parametrize("change", ["divisor", "discount"])
 def test_changed_gold_formula_cannot_be_validated_by_unchanged_silver(change):
     html = (FIXTURES / "geiger.html").read_text()
     if change == "divisor":
-        html = html.replace("/1000", "/10000", 1)
+        html = html.replace("purity / 1000", "purity / 10000", 1)
     else:
-        html = html.replace("(price *", "(price * .9 *", 1)
+        html = html.replace("basePrice * (", "basePrice * .9 * (", 1)
     with pytest.raises(SourceChanged, match="formula changed"):
         captured("geiger", html)
 

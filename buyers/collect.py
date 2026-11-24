@@ -228,11 +228,9 @@ def merge_latest(previous, sources, attempts, generated_at):
                     and rate["price_eur_per_gram"]
                     and previous_rate["price_eur_per_gram"]
                 ):
-                    change = abs(
-                        Decimal(rate["price_eur_per_gram"])
-                        / Decimal(previous_rate["price_eur_per_gram"])
-                        - 1
-                    )
+                    new_price = Decimal(rate["price_eur_per_gram"])
+                    old_price = Decimal(previous_rate["price_eur_per_gram"])
+                    change = max(new_price / old_price, old_price / new_price) - 1
                     if change > Decimal("0.30"):
                         record["status"] = "quarantined"
                         record["warnings"].append(

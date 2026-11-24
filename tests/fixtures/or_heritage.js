@@ -5,5 +5,13 @@ const GOLD_MARGINS = {
   14: 0.47646742244058266,
   9:  0.30650509539764936
 };
-LIVE_SPOT_24K = (d['pax-gold'].eur / 31.1035);
-return LIVE_SPOT_24K * (GOLD_MARGINS[carats] || 1);
+async function fetchGoldSpot() {
+  const r = await fetch('/.netlify/functions/cours-or-spot', { cache: 'no-store' });
+  const d = await r.json();
+  if (d && typeof d.eur_g === 'number' && d.eur_g > 50 && d.eur_g < 500 && typeof d.quote_time === 'number') {
+    LIVE_SPOT_24K = d.eur_g;
+  }
+}
+function priceGold(carats) {
+  return LIVE_SPOT_24K * (GOLD_MARGINS[carats] || 1);
+}

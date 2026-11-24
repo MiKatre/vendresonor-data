@@ -59,6 +59,27 @@ def extract_conditions(html):
     return statements[:35]
 
 
+def geiger_export_url(html):
+    script = next(
+        (
+            n.get_text()
+            for n in soup(html).find_all("script")
+            if "altgoldankauf.csv" in n.get_text()
+        ),
+        "",
+    )
+    match = re.search(
+        r"const\s+EXPORT_URL\s*=\s*((?:['\"][^'\"]+['\"]\s*\+?\s*)+);",
+        script,
+    )
+    if not match or not re.search(r"\bfetch\s*\(\s*EXPORT_URL\b", script):
+        raise SourceChanged("buyer export reference missing")
+    path = "".join(re.findall(r"['\"]([^'\"]+)['\"]", match[1]))
+    if not path.endswith("altgoldankauf.csv"):
+        raise SourceChanged("buyer export reference missing")
+    return path
+
+
 def parse(source, html, payload=None):
     ident = source["buyer_id"]
     doc = soup(html)
@@ -200,6 +221,7 @@ def parse(source, html, payload=None):
                 )
             )
     elif ident == "geiger":
+        root = doc.select_one("#geiger-purchase")
         script = next(
             (
                 n.get_text()
@@ -208,32 +230,47 @@ def parse(source, html, payload=None):
             ),
             "",
         )
-        gold = re.search(
-            r'if\s*\(\s*response\[0\]\s*===\s*"2230003"\s*\)(.*?)(?=if\s*\(\s*response\[3\]|$)',
-            script,
-            re.S,
+        compact = re.sub(r"\s+", "", script)
+        gold_article = re.search(
+            r"constARTICLES=\{[^}]*gold:['\"](\d+)['\"]", compact
         )
-        expected = "(price * (parseFloat(content.replace(/[^0-9,\\s]/g, '').replace(/,/, '.'))/1000))"
-        expression = (
-            re.search(r"let\s+dividedPrice\s*=\s*(.*?)\.toLocaleString", gold[1], re.S)
-            if gold
-            else None
-        )
-        if not expression or re.sub(r"\s+", "", expression[1]) != re.sub(
-            r"\s+", "", expected
+        expected_snippets = [
+            "constmetal=row.dataset.metal;",
+            "constpurity=Number(row.dataset.purity);",
+            "constbasePrice=basePrices[metal];",
+            "constunitPrice=basePrice*(purity/1000);",
+            "basePrices.gold=extractPrice(lines,ARTICLES.gold);",
+            "currency:'CHF'",
+            "fetch(EXPORT_URL",
+        ]
+        if (
+            root is None
+            or not gold_article
+            or not all(snippet in compact for snippet in expected_snippets)
         ):
             raise SourceChanged("buyer calculator formula changed")
-        block = re.search(r"\[([^\]]+)\]\.forEach", gold[1])
-        labels = re.findall(r"'([^']+)'", block[1]) if block else []
-        raw = payload.splitlines() if isinstance(payload, str) else []
-        if len(raw) < 2 or raw[0] != "2230003":
+        lines = (
+            [line.strip() for line in payload.lstrip("\ufeff").splitlines()]
+            if isinstance(payload, str)
+            else []
+        )
+        matches = [
+            lines[i + 1]
+            for i in range(len(lines) - 1)
+            if lines[i] == gold_article[1]
+        ]
+        if len(matches) != 1:
             raise SourceChanged("gold export identifier changed")
-        base = decimal(raw[1])
+        base = decimal(matches[0])
         mapping = {v: k for k, v in PERMILLE.items()}
-        for label in labels:
-            pm = float(decimal(re.match(r"[\d,]+", label)[0]))
+        for row in root.select('tr[data-metal="gold"][data-purity]'):
+            pm = float(decimal(row["data-purity"]))
             if pm not in mapping:
                 raise SourceChanged("unknown calculator alloy")
+            heading = row.select_one("th")
+            label = (
+                heading.get_text(" ", strip=True) if heading else row["data-purity"]
+            )
             p = (base * Decimal(str(pm)) / 1000).quantize(
                 Decimal(".01"), rounding=ROUND_HALF_UP
             )
@@ -326,7 +363,11 @@ def quote_status(observation, at, previous=None):
         }
         if any(
             r["purity_carats"] in old
-            and abs(decimal(r["price_chf_per_gram"]) / old[r["purity_carats"]] - 1)
+            and max(
+                decimal(r["price_chf_per_gram"]) / old[r["purity_carats"]],
+                old[r["purity_carats"]] / decimal(r["price_chf_per_gram"]),
+            )
+            - 1
             > Decimal(".3")
             for r in observation["rates"]
         ):

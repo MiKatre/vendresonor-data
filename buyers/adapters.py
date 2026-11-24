@@ -195,23 +195,36 @@ def epo(source, at, html):
 def heritage(source, at, html, js, payload):
     # Follow this buyer's public calculator, never our own market feed.
     margins = re.search(r"const\s+GOLD_MARGINS\s*=\s*\{([^}]+)\}", js)
-    grams = re.search(
-        r"LIVE_SPOT_24K\s*=\s*\(d\['pax-gold'\]\.eur\s*/\s*([\d.]+)\)", js
-    )
+    endpoint = re.search(r"fetch\(\s*['\"]([^'\"]*cours-or-spot[^'\"]*)['\"]", js)
+    spot_assign = re.search(r"LIVE_SPOT_24K\s*=\s*d\.eur_g\b", js)
     if (
         not margins
-        or not grams
+        or not endpoint
+        or not spot_assign
         or "LIVE_SPOT_24K * (GOLD_MARGINS[carats] || 1)" not in js
     ):
         raise SourceChanged("Or et Héritage calculator formula changed")
-    data = json.loads(payload)["pax-gold"]
-    price = decimal(data["eur"]) / decimal(grams[1])
-    updated = datetime.fromtimestamp(data["last_updated_at"], tz=PARIS)
+    try:
+        data = json.loads(payload)
+        if not isinstance(data, dict):
+            raise TypeError("expected JSON object")
+        if data.get("currency") != "EUR" or data.get("symbol") != "XAU":
+            raise ValueError("unexpected currency or symbol")
+        price = decimal(data["eur_g"])
+        quote_time = data["quote_time"]
+        if not isinstance(quote_time, (int, float)) or isinstance(quote_time, bool):
+            raise TypeError("invalid quote_time")
+    except (KeyError, TypeError, ValueError) as exc:
+        raise SourceChanged("Or et Héritage spot feed changed") from exc
+    if not Decimal("50") < price < Decimal("500"):
+        raise SourceChanged("Or et Héritage spot reference out of range")
+    updated = datetime.fromtimestamp(quote_time / 1000, tz=PARIS)
     if updated > at:
         raise SourceChanged("Or et Héritage reference timestamp is in the future")
+    doc = soup(html)
     rates = []
     for k, factor in re.findall(r"(\d+)\s*:\s*([\d.]+)", margins[1]):
-        if soup(html).select_one(f'[data-price="gold-{k}"]') is None:
+        if doc.select_one(f'[data-price="gold-{k}"]') is None:
             raise SourceChanged("Or et Héritage display purity missing")
         amount = (price * decimal(factor)).quantize(
             Decimal("0.01"), rounding=ROUND_HALF_UP
@@ -226,8 +239,9 @@ def heritage(source, at, html, js, payload):
                 price_basis="before_final_tax_assessment",
                 source_fields={
                     "buyer_factor": factor,
-                    "reference": "buyer_PAXG_endpoint",
-                    "paxg_eur_per_ounce": str(data["eur"]),
+                    "reference": "buyer_cours_or_spot_endpoint",
+                    "spot_eur_per_gram": str(price),
+                    "reference_source": str(data.get("source", "")),
                     "reference_updated_at": updated.isoformat(),
                 },
                 warnings=["Reference timestamp is not buyer price publication time."],
@@ -260,7 +274,10 @@ def antheor(source, at, html):
         k = re.fullmatch(r"(\d+) carats", cells[0].get_text(strip=True))
         if not k:
             continue
-        match = re.fullmatch(r"([\d.,\s]+)\s*€/g\*?", cells[2].get_text(strip=True))
+        cell_text = cells[2].get_text(strip=True)
+        if re.fullmatch(r"Sur devis", cell_text, re.IGNORECASE):
+            continue
+        match = re.fullmatch(r"([\d.,\s]+)\s*€/g\*?", cell_text)
         if not match:
             raise SourceChanged("Anthéor rate cell changed")
         rates.append(
@@ -584,9 +601,12 @@ def collect_source(source, session):
         if script is None:
             raise SourceChanged("Or et Héritage script missing")
         js = session.get(urljoin(source["url"], script["src"]))
-        payload = session.get(
-            "https://www.or-heritage.com/.netlify/functions/coingecko-paxg"
+        endpoint = re.search(
+            r"fetch\(\s*['\"]([^'\"]*cours-or-spot[^'\"]*)['\"]", js
         )
+        if endpoint is None:
+            raise SourceChanged("Or et Héritage spot endpoint missing")
+        payload = session.get(urljoin(source["url"], endpoint[1]))
         obs = heritage(source, session.last_observed_at, html, js, payload)
     elif adapter == "orencash":
         script = soup(html).find(

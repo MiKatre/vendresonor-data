@@ -36,7 +36,7 @@
       "location": "Bâle",
       "channel": "agency_and_postal",
       "currency": "CHF",
-      "status": "quarantined",
+      "status": "ok",
       "observed_at": "2026-11-24T22:32:18.556720+00:00",
       "rates": [
         {
@@ -89,7 +89,7 @@
         {
           "purity_carats": 24,
           "purity_permille": 999.0,
-          "price_chf_per_gram": "98.28",
+          "price_chf_per_gram": "93.16",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -98,7 +98,7 @@
         {
           "purity_carats": 22,
           "purity_permille": 916.0,
-          "price_chf_per_gram": "83.61",
+          "price_chf_per_gram": "83.40",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -107,7 +107,7 @@
         {
           "purity_carats": 18,
           "purity_permille": 750.0,
-          "price_chf_per_gram": "64.66",
+          "price_chf_per_gram": "68.28",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -116,7 +116,7 @@
         {
           "purity_carats": 14,
           "purity_permille": 585.0,
-          "price_chf_per_gram": "38.56",
+          "price_chf_per_gram": "53.26",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -125,7 +125,7 @@
         {
           "purity_carats": 9,
           "purity_permille": 375.0,
-          "price_chf_per_gram": "32.33",
+          "price_chf_per_gram": "32.45",
           "min_weight_g": 0,
           "quote_kind": "indicative",
           "product_kind": "gold_items",
@@ -1225,7 +1225,7 @@
   ],
   "collection": {
     "outcomes": {
-      "swissgoldexchange": "quarantined",
+      "swissgoldexchange": "ok",
       "goldencash": "ok",
       "bijouxor": "ok",
       "geiger": "failed",

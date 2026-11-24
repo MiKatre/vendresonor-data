@@ -212,14 +212,39 @@ def or_et_change(source, at, html):
 def lepage(source, at, html):
     text = clean_text(html)
     match = re.search(rf"Or 750/1000e \(18ct\)\s*=\s*({NUMBER})€ le gramme", text)
-    if not match:
-        raise SourceChanged("Lepage jewellery buying-price statement missing")
-    return result(
-        source,
-        at,
-        [make(source, at, 18, decimal(match[1]), product_kind="jewellery_for_melting")],
-        html,
-    )
+    if match:
+        return result(
+            source,
+            at,
+            [
+                make(
+                    source,
+                    at,
+                    18,
+                    decimal(match[1]),
+                    product_kind="jewellery_for_melting",
+                )
+            ],
+            html,
+        )
+    if re.search(
+        r"prix de rachat de votre or est déterminé en fonction du cours de l[’']or",
+        text,
+        re.IGNORECASE,
+    ) and re.search(
+        r"pour obtenir des informations sur les tarifs en vigueur.*nous contacter",
+        text,
+        re.IGNORECASE,
+    ):
+        return Observation(
+            buyer_id=source["buyer_id"],
+            observed_at=at,
+            conditions=conditions(html),
+            warnings=[
+                "Lepage no longer publishes a gram buying rate on this page; prices are provided on request."
+            ],
+        )
+    raise SourceChanged("Lepage jewellery buying-price statement missing")
 
 
 def oceanor(source, at, html):

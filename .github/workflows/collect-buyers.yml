@@ -44,6 +44,7 @@ jobs:
           if-no-files-found: warn
           retention-days: 14
       - name: Publish generated JSON
+        id: publish
         if: always() && (steps.collect.outcome == 'success' || steps.collect.outcome == 'failure')
         run: |
           if [ ! -f data/buyers/latest.json ]; then exit 0; fi
@@ -55,10 +56,36 @@ jobs:
           git pull --rebase origin "$GITHUB_REF_NAME"
           git push origin "HEAD:$GITHUB_REF_NAME"
       - name: Rebuild the website with this data commit
-        if: github.ref == 'refs/heads/master' && (steps.collect.outcome == 'success' || steps.swiss.outcome == 'success')
+        if: github.ref == 'refs/heads/master' && steps.publish.outcome == 'success'
         env:
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
-        run: python scripts/trigger_build.py
+        run: |
+          if uv run --locked python - <<'PY'
+          import json
+          from pathlib import Path
+          from buyers.collect_swiss import coverage
+
+          fr = (
+              json.loads(Path("data/buyers/latest.json").read_text())
+              if Path("data/buyers/latest.json").exists()
+              else {}
+          )
+          ch = (
+              json.loads(Path("data/swiss/latest.json").read_text())
+              if Path("data/swiss/latest.json").exists()
+              else {}
+          )
+          fr_ok = any(
+              b.get("status") == "ok" and b.get("rates") for b in fr.get("buyers", [])
+          )
+          ch_ok = coverage(ch) > 0 if ch.get("buyers") else False
+          raise SystemExit(0 if (fr_ok or ch_ok) else 1)
+          PY
+          then
+            python scripts/trigger_build.py
+          else
+            echo "Skipping website rebuild: no current usable buyers in either market." >&2
+          fi
       - name: Report collection outcome
         if: always() && (steps.collect.outcome == 'success' || steps.collect.outcome == 'failure')
         env:

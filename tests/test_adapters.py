@@ -17,17 +17,28 @@ CATALOG = {
     ]
 }
 AT = datetime(2026, 10, 5, 21, 50, tzinfo=timezone.utc)
+OR_HERITAGE_AT = datetime(2026, 11, 24, 23, 0, tzinfo=timezone.utc)
 
 
-def parse(ident, *, html=None, js=None):
+def parse(ident, *, html=None, js=None, payload=None, at=None):
     html = html if html is not None else (FIXTURES / f"{ident}.html").read_text()
-    args = [CATALOG[ident], AT, html]
+    observed_at = at or (OR_HERITAGE_AT if ident == "or_heritage" else AT)
+    args = [CATALOG[ident], observed_at, html]
     if ident == "godot":
-        args = [CATALOG[ident], AT, (FIXTURES / "godot.json").read_text(), html]
+        args = [
+            CATALOG[ident],
+            observed_at,
+            payload if payload is not None else (FIXTURES / "godot.json").read_text(),
+            html,
+        ]
     elif ident in {"or_heritage", "orencash", "lesmonnaiesdelyon"}:
         args.append(js if js is not None else (FIXTURES / f"{ident}.js").read_text())
         if ident == "or_heritage":
-            args.append((FIXTURES / "or_heritage.json").read_text())
+            args.append(
+                payload
+                if payload is not None
+                else (FIXTURES / "or_heritage.json").read_text()
+            )
     return getattr(adapters, "heritage" if ident == "or_heritage" else ident)(*args)
 
 
@@ -84,11 +95,36 @@ def test_buyer_calculators_use_source_formulas():
     obs = parse("or_heritage")
     r = next(r for r in obs.rates if r.purity_carats == 18)
     expected = (
-        Decimal("3697.12") / Decimal("31.1035") * Decimal("0.6565858231627923")
+        Decimal("104.65773434698345") * Decimal("0.6565858231627923")
     ).quantize(Decimal("0.01"))
     assert r.price_eur_per_gram == expected
     assert r.source_updated_at is None
     assert "reference_updated_at" in r.source_fields
+    assert r.source_fields["reference"] == "buyer_cours_or_spot_endpoint"
+    with pytest.raises(adapters.SourceChanged, match="future"):
+        parse("or_heritage", at=AT)
+    with pytest.raises(adapters.SourceChanged, match="spot feed changed"):
+        parse("or_heritage", payload='{"currency":"USD","symbol":"XAU","eur_g":100,"quote_time":1}')
+
+    class Session:
+        last_observed_at = OR_HERITAGE_AT
+
+        def __init__(self):
+            self.documents = []
+
+        def get(self, url):
+            if url == CATALOG["or_heritage"]["url"]:
+                return '<script src="script.js?v=196"></script>' + (
+                    FIXTURES / "or_heritage.html"
+                ).read_text()
+            if url.endswith("script.js?v=196"):
+                return (FIXTURES / "or_heritage.js").read_text()
+            assert url == "https://www.or-heritage.com/.netlify/functions/cours-or-spot"
+            return (FIXTURES / "or_heritage.json").read_text()
+
+    assert (
+        adapters.collect_source(CATALOG["or_heritage"], Session()).rates == obs.rates
+    )
     oec = parse("orencash")
     r = next(r for r in oec.rates if r.purity_carats == 18)
     assert r.price_eur_per_gram == Decimal("118.614") * Decimal(".750") * Decimal(
@@ -107,6 +143,27 @@ def test_antheor_timestamp_minimum_and_distinct_bullion():
         next(r for r in obs.rates if r.purity_carats == 24).product_kind
         == "investment_gold"
     )
+
+
+def test_antheor_skips_sur_devis_and_rejects_unknown_cells():
+    html = (FIXTURES / "antheor.html").read_text()
+    obs = parse("antheor", html=html.replace("<td>90 €/g</td>", "<td>Sur devis</td>"))
+    assert {r.purity_carats for r in obs.rates} == {9, 14, 18, 22, 24}
+    with pytest.raises(adapters.SourceChanged, match="rate cell changed"):
+        parse(
+            "antheor",
+            html=html.replace("<td>90 €/g</td>", "<td>Nous consulter</td>"),
+        )
+    all_devis = (
+        html.replace("29 €/g", "Sur devis")
+        .replace("54 €/g", "Sur devis")
+        .replace("76 €/g", "Sur devis")
+        .replace("90 €/g", "Sur devis")
+        .replace("96 €/g", "Sur devis")
+        .replace("118 €/g*", "Sur devis")
+    )
+    with pytest.raises(adapters.SourceChanged):
+        parse("antheor", html=all_devis)
 
 
 def test_upper_limits_formulas_and_future_dates():
